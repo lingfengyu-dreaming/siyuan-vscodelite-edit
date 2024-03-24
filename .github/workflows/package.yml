@@ -2,11 +2,11 @@ name: package
 
 on:
   push:
-    paths: 'theme.json'
+    paths: ['theme.json','package.yml']
 
 jobs:
   package:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     permissions: 
       contents: write
