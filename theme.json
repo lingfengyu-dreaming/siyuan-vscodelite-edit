@@ -2,9 +2,9 @@
   "name": "siyuan-vscodelite-edit",
   "author": "Emptylight",
   "url": "https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": {
-    "default": "VSCode Lite Plus"
+    "default": "VSCode Lite Edit"
   },
   "description": {
     "default": "(Personal use)Evolved from VSCode Lite, further beautifying the interface.",
