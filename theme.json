@@ -1,8 +1,8 @@
 {
   "name": "siyuan-vscodelite-plus",
   "author": "Emptylight",
-  "url": "https://github.com/lingfengyu-dreaming/",
-  "version": "1.2.1",
+  "url": "https://github.com/lingfengyu-dreaming/siyuan-vscodelite-plus",
+  "version": "1.0.0",
   "displayName": {
     "default": "VSCode Lite Plus"
   },
@@ -12,7 +12,7 @@
   },
   "readme": {
     "default": "README.md",
-    "zh_CN": "README_zh_CN.md"
+    "zh_CN": "README_zh.md"
   },
   "i18n": [
     "en_US",
