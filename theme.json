@@ -1,0 +1,31 @@
+{
+  "name": "siyuan-vscodelite-plus",
+  "author": "Emptylight",
+  "url": "https://github.com/lingfengyu-dreaming/",
+  "version": "1.2.1",
+  "displayName": {
+    "default": "VSCode Lite Plus"
+  },
+  "description": {
+    "default": "(Personal use)Evolved from VSCode Lite, further beautifying the interface.",
+    "zh_CN": "（自用）从VSCode Lite中脱胎而来，进一步美化界面。"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README_zh_CN.md"
+  },
+  "i18n": [
+    "en_US",
+    "zh_CN"
+  ],
+  "funding": {
+    "openCollective": "",
+    "patreon": "",
+    "github": "",
+    "custom": []
+  },
+  "modes": [
+    "light",
+    "dark"
+  ]
+}
