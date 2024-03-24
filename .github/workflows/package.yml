@@ -2,7 +2,8 @@ name: package
 
 on:
   push:
-    paths: ['theme.json','package.yml']
+    paths: 'theme.json'
+  workflow_dispatch:
 
 jobs:
   package:
