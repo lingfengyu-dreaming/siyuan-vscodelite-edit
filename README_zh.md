@@ -1,4 +1,4 @@
-# VSCode Lite Plus
+# VSCode Lite Edit
 
 从VSCode Lite脱胎而来，进一步美化界面。
 
@@ -14,5 +14,12 @@
 
 # 更新日志
 
+> 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-plus/changelog.md)
+
+- V1.0.1
+  - 调整了页面滚动条显示效果
+  - 调整了部分颜色效果
 - V1.0.0
   - 改版后第一次更新，改自VSCode Lite v1.2.1
+  - 调整了各级标题样式，调整了部分区域宽高
+  - 调整了表格显示效果
