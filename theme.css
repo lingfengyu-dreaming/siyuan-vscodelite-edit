@@ -201,7 +201,7 @@ ul.b3-list.b3-list--background [data-subtype=h6] .b3-list-item__text {
 
 /* 页面底部状态栏 */
 .status {
-  background-color: #3e78c9;
+  background-color: var(--lite-status-background);
   box-sizing: border-box;
   z-index: 2;
   height: 32px;
@@ -247,6 +247,7 @@ body.body--blur .toolbar .toolbar__item {
   color: var(--mk-toolbar--blur-item);
 }
 
+/* 应用顶部工具栏 */
 .toolbar {
   background-color: var(--mk-toolbar-background);
   border-bottom: none;
@@ -259,6 +260,7 @@ body.body--blur .toolbar .toolbar__item {
   font-weight: 600;
 }
 
+/* 应用顶部工具栏文字 */
 .toolbar .toolbar__text {
   color: var(--mk-toolbar-text);
   font-weight: bold;
@@ -543,6 +545,7 @@ table thead tr th {
 
 /* 明亮模式元数据定义 */
 :root[data-theme-mode=light] {
+  --lite-status-background: #39cebb;
   --mk-toolbar-background: #dddddd;
   --mk-toolbar-background--blur: #e5e5e5;
   --mk-toolbar--blur-item: #7b7b7b;
@@ -590,6 +593,7 @@ table thead tr th {
 
 /* 暗黑模式元数据定义 */
 :root[data-theme-mode=dark] {
+  --lite-status-background: #66ccff;
   --mk-toolbar-background: #3c3c3c;
   --mk-toolbar-background--blur: #323233;
   --mk-toolbar--blur-item: #8e8e8e;
@@ -622,11 +626,21 @@ table thead tr th {
   --mk-scrollbar-thumb--hover: #4f4f4f;
   --mk-scrollbar-thumb--active: #5e5e5e;
   --mk-block-header-h1: #cbd1d9;
-  --mk-block-header-h2: #2E75B5;
+  --mk-block-header-h2: #82b2dc;
   --mk-block-header-h3: #BF9000;
   --mk-block-header-h4: #70AD47;
   --mk-block-header-h5: #E84C22;
   --mk-block-header-h6: #9f8ab9;
 }
 
-/*# sourceMappingURL=theme.css.map */
+/* 插件适配 */
+/* 快捷键面板 */
+/* 快捷键面板标题h1 */
+.keymap-plugin-container .keymap-plugin-header {
+  color: var(--mk-block-header-h2);
+}
+
+/* 快捷键面板标题h2 */
+.keymap-plugin-container .keymap-plugin-header-2 {
+  color: var(--mk-block-header-h4);
+}
