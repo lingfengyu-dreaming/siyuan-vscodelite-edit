@@ -16,6 +16,9 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-plus/changelog.md)
 
+- V1.0.3
+  - 调整了部分颜色效果
+  - 修改了标题样式
 - V1.0.1
   - 调整了页面滚动条显示效果
   - 调整了部分颜色效果

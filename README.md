@@ -16,6 +16,9 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
 
+- V1.0.3
+  - Adjust some color
+  - Edit title style
 - V1.0.1
   - Adjust page scrollbar style
   - Adjust some color

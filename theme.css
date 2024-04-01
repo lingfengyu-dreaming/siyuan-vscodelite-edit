@@ -8,20 +8,30 @@
 
 /* h1标签 */
 .protyle-wysiwyg [data-node-id].h1::before {
-  content: "#1";
+  content: "";
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: url(resources/h1.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
+  padding-top: 8.4px;
   margin-right: 0.2em;
 }
 
 /* h1标签 */
 .protyle-wysiwyg [data-node-id].h1[fold="1"]::before {
-  content: "#1";
+  content: "";
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem !important;
+  background: url(resources/h1.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
   position: static;
-  height: 100% !important;
-  width: unset;
   border-radius: unset;
   margin-top: unset;
   margin-right: 0.2em;
-  background: var(--mk-block-header-background-h1);
 }
 
 /* h1标签 */
@@ -38,20 +48,30 @@ ul.b3-list.b3-list--background [data-subtype=h1] .b3-list-item__text {
 
 /* h2标签 */
 .protyle-wysiwyg [data-node-id].h2::before {
-  content: "#2";
+  content: "";
+  display: inline-block;
+  width: 1.55rem;
+  height: 1.55rem;
+  background: url(resources/h2.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
+  padding-top: 7.44px;
   margin-right: 0.2em;
 }
 
 /* h2标签 */
 .protyle-wysiwyg [data-node-id].h2[fold="1"]::before {
-  content: "#2";
+  content: "";
+  display: inline-block;
+  width: 1.55rem;
+  height: 1.55rem !important;
+  background: url(resources/h2.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
   position: static;
-  height: 100% !important;
-  width: unset;
   border-radius: unset;
   margin-top: unset;
   margin-right: 0.2em;
-  background: var(--mk-block-header-background-h2);
 }
 
 /* h2标签 */
@@ -68,20 +88,30 @@ ul.b3-list.b3-list--background [data-subtype=h2] .b3-list-item__text {
 
 /* h3标签 */
 .protyle-wysiwyg [data-node-id].h3::before {
-  content: "#3";
+  content: "";
+  display: inline-block;
+  width: 1.38rem;
+  height: 1.38rem;
+  background: url(resources/h3.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
+  padding-top: 4px;
   margin-right: 0.2em;
 }
 
 /* h3标签 */
 .protyle-wysiwyg [data-node-id].h3[fold="1"]::before {
-  content: "#3";
+  content: "";
+  display: inline-block;
+  width: 1.38rem;
+  height: 1.38rem !important;
+  background: url(resources/h3.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
   position: static;
-  height: 100% !important;
-  width: unset;
   border-radius: unset;
   margin-top: unset;
   margin-right: 0.2em;
-  background: var(--mk-block-header-background-h3);
 }
 
 /* h3标签 */
@@ -98,20 +128,30 @@ ul.b3-list.b3-list--background [data-subtype=h3] .b3-list-item__text {
 
 /* h4标签 */
 .protyle-wysiwyg [data-node-id].h4::before {
-  content: "#4";
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: url(resources/h4.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
+  padding-top: 4px;
   margin-right: 0.2em;
 }
 
 /* h4标签 */
 .protyle-wysiwyg [data-node-id].h4[fold="1"]::before {
-  content: "#4";
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem !important;
+  background: url(resources/h4.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
   position: static;
-  height: 100% !important;
-  width: unset;
   border-radius: unset;
   margin-top: unset;
   margin-right: 0.2em;
-  background: var(--mk-block-header-background-h4);
 }
 
 /* h4标签 */
@@ -128,20 +168,30 @@ ul.b3-list.b3-list--background [data-subtype=h4] .b3-list-item__text {
 
 /* h5标签 */
 .protyle-wysiwyg [data-node-id].h5::before {
-  content: "#5";
+  content: "";
+  display: inline-block;
+  width: 1.13rem;
+  height: 1.13rem;
+  background: url(resources/h5.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
+  padding-top: 4px;
   margin-right: 0.2em;
 }
 
 /* h5标签 */
 .protyle-wysiwyg [data-node-id].h5[fold="1"]::before {
-  content: "#5";
+  content: "";
+  display: inline-block;
+  width: 1.13rem;
+  height: 1.13rem !important;
+  background: url(resources/h5.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
   position: static;
-  height: 100% !important;
-  width: unset;
   border-radius: unset;
   margin-top: unset;
   margin-right: 0.2em;
-  background: var(--mk-block-header-background-h5);
 }
 
 /* h5标签 */
@@ -158,20 +208,30 @@ ul.b3-list.b3-list--background [data-subtype=h5] .b3-list-item__text {
 
 /* h6标签 */
 .protyle-wysiwyg [data-node-id].h6::before {
-  content: "#6";
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url(resources/h6.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
+  padding-top: 4px;
   margin-right: 0.2em;
 }
 
 /* h6标签 */
 .protyle-wysiwyg [data-node-id].h6[fold="1"]::before {
-  content: "#6";
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem !important;
+  background: url(resources/h6.bmp) no-repeat center center;
+  background-size: contain;
+  filter: invert(75%);
   position: static;
-  height: 100% !important;
-  width: unset;
   border-radius: unset;
   margin-top: unset;
   margin-right: 0.2em;
-  background: var(--mk-block-header-background-h6);
 }
 
 /* h6标签 */
@@ -364,7 +424,7 @@ body.body--blur .toolbar .toolbar__item {
 
 /* 有序列表 */
 .list .li .protyle-action.protyle-action--order {
-  color: #c6d77b;
+  color: var(--lite-li-items);
 }
 
 .sy__file div.fn__flex-1 {
@@ -546,6 +606,7 @@ table thead tr th {
 /* 明亮模式元数据定义 */
 :root[data-theme-mode=light] {
   --lite-status-background: #39cebb;
+  --lite-li-items: #5cb83e;
   --mk-toolbar-background: #dddddd;
   --mk-toolbar-background--blur: #e5e5e5;
   --mk-toolbar--blur-item: #7b7b7b;
@@ -594,6 +655,7 @@ table thead tr th {
 /* 暗黑模式元数据定义 */
 :root[data-theme-mode=dark] {
   --lite-status-background: #66ccff;
+  --lite-li-items: #c6d77b;
   --mk-toolbar-background: #3c3c3c;
   --mk-toolbar-background--blur: #323233;
   --mk-toolbar--blur-item: #8e8e8e;

@@ -2,17 +2,31 @@
 
 > If needs translations, please use browser translator first. Too much to write in the changelogs.
 
+- V1.0.3
+  - 修改了标题样式（好麻烦）
+  - Adjust title style
 - V1.0.2
   - 调整了部分颜色效果
   - 调整了代码块行号显示
   - 调整了有序列表显示效果
   - 调整了状态栏显示效果
   - 适配快捷键面板
+  - Adjust some color
+  - Adjust code block line number display style
+  - Adjust ordered list display style
+  - Adjust status bar display style
+  - Fit shortcut panel
 - V1.0.1
   - 调整了页面滚动条显示效果
   - 调整了部分颜色效果
+  - Adjust scroll bar display style
+  - Adjust some color
 - V1.0.0
   - 从VSCode Lite复制项目，第一次更新
   - 调整了各级标题样式
   - 调整了部分区域宽高
   - 调整了表格显示效果
+  - Copied from VSCode Ltie, first update
+  - Adjust title style
+  - Adjust some area's width and height
+  - Adjust table display style
