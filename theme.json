@@ -2,17 +2,19 @@
   "name": "siyuan-vscodelite-edit",
   "author": "Emptylight",
   "url": "https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "displayName": {
     "default": "VSCode Lite Edit"
   },
   "description": {
-    "default": "(Personal use)Evolved from VSCode Lite, further beautifying the interface.",
-    "zh_CN": "（自用）从VSCode Lite中改造而来，进一步美化界面。"
+    "default": "（自用）从VSCode Lite中改造而来，进一步美化界面。",
+    "zh_CN": "（自用）从VSCode Lite中改造而来，进一步美化界面。",
+    "en_US": "(Personal use)Evolved from VSCode Lite, further beautifying the interface."
   },
   "readme": {
-    "default": "README.md",
-    "zh_CN": "README_zh.md"
+    "default": "README_zh.md",
+    "zh_CN": "README_zh.md",
+    "en_US": "README.md"
   },
   "i18n": [
     "en_US",
