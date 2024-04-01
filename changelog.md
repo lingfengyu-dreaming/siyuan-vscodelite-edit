@@ -2,6 +2,9 @@
 
 > If needs translations, please use browser translator first. Too much to write in the changelogs.
 
+- V1.0.7
+  - 修复标签栏意外滚动
+  - Fix tab-header accidently scroll
 - V1.0.6
   - Nothing change
 - V1.0.5

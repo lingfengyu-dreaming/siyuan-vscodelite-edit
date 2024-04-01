@@ -548,6 +548,8 @@ body.body--blur .dock__item--activefocus,
   min-height: 36px;
 }
 
+/* 标签栏中标题标签 */
+.layout-tab-bar .item,
 /* 标签聚焦 */
 .layout-tab-bar .item.item--focus {
   background-color: var(--mk-tabbar-background-color-item--focus);
