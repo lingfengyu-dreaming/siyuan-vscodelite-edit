@@ -2,6 +2,9 @@
 
 > If needs translations, please use browser translator first. Too much to write in the changelogs.
 
+- V1.0.5
+  - 更新许可证
+  - Update LICENSE
 - V1.0.4
   - 更新预览图
   - Update preview image

@@ -26,3 +26,7 @@
   - 改版后第一次更新，改自VSCode Lite v1.2.1
   - 调整了各级标题样式，调整了部分区域宽高
   - 调整了表格显示效果
+
+# 许可证
+
+跟随上级储存库[TinkMingKing/siyuan-themes-vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)使用GNU3.0协议

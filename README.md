@@ -26,3 +26,7 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
   - First update fork from VSCode Lite v1.2.1
   - Adjust title style, adjust some area's width and height
   - Adjust table display style
+
+# LICENSE
+
+Follow origin repository [TinkMingKing/siyuan-themes-vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite) use GNU3.0 LICENSE
