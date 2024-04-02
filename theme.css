@@ -599,6 +599,14 @@ body.body--blur .layout-tab-bar .item.item--focus:after {
   padding: 0px 8px;
 }
 
+/* 集市中选中的标签栏 */
+.config__tab-container.config__tab-container--top .layout-tab-bar .item.item--focus {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: rgb(72, 72, 72);
+}
+
 /* 表格表头单元格 */
 table thead tr th {
   color: var(--mk-block-header-h6);

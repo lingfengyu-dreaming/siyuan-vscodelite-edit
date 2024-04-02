@@ -1,7 +1,8 @@
 # ChangeLog
 
-> If needs translations, please use browser translator first. Too much to write in the changelogs.
-
+- V1.0.10
+  - 修复了集市中选中分类高亮问题
+  - Fix bazaar selected category highlight
 - V1.0.9
   - 修复README
   - Fix README

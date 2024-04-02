@@ -17,6 +17,8 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
 
+- V1.0.10
+  - Fix bazaar selected category highlight
 - V1.0.7
   - Fix tab-header accidently scroll
 - V1.0.3

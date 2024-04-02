@@ -17,6 +17,8 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-plus/changelog.md)
 
+- V1.0.10
+  - 修复了集市中选中分类高亮问题
 - V1.0.7
   - 修复了标签栏意外滚动
 - V1.0.3
