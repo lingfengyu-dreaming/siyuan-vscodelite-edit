@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.0.11
+  - 调整代码块行号宽度为3em，缓解代码块换行冲突问题
+  - Expand code block line number width to 3em, alleviate code block soft wrap conflict
 - V1.0.10
   - 修复了集市中选中分类高亮问题
   - Fix bazaar selected category highlight

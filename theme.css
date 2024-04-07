@@ -246,12 +246,12 @@ ul.b3-list.b3-list--background [data-subtype=h6] .b3-list-item__text {
 
 /* 代码块的语言显示 */
 .code-block .protyle-action .protyle-action--first.protyle-action__language {
-  margin-left: 2em !important;
+  margin-left: 3em !important;
 }
 
 /* 代码块左边的行号显示 */
 .code-block .protyle-linenumber__rows {
-  width: 2em;
+  width: 3em;
 }
 
 /* 块标动画 */

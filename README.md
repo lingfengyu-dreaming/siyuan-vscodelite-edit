@@ -17,16 +17,16 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
 
+- V1.0.11
+  - Expand code block line number width to 3em, alleviate code block soft wrap conflict
 - V1.0.10
   - Fix bazaar selected category highlight
 - V1.0.7
   - Fix tab-header accidently scroll
-- V1.0.3
-  - Adjust some color
-  - Edit title style
-- V1.0.1
-  - Adjust page scrollbar style
-  - Adjust some color
+
+# Feedback
+
+Bug report & Known issue: [Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)
 
 # LICENSE
 

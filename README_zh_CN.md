@@ -17,16 +17,16 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-plus/changelog.md)
 
+- V1.0.11
+  - 调整代码块行号宽度为3em，缓解代码块换行冲突问题
 - V1.0.10
   - 修复了集市中选中分类高亮问题
 - V1.0.7
   - 修复了标签栏意外滚动
-- V1.0.3
-  - 调整了部分颜色效果
-  - 修改了标题样式
-- V1.0.1
-  - 调整了页面滚动条显示效果
-  - 调整了部分颜色效果
+
+# 反馈
+
+反馈问题和已知问题：[Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)
 
 # 许可证
 
