@@ -1,257 +1,31 @@
 @charset "UTF-8";
+/* 导入定义的颜色 */
+@import url(sub/color.css);
 
-/* h1标签 */
-.protyle-wysiwyg [data-node-id].h1 {
-  color: var(--mk-block-header-h1);
-  display: flex;
-}
+/* 插件适配，不用的就注释掉 */
+/* 快捷键面板 */
+@import url(sub/plugin/keymapPlugin.css);
 
-/* h1标签 */
-.protyle-wysiwyg [data-node-id].h1::before {
-  content: "";
-  display: inline-block;
-  width: 1.75rem;
-  height: 1.75rem;
-  background: url(resources/h1.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  padding-top: 8.4px;
-  margin-right: 0.2em;
-}
-
-/* h1标签 */
-.protyle-wysiwyg [data-node-id].h1[fold="1"]::before {
-  content: "";
-  display: inline-block;
-  width: 1.75rem;
-  height: 1.75rem !important;
-  background: url(resources/h1.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  position: static;
-  border-radius: unset;
-  margin-top: unset;
-  margin-right: 0.2em;
-}
-
-/* h1标签 */
-.sy__outline ul.b3-list.b3-list--background [data-subtype=h1],
-ul.b3-list.b3-list--background [data-subtype=h1] .b3-list-item__text {
-  color: var(--mk-block-header-h1);
-}
-
-/* h2标签 */
-.protyle-wysiwyg [data-node-id].h2 {
-  color: var(--mk-block-header-h2);
-  display: flex;
-}
-
-/* h2标签 */
-.protyle-wysiwyg [data-node-id].h2::before {
-  content: "";
-  display: inline-block;
-  width: 1.55rem;
-  height: 1.55rem;
-  background: url(resources/h2.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  padding-top: 7.44px;
-  margin-right: 0.2em;
-}
-
-/* h2标签 */
-.protyle-wysiwyg [data-node-id].h2[fold="1"]::before {
-  content: "";
-  display: inline-block;
-  width: 1.55rem;
-  height: 1.55rem !important;
-  background: url(resources/h2.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  position: static;
-  border-radius: unset;
-  margin-top: unset;
-  margin-right: 0.2em;
-}
-
-/* h2标签 */
-.sy__outline ul.b3-list.b3-list--background [data-subtype=h2],
-ul.b3-list.b3-list--background [data-subtype=h2] .b3-list-item__text {
-  color: var(--mk-block-header-h2);
-}
-
-/* h3标签 */
-.protyle-wysiwyg [data-node-id].h3 {
-  color: var(--mk-block-header-h3);
-  display: flex;
-}
-
-/* h3标签 */
-.protyle-wysiwyg [data-node-id].h3::before {
-  content: "";
-  display: inline-block;
-  width: 1.38rem;
-  height: 1.38rem;
-  background: url(resources/h3.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  padding-top: 4px;
-  margin-right: 0.2em;
-}
-
-/* h3标签 */
-.protyle-wysiwyg [data-node-id].h3[fold="1"]::before {
-  content: "";
-  display: inline-block;
-  width: 1.38rem;
-  height: 1.38rem !important;
-  background: url(resources/h3.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  position: static;
-  border-radius: unset;
-  margin-top: unset;
-  margin-right: 0.2em;
-}
-
-/* h3标签 */
-.sy__outline ul.b3-list.b3-list--background [data-subtype=h3],
-ul.b3-list.b3-list--background [data-subtype=h3] .b3-list-item__text {
-  color: var(--mk-block-header-h3);
-}
-
-/* h4标签 */
-.protyle-wysiwyg [data-node-id].h4 {
-  color: var(--mk-block-header-h4);
-  display: flex;
-}
-
-/* h4标签 */
-.protyle-wysiwyg [data-node-id].h4::before {
-  content: "";
-  display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem;
-  background: url(resources/h4.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  padding-top: 4px;
-  margin-right: 0.2em;
-}
-
-/* h4标签 */
-.protyle-wysiwyg [data-node-id].h4[fold="1"]::before {
-  content: "";
-  display: inline-block;
-  width: 1.25rem;
-  height: 1.25rem !important;
-  background: url(resources/h4.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  position: static;
-  border-radius: unset;
-  margin-top: unset;
-  margin-right: 0.2em;
-}
-
-/* h4标签 */
-.sy__outline ul.b3-list.b3-list--background [data-subtype=h4],
-ul.b3-list.b3-list--background [data-subtype=h4] .b3-list-item__text {
-  color: var(--mk-block-header-h4);
-}
-
-/* h5标签 */
-.protyle-wysiwyg [data-node-id].h5 {
-  color: var(--mk-block-header-h5);
-  display: flex;
-}
-
-/* h5标签 */
-.protyle-wysiwyg [data-node-id].h5::before {
-  content: "";
-  display: inline-block;
-  width: 1.13rem;
-  height: 1.13rem;
-  background: url(resources/h5.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  padding-top: 4px;
-  margin-right: 0.2em;
-}
-
-/* h5标签 */
-.protyle-wysiwyg [data-node-id].h5[fold="1"]::before {
-  content: "";
-  display: inline-block;
-  width: 1.13rem;
-  height: 1.13rem !important;
-  background: url(resources/h5.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  position: static;
-  border-radius: unset;
-  margin-top: unset;
-  margin-right: 0.2em;
-}
-
-/* h5标签 */
-.sy__outline ul.b3-list.b3-list--background [data-subtype=h5],
-ul.b3-list.b3-list--background [data-subtype=h5] .b3-list-item__text {
-  color: var(--mk-block-header-h5);
-}
-
-/* h6标签 */
-.protyle-wysiwyg [data-node-id].h6 {
-  color: var(--mk-block-header-h6);
-  display: flex;
-}
-
-/* h6标签 */
-.protyle-wysiwyg [data-node-id].h6::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background: url(resources/h6.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  padding-top: 4px;
-  margin-right: 0.2em;
-}
-
-/* h6标签 */
-.protyle-wysiwyg [data-node-id].h6[fold="1"]::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem !important;
-  background: url(resources/h6.bmp) no-repeat center center;
-  background-size: contain;
-  filter: invert(75%);
-  position: static;
-  border-radius: unset;
-  margin-top: unset;
-  margin-right: 0.2em;
-}
-
-/* h6标签 */
-.sy__outline ul.b3-list.b3-list--background [data-subtype=h6],
-ul.b3-list.b3-list--background [data-subtype=h6] .b3-list-item__text {
-  color: var(--mk-block-header-h6);
-}
+/* 正式内容 */
+/* 应用程序底部状态栏 */
+@import url(sub/app/statusBar.css);
+/* 应用程序顶部标题栏 */
+@import url(sub/app/toolbarHead.css);
+/* 应用程序页面标签 */
+@import url(sub/app/tabBar.css);
+/* 标题标签h123456 */
+@import url(sub/block/title.css);
+/* 列表样式 */
+@import url(sub/block/list.css);
+/* 代码块样式 */
+@import url(sub/block/codeBlock.css);
+/* 集市相关样式 */
+@import url(sub/app/bazaar.css);
+/* 引用锚文本样式 */
+@import url(sub/block/reference.css);
 
 .protyle-title__input {
   font-size: 2.5em;
-}
-
-/* 代码块的语言显示 */
-.code-block .protyle-action .protyle-action--first.protyle-action__language {
-  margin-left: 3em !important;
-}
-
-/* 代码块左边的行号显示 */
-.code-block .protyle-linenumber__rows {
-  width: 3em;
 }
 
 /* 块标动画 */
@@ -259,91 +33,8 @@ ul.b3-list.b3-list--background [data-subtype=h6] .b3-list-item__text {
   transition: all 200ms ease-out;
 }
 
-/* 页面底部状态栏 */
-.status {
-  background-color: var(--lite-status-background);
-  box-sizing: border-box;
-  z-index: 2;
-  height: 32px;
-  line-height: 32px;
-  border-top: unset;
-  padding: 0 5px;
-  color: #ffffff;
-}
-
-/* 状态栏内所有文本 */
-.status * {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: 'Cascadia Mono', 'Cascadia Code', 'Microsoft YaHei UI';
-}
-
-#barDock:hover {
-  background-color: #5284c9 !important;
-}
-
-#statusHelp:hover {
-  background-color: #5284c9 !important;
-}
-
-body.body--blur .toolbar {
-  background: var(--mk-toolbar-background--blur);
-}
-
-body.body--blur .toolbar #drag {
-  color: var(--mk-toolbar--blur-item);
-}
-
-body.body--blur .toolbar .toolbar__text {
-  color: var(--mk-toolbar-text--blur);
-}
-
-body.body--blur .toolbar .toolbar__svg {
-  color: var(--mk-toolbar-svg--blur);
-}
-
-body.body--blur .toolbar .toolbar__item {
-  color: var(--mk-toolbar--blur-item);
-}
-
-/* 应用顶部工具栏 */
-.toolbar {
-  background-color: var(--mk-toolbar-background);
-  border-bottom: none;
-}
-
-/* 应用顶部标题 */
-.toolbar #drag {
-  color: var(--mk-toolbar-item);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/* 应用顶部工具栏文字 */
-.toolbar .toolbar__text {
-  color: var(--mk-toolbar-text);
-  font-weight: bold;
-}
-
-.toolbar .toolbar__svg {
-  color: var(--mk-toolbar-svg);
-}
-
-.toolbar .toolbar__item {
-  color: var(--mk-toolbar-item);
-}
-
-.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover {
-  background-color: var(--mk-toolbar-item--hover);
-}
-
 #barWorkspace:hover {
   background-color: var(--mk-toolbar-item-barWorkspace--hover);
-}
-
-.toolbar__item--active {
-  background-color: var(--mk-toolbar-item--active);
 }
 
 #closeWindow:hover {
@@ -420,11 +111,6 @@ body.body--blur .toolbar .toolbar__item {
 
 .protyle-content::-webkit-scrollbar-thumb:active {
   background: var(--mk-protyle-content-scrollbar-thumb--active);
-}
-
-/* 有序列表 */
-.list .li .protyle-action.protyle-action--order {
-  color: var(--lite-li-items);
 }
 
 .sy__file div.fn__flex-1 {
@@ -532,55 +218,6 @@ body.body--blur .dock__item--activefocus,
   margin-left: 8px;
 }
 
-/* 标签栏 */
-.layout-tab-bar.layout-tab-bar--readonly {
-  background-color: var(--mk-tabbar-background-color-item--readonly);
-  border-bottom: none;
-  height: 36px;
-  min-height: 36px;
-}
-
-/* 标签栏 */
-.layout-tab-bar {
-  background-color: var(--mk-tabbar-background-color);
-  border-bottom: none;
-  height: 36px;
-  min-height: 36px;
-}
-
-/* 标签栏中标题标签 */
-.layout-tab-bar .item,
-/* 标签聚焦 */
-.layout-tab-bar .item.item--focus {
-  background-color: var(--mk-tabbar-background-color-item--focus);
-  height: 36px;
-  min-height: 36px;
-}
-
-/* 标签聚焦 */
-.layout-tab-bar .item.item--focus:after {
-  display: none;
-  height: 36px;
-  min-height: 36px;
-}
-
-/* 标签栏空地 */
-.layout-tab-bar .item--readonly {
-  min-height: 36px;
-}
-
-/* 标签栏聚焦 */
-body.body--blur .layout-tab-bar .item.item--focus {
-  box-shadow: none;
-  height: 36px;
-}
-
-/* 标签栏聚焦 */
-body.body--blur .layout-tab-bar .item.item--focus:after {
-  display: none;
-  height: 36px;
-}
-
 .protyle:not(:has(.protyle-content[data-scrolltop="0"])) .protyle-breadcrumb {
   box-shadow: 0px 5px 10px -10px grey;
 }
@@ -589,130 +226,8 @@ body.body--blur .layout-tab-bar .item.item--focus:after {
   box-shadow: none;
 }
 
-/* 设置中集市的上方筛选栏 */
-.config__tab-container.config__tab-container--top .config-bazaar__panel .config-bazaar__title {
-  padding: 8px 16px;
-}
-
-/* 集市中筛选栏中按钮 */
-.config__tab-container.config__tab-container--top .config-bazaar__panel .config-bazaar__title .b3-button {
-  padding: 0px 8px;
-}
-
-/* 集市中选中的标签栏 */
-.config__tab-container.config__tab-container--top .layout-tab-bar .item.item--focus {
-  color: white;
-  font-weight: 500;
-  font-size: 15px;
-  background-color: rgb(72, 72, 72);
-}
-
 /* 表格表头单元格 */
 table thead tr th {
   color: var(--mk-block-header-h6);
   text-align: center;
-}
-
-/* 明亮模式元数据定义 */
-:root[data-theme-mode=light] {
-  --lite-status-background: #39cebb;
-  --lite-li-items: #5cb83e;
-  --mk-toolbar-background: #dddddd;
-  --mk-toolbar-background--blur: #e5e5e5;
-  --mk-toolbar--blur-item: #7b7b7b;
-  --mk-toolbar-item: #333333;
-  --mk-toolbar-item--hover: #bfbfbf;
-  --mk-toolbar-item--active: #66ccff;
-  --mk-toolbar-item-barWorkspace--hover: #39c5bb;
-  --mk-toolbar-text: #ffffff;
-  --mk-toolbar-svg: var(--mk-toolbar-text);
-  --mk-toolbar-text--blur: rgba(255, 255, 255, 0.6);
-  --mk-toolbar-svg--blur: var(--mk-toolbar-text--blur);
-  --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
-  --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
-  --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
-  --mk-filetree-list--hover: #e5e6f0;
-  --mk-tabbar-background-color: #ececec;
-  --mk-tabbar-background-color-item--readonly: #f3f3f3;
-  --mk-tabbar-background-color-item--focus: #ffffff;
-  --mk-dock-background: #2c2c2c;
-  --mk-dock-item-color: #727272;
-  --mk-dock-item-svg-color--hover: #f4f4f4;
-  --mk-protyle-wysiwyg--selection: #cddcf6;
-  --mk-protyle-wysiwyg--selection--blur: #e6ebf1;
-  --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
-  --mk-protyle-content-scrollbar-thumb: var(--mk-scrollbar-thumb);
-  --mk-protyle-content-scrollbar-thumb--hover: var(--mk-filetree-scrollbar-thumb--hover);
-  --mk-protyle-content-scrollbar-thumb--active: var(--mk-filetree-scrollbar-thumb--active);
-  --mk-scrollbar-track-border: #dcdcdc;
-  --mk-scrollbar-thumb: #c1c1c1;
-  --mk-scrollbar-thumb--hover: #929292;
-  --mk-scrollbar-thumb--active: #666666;
-  --mk-block-header-h1: #202124;
-  --mk-block-header-h2: #2E75B5;
-  --mk-block-header-h3: #BF9000;
-  --mk-block-header-h4: #70AD47;
-  --mk-block-header-h5: #E84C22;
-  --mk-block-header-h6: #8064A2;
-  --mk-block-header-background-h1: rgba(32, 33, 36, 0.2);
-  --mk-block-header-background-h2: rgba(46, 118, 181, 0.2);
-  --mk-block-header-background-h3: rgba(191, 143, 0, 0.2);
-  --mk-block-header-background-h4: rgba(112, 173, 71, 0.2);
-  --mk-block-header-background-h5: rgba(232, 77, 34, 0.2);
-  --mk-block-header-background-h6: rgba(128, 100, 162, 0.2);
-}
-
-/* 暗黑模式元数据定义 */
-:root[data-theme-mode=dark] {
-  --lite-status-background: #66ccff;
-  --lite-li-items: #c6d77b;
-  --mk-toolbar-background: #3c3c3c;
-  --mk-toolbar-background--blur: #323233;
-  --mk-toolbar--blur-item: #8e8e8e;
-  --mk-toolbar-item: #cccccc;
-  --mk-toolbar-item--hover: #565656;
-  --mk-toolbar-item--active: #39c5bb;
-  --mk-toolbar-item-barWorkspace--hover: #66ccff;
-  --mk-toolbar-text: #ffffff;
-  --mk-toolbar-svg: var(--mk-toolbar-text);
-  --mk-toolbar-text--blur: rgba(255, 255, 255, 0.6);
-  --mk-toolbar-svg--blur: var(--mk-toolbar-text--blur);
-  --mk-filetree-scrollbar-thumb: var(--mk-scrollbar-thumb);
-  --mk-filetree-scrollbar-thumb--hover: var(--mk-scrollbar-thumb--hover);
-  --mk-filetree-scrollbar-thumb--active: var(--mk-scrollbar-thumb--active);
-  --mk-filetree-list--hover: #37373d;
-  --mk-tabbar-background-color: #2d2d2d;
-  --mk-tabbar-background-color-item--readonly: #252526;
-  --mk-tabbar-background-color-item--focus: #1e1e1e;
-  --mk-dock-background: #333333;
-  --mk-dock-item-color: #727272;
-  --mk-dock-item-svg-color--hover: #f4f4f4;
-  --mk-protyle-wysiwyg--selection: #334e76;
-  --mk-protyle-wysiwyg--selection--blur: #3b3d41;
-  --mk-protyle-content-scrollbar-track-border: var(--mk-scrollbar-track-border);
-  --mk-protyle-content-scrollbar-thumb: var(--mk-scrollbar-thumb);
-  --mk-protyle-content-scrollbar-thumb--hover: var(--mk-filetree-scrollbar-thumb--hover);
-  --mk-protyle-content-scrollbar-thumb--active: var(--mk-filetree-scrollbar-thumb--active);
-  --mk-scrollbar-track-border: #393939;
-  --mk-scrollbar-thumb: #424242;
-  --mk-scrollbar-thumb--hover: #4f4f4f;
-  --mk-scrollbar-thumb--active: #5e5e5e;
-  --mk-block-header-h1: #cbd1d9;
-  --mk-block-header-h2: #82b2dc;
-  --mk-block-header-h3: #BF9000;
-  --mk-block-header-h4: #70AD47;
-  --mk-block-header-h5: #E84C22;
-  --mk-block-header-h6: #9f8ab9;
-}
-
-/* 插件适配 */
-/* 快捷键面板 */
-/* 快捷键面板标题h1 */
-.keymap-plugin-container .keymap-plugin-header {
-  color: var(--mk-block-header-h2);
-}
-
-/* 快捷键面板标题h2 */
-.keymap-plugin-container .keymap-plugin-header-2 {
-  color: var(--mk-block-header-h4);
 }

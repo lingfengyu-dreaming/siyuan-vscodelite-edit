@@ -1,5 +1,12 @@
 # ChangeLog
 
+- V1.1.0
+  - 改善引用锚文本显示效果
+  - 调整适配插件为导入模块
+  - 调整文件组成为导入模块
+  - Improve reference text display
+  - Change fit plugin's code to import module
+  - Change files to import module
 - V1.0.11
   - 调整代码块行号宽度为3em，缓解代码块换行冲突问题
   - Expand code block line number width to 3em, alleviate code block soft wrap conflict

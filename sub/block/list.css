@@ -1,0 +1,4 @@
+/* 有序列表 */
+.list .li .protyle-action.protyle-action--order {
+    color: var(--lite-li-items);
+}

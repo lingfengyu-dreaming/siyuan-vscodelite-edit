@@ -1,0 +1,9 @@
+/* 代码块的语言显示 */
+.code-block .protyle-action .protyle-action--first.protyle-action__language {
+    margin-left: 3em !important;
+}
+
+/* 代码块左边的行号显示 */
+.code-block .protyle-linenumber__rows {
+    width: 3em;
+}

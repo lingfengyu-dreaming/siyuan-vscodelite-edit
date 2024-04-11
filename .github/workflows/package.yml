@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: package
-        run: find ./ -name 'theme.json' -o -name 'icon.png' -o -name 'preview.png' -o -name 'README.md' -o -name 'README_zh.md' -o -name 'theme.css' -o -path './resources/*' | xargs zip package.zip
+        run: find ./ -name 'theme.json' -o -name 'icon.png' -o -name 'preview.png' -o -name 'README.md' -o -name 'README_zh.md' -o -name 'theme.css' -o -path './resources/*' -o -path './sub/*' | xargs zip package.zip
 
       - name: install
         run: sudo apt-get install jq

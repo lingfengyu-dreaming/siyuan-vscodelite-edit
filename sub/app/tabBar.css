@@ -1,0 +1,50 @@
+/* 页面标签 */
+
+/* 标签栏 */
+.layout-tab-bar.layout-tab-bar--readonly {
+    background-color: var(--mk-tabbar-background-color-item--readonly);
+    border-bottom: none;
+    height: 36px;
+    min-height: 36px;
+}
+
+/* 标签栏 */
+.layout-tab-bar {
+    background-color: var(--mk-tabbar-background-color);
+    border-bottom: none;
+    height: 36px;
+    min-height: 36px;
+}
+
+/* 标签栏中标题标签 */
+.layout-tab-bar .item,
+/* 标签聚焦 */
+.layout-tab-bar .item.item--focus {
+    background-color: var(--mk-tabbar-background-color-item--focus);
+    height: 36px;
+    min-height: 36px;
+}
+
+/* 标签聚焦 */
+.layout-tab-bar .item.item--focus:after {
+    display: none;
+    height: 36px;
+    min-height: 36px;
+}
+
+/* 标签栏空地 */
+.layout-tab-bar .item--readonly {
+    min-height: 36px;
+}
+
+/* 标签栏聚焦 */
+body.body--blur .layout-tab-bar .item.item--focus {
+    box-shadow: none;
+    height: 36px;
+}
+
+/* 标签栏聚焦 */
+body.body--blur .layout-tab-bar .item.item--focus:after {
+    display: none;
+    height: 36px;
+}
