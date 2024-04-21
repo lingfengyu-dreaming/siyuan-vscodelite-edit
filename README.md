@@ -13,6 +13,12 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 * Customize change
 * Table display style
 
+# Configure
+
+Theme uses `import` to load different modules, can configure display style sheet by setting comments. Instructions in [LINK](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/Configure.md).
+
+The theme uses `import` to incorporate different theme modules, and you can adjust the display effect by modifying the comments. For detailed instructions, please check the [link](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/Configure.md).
+
 # ChangeLog
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)

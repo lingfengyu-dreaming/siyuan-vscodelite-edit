@@ -1,5 +1,7 @@
 # ChangeLog
 
+- V1.1.1
+  - minor bug fixed
 - V1.1.0
   - 改善引用锚文本显示效果
   - 调整适配插件为导入模块
