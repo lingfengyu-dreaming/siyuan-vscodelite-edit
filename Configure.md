@@ -1,12 +1,10 @@
-LINK: [中文](#配置)  [English](#configure)
+JUMP TO(may have problems): [中文](#配置)  [English](#configure)
 
-请注意：注释会在主题版本更新后失效。
-
-NOTICE: Comments will disable after update the theme.
+> 请注意：注释会在主题版本更新后失效。
+>
+> NOTICE: Comments will disable after update the theme.
 
 # Configure
-
-TRANSLATING...
 
 Theme use `import` to incorporate different parts' theme. For example, `@import url("CodeBlock.css")` is used to import the style of code block. Belows are instruction about import and comment.
 
@@ -53,13 +51,19 @@ By setting comments, you can disable those style you don't want to use. Here are
 
 The width of the line numbers on the left side of the code block has been modified, causing the line breaks in the code block and the display of line numbers to be out of sync. If your code block is severely affected, you can comment out this code.
 
+`@import url(sub/block/codeBlock.css)`
+
 ## Reference Anchor Text Styles
 
 Reference anchor text styles add background for reference anchor text.
 
+`@import url(sub/block/reference.css)`
+
 ## Embedded Block Style
 
-Because it makes great change for embedded block, limit the height of embedded block and cause display height error for katex block in embedded block, so I hadn't add it into theme. If you want to have a try and help me improve it, you can contact me, I will provide code snippets for you.
+It makes great change for embedded block, limit the height of embedded block. And may cause unknown problems.
+
+`@import url(sub/block/embeddedBlock.css)`
 
 # 配置
 
@@ -108,10 +112,16 @@ Because it makes great change for embedded block, limit the height of embedded b
 
 代码块样式修改了代码块左侧行号的宽度，导致代码块的换行和行号的显示不同步。如果你的代码块受到影响严重，可以注释掉这个代码。
 
+`@import url(sub/block/codeBlock.css)`
+
 ## 引用锚文本样式
 
 引用锚文本样式给引用的锚文本添加了背景。
 
+`@import url(sub/block/reference.css)`
+
 ## 嵌入块样式
 
-这个由于改变严重，限制了嵌入块的高度，还导致嵌入块中的公式显示错位，所以先不加入主题中。如有希望试用和帮助改进的用户可联系我，提供代码片段给你。
+这个改变严重，限制了嵌入块的高度。并且还可能导致未知的错误。
+
+`@import url(sub/block/embeddedBlock.css)`

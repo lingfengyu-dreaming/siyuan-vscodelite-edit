@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.1.2
+  - 调整了嵌入块的显示效果，限制高度到70vh
+  - Adjust the display style of embedded block, limit the height to 70vh
 - V1.1.1
   - minor bug fixed
 - V1.1.0

@@ -1,0 +1,22 @@
+/* 嵌入块的边框高亮 */
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+    max-height: 70vh;
+    display: flex;
+    border: 1px solid white;
+}
+
+/* 嵌入块的高度限制 */
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] .protyle-wysiwyg__embed {
+    max-height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* 嵌入块内部特殊块高度修复 */
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] .protyle-wysiwyg__embed .render-node:not([data-type=NodeParagraph]) {
+    display: table;
+    clear: both;
+    min-height: 32px !important;
+}

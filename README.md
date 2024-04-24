@@ -11,18 +11,23 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 * Style various heading levels(futher change)
 * Fine-tune layout and color scheme
 * Customize change
+* Adjust code block
 * Table display style
+* Fit some plugins
+* Limit display height of embedded block(can close)
 
 # Configure
 
-Theme uses `import` to load different modules, can configure display style sheet by setting comments. Instructions in [LINK](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/Configure.md).
+The theme uses `import` to incorporate different theme modules, and you can adjust the display effect by modifying the comments. For detailed instructions, please check the [Link](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/Configure.md).
 
-The theme uses `import` to incorporate different theme modules, and you can adjust the display effect by modifying the comments. For detailed instructions, please check the [link](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/Configure.md).
+I'm thinking use `theme.js` to modify display style. This may release after several versions.
 
 # ChangeLog
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
 
+- V1.1.2
+  - Adjust the display style of embedded block, limit the height(can cancel by modify file)
 - V1.1.0
   - Improve reference text display
   - Change fit plugin's code to import module
@@ -35,6 +40,8 @@ The theme uses `import` to incorporate different theme modules, and you can adju
 # Feedback
 
 Bug report & Known issue: [Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)
+
+Don't use GitHub & Can't visit Github? Please [email to me](mailto:1378990254@qq.com).
 
 # LICENSE
 
