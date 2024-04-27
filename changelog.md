@@ -1,5 +1,7 @@
 # ChangeLog
 
+- V1.1.3
+  - 修复了嵌入块的显示问题，表现为嵌入块内所有非段落块都单独显示。现在行级公式块不会单独显示了。
 - V1.1.2
   - 调整了嵌入块的显示效果，限制高度到70vh
   - Adjust the display style of embedded block, limit the height to 70vh

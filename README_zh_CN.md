@@ -26,14 +26,14 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
 
+- V1.1.3
+  - 修复嵌入块的显示问题
 - V1.1.2
   - 调整了嵌入块的显示效果，限制高度（可调整文件关闭）
 - V1.1.0
   - 改善引用锚文本显示效果
   - 调整适配插件为导入模块
   - 调整文件组成为导入模块
-- V1.0.11
-  - 调整代码块行号宽度为3em，缓解代码块换行冲突问题
 
 # 反馈
 

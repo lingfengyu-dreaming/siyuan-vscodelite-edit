@@ -15,7 +15,7 @@
 }
 
 /* 嵌入块内部特殊块高度修复 */
-.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] .protyle-wysiwyg__embed .render-node:not([data-type=NodeParagraph]) {
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] .protyle-wysiwyg__embed > [data-node-index].render-node:not([data-type=NodeParagraph]) {
     display: table;
     clear: both;
     min-height: 32px !important;

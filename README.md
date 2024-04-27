@@ -26,16 +26,14 @@ I'm thinking use `theme.js` to modify display style. This may release after seve
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
 
+- V1.1.3
+  - Fix a display problem of embedded block
 - V1.1.2
   - Adjust the display style of embedded block, limit the height(can cancel by modify file)
 - V1.1.0
   - Improve reference text display
   - Change fit plugin's code to import module
   - Change files to import module
-- V1.0.11
-  - Expand code block line number width to 3em, alleviate code block soft wrap conflict
-- V1.0.10
-  - Fix bazaar selected category highlight
 
 # Feedback
 
