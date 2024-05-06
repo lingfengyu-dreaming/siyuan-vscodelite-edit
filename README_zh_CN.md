@@ -26,20 +26,25 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
 
+- V1.1.4
+  - 修复了插件自定义块样式定义的块在嵌入块中的显示问题
 - V1.1.3
   - 修复嵌入块的显示问题
 - V1.1.2
   - 调整了嵌入块的显示效果，限制高度（可调整文件关闭）
-- V1.1.0
-  - 改善引用锚文本显示效果
-  - 调整适配插件为导入模块
-  - 调整文件组成为导入模块
+
+# 插件适配
+
+目前已适配的插件有：
+
+- 快捷键面板（分类标题颜色）
+- 自定义块样式（修复由主题造成的嵌入块中自定义块显示问题）
 
 # 反馈
 
 反馈问题和已知问题：[Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)。
 
-不使用GitHub或无法访问？[发邮件](mailto:1378990254@qq.com)。
+不使用GitHub或无法访问？[发邮件](mailto:1378990254@qq.com)（1378990254@qq.com）。
 
 # 许可证
 

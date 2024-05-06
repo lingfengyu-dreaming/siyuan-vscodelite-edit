@@ -1,7 +1,11 @@
 # ChangeLog
 
+- V1.1.4
+  - 修复了插件自定义块样式定义的块在嵌入块中的显示问题
+  - Fix plugin Custom Block Style's display problem in embedded block
 - V1.1.3
   - 修复了嵌入块的显示问题，表现为嵌入块内所有非段落块都单独显示。现在行级公式块不会单独显示了。
+  - Fix a display problem of embedded block, showing as any non-paragraph block will display in single line. Now it won't display like this.
 - V1.1.2
   - 调整了嵌入块的显示效果，限制高度到70vh
   - Adjust the display style of embedded block, limit the height to 70vh

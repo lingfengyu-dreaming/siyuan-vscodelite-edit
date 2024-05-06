@@ -26,20 +26,25 @@ I'm thinking use `theme.js` to modify display style. This may release after seve
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
 
+- V1.1.4
+  - Fix plugin Custom Block Style's display problem in embedded block
 - V1.1.3
   - Fix a display problem of embedded block
 - V1.1.2
   - Adjust the display style of embedded block, limit the height(can cancel by modify file)
-- V1.1.0
-  - Improve reference text display
-  - Change fit plugin's code to import module
-  - Change files to import module
+
+# Plugin fitness
+
+The plugins has fit now:
+
+- Shortcut key panel(Category title color)
+- Custom block style(fix display problem in embedded block caused by theme)
 
 # Feedback
 
 Bug report & Known issue: [Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)
 
-Don't use GitHub & Can't visit Github? Please [email to me](mailto:1378990254@qq.com).
+Don't use GitHub & Can't visit Github? Please [email to me](mailto:1378990254@qq.com)(1378990254@qq.com).
 
 # LICENSE
 
