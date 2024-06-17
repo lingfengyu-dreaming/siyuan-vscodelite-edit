@@ -17,7 +17,12 @@
 }
 
 /* 标签栏中标题标签 */
-.layout-tab-bar .item,
+.layout-tab-bar .item {
+    background-color: var(--mk-tabbar-background-color);
+    height: 36px;
+    min-height: 36px;
+}
+
 /* 标签聚焦 */
 .layout-tab-bar .item.item--focus {
     background-color: var(--mk-tabbar-background-color-item--focus);

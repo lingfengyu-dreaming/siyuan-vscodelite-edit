@@ -1,5 +1,7 @@
 # ChangeLog
 
+- V1.1.5
+  - minor fix
 - V1.1.4
   - 修复了插件自定义块样式定义的块在嵌入块中的显示问题
   - Fix plugin Custom Block Style's display problem in embedded block
