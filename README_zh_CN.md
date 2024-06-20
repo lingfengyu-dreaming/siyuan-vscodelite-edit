@@ -18,13 +18,13 @@
 
 # 配置
 
-主题使用 `import`导入不同的主题模块，可以通过调整注释修改显示效果。具体说明请查看[链接](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/Configure.md)。可以手动取消部分调整。
+主题使用 `import`导入不同的主题模块，可以通过调整注释修改显示效果。具体说明请查看[链接](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/Configure.md)。可以手动取消部分调整。
 
 我正在考虑使用 `theme.js`实现调整显示效果。这或许会在几个版本后推出。
 
 # 更新日志
 
-> 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
+> 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
 - V1.1.4
   - 修复了插件自定义块样式定义的块在嵌入块中的显示问题

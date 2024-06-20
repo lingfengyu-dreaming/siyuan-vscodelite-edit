@@ -18,13 +18,13 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
 # Configure
 
-The theme uses `import` to incorporate different theme modules, and you can adjust the display effect by modifying the comments. For detailed instructions, please check the [Link](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/Configure.md).
+The theme uses `import` to incorporate different theme modules, and you can adjust the display effect by modifying the comments. For detailed instructions, please check the [Link](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/Configure.md).
 
 I'm thinking use `theme.js` to modify display style. This may release after several versions.
 
 # ChangeLog
 
-> Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/changelog.md)
+> Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
 - V1.1.4
   - Fix plugin Custom Block Style's display problem in embedded block
