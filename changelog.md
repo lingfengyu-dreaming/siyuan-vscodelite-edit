@@ -1,5 +1,6 @@
 # ChangeLog
-
+- V1.1.6
+  - Readme fix
 - V1.1.5
   - minor fix
 - V1.1.4
