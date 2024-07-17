@@ -44,7 +44,9 @@ The plugins has fit now:
 
 Bug report & Known issue: [Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)
 
-Don't use GitHub & Can't visit Github? Please [email to me](mailto:1378990254@qq.com)(1378990254@qq.com).
+Don't use GitHub & Can't visit Github?  
+Please [email to me](mailto:1378990254@qq.com)(1378990254@qq.com).  
+Or [join QQ channel](https://pd.qq.com/s/7uxvabgbp).
 
 # LICENSE
 

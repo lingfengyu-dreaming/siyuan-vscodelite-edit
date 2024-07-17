@@ -44,7 +44,9 @@
 
 反馈问题和已知问题：[Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)。
 
-不使用GitHub或无法访问？[发邮件](mailto:1378990254@qq.com)（1378990254@qq.com）。
+不使用GitHub或无法访问？  
+[发邮件](mailto:1378990254@qq.com)（1378990254@qq.com）。  
+或者[加入QQ频道](https://pd.qq.com/s/7uxvabgbp)。
 
 # 许可证
 
