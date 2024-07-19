@@ -3,12 +3,7 @@
 (function () {
     // const body = document.getElementsByTagName("body")[0];
     // 读取配置文件或生成配置文件
-    try {
-        getSettings();
-        // console.log(settings);
-    } catch (TypeError) {
-        console.log(TypeError);
-    }
+    getSettings();
     addThemeToolBar();
     // str = showElementSettings(settings);
     // var str = "main/load/store/";
@@ -23,6 +18,23 @@ window.destroyTheme = () => {
     body.removeAttribute("vslite");
     // 移除主题按钮
     document.querySelector("#vscleToolbar").remove();
+};
+
+/**
+ * 默认配置文件
+ */
+const defaultConf = {
+    "theme": {
+        "codeBlock": true,
+        "reference": true,
+        "bazaar": true,
+        "embeddedBlock": true,
+        "title": true
+    },
+    "plugins": {
+        "shortcutPanel": true,
+        "mathPanel": false
+    }
 };
 
 /** 
@@ -125,18 +137,7 @@ async function getSettings() {
     // var res = _analyseResponse(_getFile("/data/snippets/vsc_edit.config.json"));
     _getFile("/data/snippets/vsc_edit.config.json", (v) => {
         if (v == null) {
-            v = {
-                "theme": {
-                    "codeBlock": true,
-                    "reference": true,
-                    "bazaar": true,
-                    "embeddedBlock": true
-                },
-                "plugins": {
-                    "shortcutPanel": true,
-                    "mathPanel": false
-                }
-            };
+            v = defaultConf;
             putSettings(v);
         }
         // console.log(v);
@@ -256,6 +257,14 @@ function addThemeToolBar() {
         // window.screenX = event.screenX;
         // window.screenY = event.screenY;
         alert("抱歉，暂时无法打开配置文件。请打开工作空间下的/data/snippets/vsc_edit.config.json文件编辑并重新加载思源");
+        var re = confirm("是否要重置配置文件?Reset configuration file?");
+        if (re == true) {
+            v = defaultConf;
+            putSettings(v);
+            alert("重置配置文件成功.Successfully reset configuration file.");
+        } else {
+
+        }
     });
 }
 
@@ -267,18 +276,27 @@ function addThemeToolBar() {
  */
 function showElementSettings(settings) {
     var str = "";
+    // 代码块
     if (settings["theme"]["codeBlock"]) {
         str += "cb/";
     }
+    // 引用
     if (settings["theme"]["reference"]) {
         str += "ref/";
     }
+    // 集市
     if (settings["theme"]["bazaar"]) {
         str += "bazaar/";
     }
+    // 嵌入块
     if (settings["theme"]["embeddedBlock"]) {
         str += "embed/";
     }
+    // 标题
+    if (settings["theme"]["title"]) {
+        str += "ttH/";
+    }
+    // 快捷键面板
     if (settings["plugins"]["shortcutPanel"]) {
         str += "scPanel/";
     }

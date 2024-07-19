@@ -4,6 +4,8 @@ A further beautification of the interface from VSCode Lite.
 
 Using dark mode for testing, expected no problems with light mode.
 
+If display errors appear, reload SiYuan please.
+
 Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
 # Features
@@ -61,3 +63,4 @@ Follow origin repository [TinkMingKing/siyuan-themes-vscodelite](https://github.
 | :--------------------------------------------------------------------------: | :-----: |
 | [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite) theme | GNU3.0  |
 |    [Savor](https://github.com/royc01/notion-theme/tree/main) some js code    |   无    |
+| [SiYuan api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) | AGPL3.0 |

@@ -17,6 +17,7 @@ Theme uses configuration file to enable parts of theme. This is the meaning of t
         "reference": true,
         "bazaar": true,
         "embeddedBlock": true,
+        "title": true
     },
     "plugins": {
         "shortcutPanel": true
@@ -52,6 +53,12 @@ It makes great change for embedded block, limit the height of embedded block. An
 
 `"embeddedBlock": true/false,`
 
+### Title Style
+
+Add special image for each title(h1#,h2##...)
+
+`"title": true/false,`
+
 ## Plugin Adaption
 
 ### keymap(siyuan-plugin-keymap)
@@ -73,6 +80,7 @@ Add color for keymap panel's titles.
         "reference": true,
         "bazaar": true,
         "embeddedBlock": true,
+        "title": true
     },
     "plugins": {
         "shortcutPanel": true
@@ -107,6 +115,12 @@ Add color for keymap panel's titles.
 这个改变严重，限制了嵌入块的高度。并且还可能导致未知的错误。
 
 `"embeddedBlock": true/false,`
+
+### 标题样式
+
+为不同的标题添加独特的图片(h1#,h2##...)
+
+`"title": true/false,`
 
 ## 插件适配
 

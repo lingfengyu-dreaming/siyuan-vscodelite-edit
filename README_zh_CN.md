@@ -4,6 +4,8 @@
 
 使用暗色模式测试，预计明亮模式没有问题。
 
+如果出现显示错误请重新加载思源。
+
 原作者：[TinkMingKing](https://github.com/TinkMingKing)
 
 # 特性
@@ -57,7 +59,8 @@
 
 # 感谢
 
-|                                    内容                                    | 许可证 |
-| :------------------------------------------------------------------------: | :----: |
-| [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)主题 | GNU3.0 |
-|    [Savor](https://github.com/royc01/notion-theme/tree/main)部分js代码     |   无   |
+|                                    内容                                    | 许可证  |
+| :------------------------------------------------------------------------: | :-----: |
+| [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)主题 | GNU3.0  |
+|    [Savor](https://github.com/royc01/notion-theme/tree/main)部分js代码     |   无    |
+| [思源api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md)  | AGPL3.0 |
