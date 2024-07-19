@@ -15,17 +15,20 @@
 - 表格显示效果
 - 适配部分插件
 - 限制嵌入块显示高度（可手动关闭）
+- 配置文件
 
 # 配置
 
-主题使用 `import`导入不同的主题模块，可以通过调整注释修改显示效果。具体说明请查看[链接](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/Configure.md)。可以手动取消部分调整。
-
-我正在考虑使用 `theme.js`实现调整显示效果。这或许会在几个版本后推出。
+目前已经实现使用配置文件设置主题显示效果方法，部分代码参考Savor。  
+具体的设置方法还请参考[配置](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/Configure.md)。  
+由于无法直接打开配置文件或所在目录，所以还请使用“左上角主菜单-工作空间-当前工作空间-打开文件位置-/data/snipptes/vsc_edit.config.json”编辑。
 
 # 更新日志
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.2.0
+  - 使用配置文件来调整主题显示效果，但是尚无法直接打开配置文件编辑。
 - V1.1.4
   - 修复了插件自定义块样式定义的块在嵌入块中的显示问题
 - V1.1.3
@@ -51,3 +54,10 @@
 # 许可证
 
 跟随上级储存库[TinkMingKing/siyuan-themes-vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)使用GNU3.0协议
+
+# 感谢
+
+|                                    内容                                    | 许可证 |
+| :------------------------------------------------------------------------: | :----: |
+| [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)主题 | GNU3.0 |
+|    [Savor](https://github.com/royc01/notion-theme/tree/main)部分js代码     |   无   |

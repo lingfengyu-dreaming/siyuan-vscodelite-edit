@@ -1,4 +1,7 @@
 # ChangeLog
+- V1.2.0
+  - 使用配置文件来调整主题显示效果，但是尚无法直接打开配置文件编辑。
+  - Use configuration file to amend display style, but can't directly open file to edit.
 - V1.1.6
   - Readme fix
 - V1.1.5

@@ -8,24 +8,27 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
 # Features
 
-* Style various heading levels(futher change)
-* Fine-tune layout and color scheme
-* Customize change
-* Adjust code block
-* Table display style
-* Fit some plugins
-* Limit display height of embedded block(can close)
+- Style various heading levels(futher change)
+- Fine-tune layout and color scheme
+- Customize change
+- Adjust code block
+- Table display style
+- Fit some plugins
+- Limit display height of embedded block(can close)
+- Configuration file
 
 # Configure
 
-The theme uses `import` to incorporate different theme modules, and you can adjust the display effect by modifying the comments. For detailed instructions, please check the [Link](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/Configure.md).
-
-I'm thinking use `theme.js` to modify display style. This may release after several versions.
+Now has implemented to used the configuration file to set the theme display effect, some codes refers to Savor.  
+The setting refer to [Configure](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/Configure.md).  
+Because can directly open configuration file or its directory, so please use "main menu-workspace-current workspace-open file path-/data/snippets/vsc_edit.config.json" to edit.
 
 # ChangeLog
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.2.0
+  - Use configuration file to amend display style, but can't directly open file to edit.
 - V1.1.4
   - Fix plugin Custom Block Style's display problem in embedded block
 - V1.1.3
@@ -51,3 +54,10 @@ Or [join QQ channel](https://pd.qq.com/s/7uxvabgbp).
 # LICENSE
 
 Follow origin repository [TinkMingKing/siyuan-themes-vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite) use GNU3.0 LICENSE
+
+# Thanks
+
+|                                   Content                                    | License |
+| :--------------------------------------------------------------------------: | :-----: |
+| [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite) theme | GNU3.0  |
+|    [Savor](https://github.com/royc01/notion-theme/tree/main) some js code    |   无    |

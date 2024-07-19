@@ -1,10 +1,10 @@
 /* 快捷键面板适配子模块 */
 /* 快捷键面板标题h1 */
-.keymap-plugin-container .keymap-plugin-header {
+body[vslite*="scPanel/"] .keymap-plugin-container .keymap-plugin-header {
     color: var(--mk-block-header-h2);
 }
 
 /* 快捷键面板标题h2 */
-.keymap-plugin-container .keymap-plugin-header-2 {
+body[vslite*="scPanel/"] .keymap-plugin-container .keymap-plugin-header-2 {
     color: var(--mk-block-header-h4);
 }
