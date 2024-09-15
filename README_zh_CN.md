@@ -29,13 +29,13 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.2.2
+  - 完成配置面板
 - V1.2.1
   - 为有序列表添加不同缩进层级的编号类型（#4）
   - 为无序列表添加颜色显示
 - V1.2.0
   - 使用配置文件来调整主题显示效果，但是尚无法直接打开配置文件编辑。
-- V1.1.4
-  - 修复了插件自定义块样式定义的块在嵌入块中的显示问题
 
 # 插件适配
 

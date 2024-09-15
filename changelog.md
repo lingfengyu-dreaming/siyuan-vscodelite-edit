@@ -1,4 +1,7 @@
 # ChangeLog
+- V1.2.2
+  - 完成配置面板
+  - Accomplish Configure Panel
 - V1.2.1
   - 为有序列表添加不同缩进层级的编号类型（#4）
   - 为无序列表添加颜色显示

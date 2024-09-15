@@ -29,13 +29,13 @@ Because can directly open configuration file or its directory, so please use "ma
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.2.2
+  - Accomplish Configure Panel
 - V1.2.1
   - Add numbering types with different indentation levels to ordered lists (#4)
   - Add color display to unordered lists
 - V1.2.0
   - Use configuration file to amend display style, but can't directly open file to edit.
-- V1.1.4
-  - Fix plugin Custom Block Style's display problem in embedded block
 
 # Plugin fitness
 
