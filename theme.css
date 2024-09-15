@@ -25,6 +25,8 @@
 @import url(sub/block/reference.css);
 /* 嵌入块样式 */
 @import url(sub/block/embeddedBlock.css);
+/* 主题设置面板 */
+@import url(sub/app/SettingPanel.css);
 
 .protyle-title__input {
   font-size: 2.5em;
