@@ -29,14 +29,13 @@ Because can directly open configuration file or its directory, so please use "ma
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.2.1
+  - Add numbering types with different indentation levels to ordered lists (#4)
+  - Add color display to unordered lists
 - V1.2.0
   - Use configuration file to amend display style, but can't directly open file to edit.
 - V1.1.4
   - Fix plugin Custom Block Style's display problem in embedded block
-- V1.1.3
-  - Fix a display problem of embedded block
-- V1.1.2
-  - Adjust the display style of embedded block, limit the height(can cancel by modify file)
 
 # Plugin fitness
 
@@ -59,8 +58,8 @@ Follow origin repository [TinkMingKing/siyuan-themes-vscodelite](https://github.
 
 # Thanks
 
-|                                   Content                                    | License |
-| :--------------------------------------------------------------------------: | :-----: |
-| [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite) theme | GNU3.0  |
-|    [Savor](https://github.com/royc01/notion-theme/tree/main) some js code    |   无    |
-| [SiYuan api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) | AGPL3.0 |
+|                                  Repository                                  |          Content           | License |
+| :--------------------------------------------------------------------------: | :------------------------: | :-----: |
+|    [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)    |           theme            | GNU3.0  |
+|          [Savor](https://github.com/royc01/notion-theme/tree/main)           | some js code,some CSS code |  None   |
+| [SiYuan api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |          API code          | AGPL3.0 |

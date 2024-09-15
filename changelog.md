@@ -1,4 +1,9 @@
 # ChangeLog
+- V1.2.1
+  - 为有序列表添加不同缩进层级的编号类型（#4）
+  - 为无序列表添加颜色显示
+  - Add numbering types with different indentation levels to ordered lists (#4)
+  - Add color display to unordered lists
 - V1.2.0
   - 使用配置文件来调整主题显示效果，但是尚无法直接打开配置文件编辑。
   - Use configuration file to amend display style, but can't directly open file to edit.

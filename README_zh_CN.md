@@ -29,14 +29,13 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.2.1
+  - 为有序列表添加不同缩进层级的编号类型（#4）
+  - 为无序列表添加颜色显示
 - V1.2.0
   - 使用配置文件来调整主题显示效果，但是尚无法直接打开配置文件编辑。
 - V1.1.4
   - 修复了插件自定义块样式定义的块在嵌入块中的显示问题
-- V1.1.3
-  - 修复嵌入块的显示问题
-- V1.1.2
-  - 调整了嵌入块的显示效果，限制高度（可调整文件关闭）
 
 # 插件适配
 
@@ -59,8 +58,8 @@
 
 # 感谢
 
-|                                    内容                                    | 许可证  |
-| :------------------------------------------------------------------------: | :-----: |
-| [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)主题 | GNU3.0  |
-|    [Savor](https://github.com/royc01/notion-theme/tree/main)部分js代码     |   无    |
-| [思源api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md)  | AGPL3.0 |
+|                                  存储库                                   |          内容           | 许可证  |
+| :-----------------------------------------------------------------------: | :---------------------: | :-----: |
+|  [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)   |          主题           | GNU3.0  |
+|         [Savor](https://github.com/royc01/notion-theme/tree/main)         | 部分js代码，部分CSS代码 |   无    |
+| [思源api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |         API代码         | AGPL3.0 |
