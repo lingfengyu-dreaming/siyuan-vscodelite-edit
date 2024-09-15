@@ -21,9 +21,7 @@
 
 # 配置
 
-目前已经实现使用配置文件设置主题显示效果方法，部分代码参考Savor。  
-具体的设置方法还请参考[配置](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/Configure.md)。  
-由于无法直接打开配置文件或所在目录，所以还请使用“左上角主菜单-工作空间-当前工作空间-打开文件位置-/data/snipptes/vsc_edit.config.json”编辑。
+目前可以使用标题栏上的`VC`按钮编辑配置文件。
 
 # 更新日志
 

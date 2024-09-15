@@ -1,4 +1,7 @@
 # ChangeLog
+- V1.2.3
+  - 快速修复Readme说明
+  - Readme quick fix
 - V1.2.2
   - 完成配置面板
   - Accomplish Configure Panel

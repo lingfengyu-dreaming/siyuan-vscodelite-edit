@@ -21,9 +21,7 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
 # Configure
 
-Now has implemented to used the configuration file to set the theme display effect, some codes refers to Savor.  
-The setting refer to [Configure](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/Configure.md).  
-Because can directly open configuration file or its directory, so please use "main menu-workspace-current workspace-open file path-/data/snippets/vsc_edit.config.json" to edit.
+You can currently edit configuration files using the `VC` button on the title bar.
 
 # ChangeLog
 
