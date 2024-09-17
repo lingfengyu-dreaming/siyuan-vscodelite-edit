@@ -1,9 +1,9 @@
 /* 代码块的语言显示 */
-body[vslite*="cb/"] .code-block .protyle-action .protyle-action--first.protyle-action__language {
+.code-block .protyle-action .protyle-action--first.protyle-action__language {
     margin-left: 3em !important;
 }
 
 /* 代码块左边的行号显示 */
-body[vslite*="cb/"] .code-block .protyle-linenumber__rows {
+.code-block .protyle-linenumber__rows {
     width: 3em;
 }

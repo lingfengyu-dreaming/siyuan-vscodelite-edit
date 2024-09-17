@@ -23,17 +23,22 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
 You can currently edit configuration files using the `VC` button on the title bar.
 
+Affected by the configuration loading method, updated configurations for new versions need to be manually enabled in the configuration panel. This way, previous configuration data will not be lost.
+
 # ChangeLog
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.3.0
+  - Update how themes are loaded (may require multiple restarts or refreshments)
+  - Add styles to the database
+  - Modify the style of reference anchor text
+  - Remove horizontal scroll bars from embedded blocks
 - V1.2.2
   - Accomplish Configure Panel
 - V1.2.1
   - Add numbering types with different indentation levels to ordered lists (#4)
   - Add color display to unordered lists
-- V1.2.0
-  - Use configuration file to amend display style, but can't directly open file to edit.
 
 # Plugin fitness
 

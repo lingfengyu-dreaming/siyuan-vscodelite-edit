@@ -1,4 +1,13 @@
 # ChangeLog
+- V1.3.0
+  - 更新加载主题的方式（可能需要多次重启或刷新）
+  - 添加数据库的样式
+  - 修改引用锚文本的样式
+  - 去除嵌入块的横向滚动条
+  - Update how themes are loaded (may require multiple restarts or refreshments)
+  - Add styles to the database
+  - Modify the style of reference anchor text
+  - Remove horizontal scroll bars from embedded blocks
 - V1.2.3
   - 快速修复Readme说明
   - Readme quick fix

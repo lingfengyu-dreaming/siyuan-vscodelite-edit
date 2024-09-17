@@ -1,20 +1,23 @@
 // 主题默认加载时进行的行为
 // js代码加载后立即执行
-(function () {
-    // 读取配置文件或生成配置文件
-    getSettings();
-    addThemeToolBar();
-    // str = showElementSettings(settings);
-    // var str = "main/load/store/";
-    // console.log(settings);
-    // body.setAttribute("vslite", str);
-    // 使用[vslite*=main/]读取
+(async function () {
+    // 获取自己的css表
+    const cssTable = document.getElementById('themeStyle');
+    console.log(cssTable);
+    if (cssTable) {
+        // 读取配置文件或生成配置文件
+        var labels = await getSettings();
+        // 向css中插入语句
+        addImports(cssTable, labels);
+        // 添加主题菜单
+        addThemeToolBar();
+    } else {
+        _postMessage('error', '加载主题VSCode Lite Edit失败，无法获取当前样式表', 5000);
+    }
 })();
 
 // 更换主题时移除修改内容
 window.destroyTheme = () => {
-    const body = document.getElementsByTagName("body")[0];
-    body.removeAttribute("vslite");
     // 移除主题按钮
     document.querySelector("#vscleToolbar").remove();
 };
@@ -28,7 +31,8 @@ const defaultConf = {
         "reference": true,
         "bazaar": true,
         "embeddedBlock": true,
-        "title": true
+        "title": true,
+        "database": true
     },
     "plugins": {
         "shortcutPanel": true,
@@ -119,20 +123,27 @@ async function _postMessage(type, message, time = null) {
     else await _rqFORSiyuan(url, { "msg": message });
 }
 
+/**
+ * @description 获取设置
+ */
 async function getSettings() {
+    var str;
     // var res = _analyseResponse(_getFile("/data/snippets/vsc_edit.config.json"));
     await _getFile("/data/snippets/vsc_edit.config.json", (v) => {
         if (v == null) {
             v = defaultConf;
             putSettings(v);
         }
-        // console.log(v);
-        // return v;
-        var str = showElementSettings(v);
-        document.getElementsByTagName("body")[0].setAttribute("vslite", str);
+        str = showElementSettings(v);
     });
+    return str;
 }
 
+/**
+ * @description 保存设置
+ * @param settings
+ * @return 
+ */
 async function putSettings(settings) {
     if (settings == null) {
         return;
@@ -141,16 +152,15 @@ async function putSettings(settings) {
 }
 
 /**
- * 得到vscode-lite-edit-Toolbar
- * @returns 
+ * @description 得到vscode-lite-edit-Toolbar
+ * @returns HTMLElement
  */
 function getvscleToolbar() {
     return document.getElementById("vscleToolbar");
 }
 
 /**
- * @Description 创建工具栏的按钮
- * @Feature 
+ * @description 创建工具栏的按钮
  */
 function addThemeToolBar() {
     var vscToolBar = getvscleToolbar();
@@ -177,56 +187,109 @@ function addThemeToolBar() {
 }
 
 /**
- * @Description 根据设置显示不同的主题
- * @Feature 
+ * @description 根据设置显示不同的主题
  * @param settings
  * @return 
  */
 function showElementSettings(settings) {
-    var str = "";
+    var lab = [];
     // 代码块
-    if (settings["theme"]["codeBlock"]) {
-        str += "cb/";
+    if (settings["theme"]["codeBlock"] == true) {
+        lab.push("codeBlock");
     }
     // 引用
-    if (settings["theme"]["reference"]) {
-        str += "ref/";
+    if (settings["theme"]["reference"] == true) {
+        lab.push("reference");
     }
     // 集市
-    if (settings["theme"]["bazaar"]) {
-        str += "bazaar/";
+    if (settings["theme"]["bazaar"] == true) {
+        lab.push("bazaar");
     }
     // 嵌入块
-    if (settings["theme"]["embeddedBlock"]) {
-        str += "embed/";
+    if (settings["theme"]["embeddedBlock"] == true) {
+        lab.push("embeddedBlock");
     }
     // 标题
-    if (settings["theme"]["title"]) {
-        str += "ttH/";
+    if (settings["theme"]["title"] == true) {
+        lab.push("title");
     }
     // 快捷键面板
-    if (settings["plugins"]["shortcutPanel"]) {
-        str += "scPanel/";
+    if (settings["plugins"]["shortcutPanel"] == true) {
+        lab.push("shortcutPanel");
     }
-    return str;
+    // 数据库
+    if (settings["theme"]["database"] == true) {
+        lab.push("database");
+    }
+    return lab;
 }
 
-// 创建一个包含标签和复选框的 HTML 结构
+/**
+ * @description 向css表中插入引用的语句
+ * @param table
+ * @param labels
+ * @return 
+ */
+function addImports(table, labels) {
+    table = table.sheet;
+    var i = 0;
+    labels.forEach(it => {
+        if (it == 'codeBlock') {
+            table.insertRule('@import url(sub/block/codeBlock.css);', 6 + i);
+            console.log('代码块');
+            i += 1;
+        }
+        if (it == 'reference') {
+            table.insertRule('@import url(sub/block/reference.css);', 6 + i);
+            console.log('引用文本');
+            i += 1;
+        }
+        if (it == 'bazaar') {
+            table.insertRule('@import url(sub/app/bazaar.css);', 6 + i);
+            console.log('集市');
+            i += 1;
+        }
+        if (it == 'embeddedBlock') {
+            table.insertRule('@import url(sub/block/embeddedBlock.css);', 6 + i);
+            console.log('嵌入块');
+            i += 1;
+        }
+        if (it == 'title') {
+            table.insertRule('@import url(sub/block/title.css);', 6 + i);
+            console.log('标题');
+            i += 1;
+        }
+        if (it == 'shortcutPanel') {
+            table.insertRule('@import url(sub/plugin/keymapPlugin.css);', 6 + i);
+            console.log('快捷键面板');
+            i += 1;
+        }
+        if (it == 'database') {
+            table.insertRule('@import url(sub/block/database.css);', 6 + i);
+            console.log('数据库');
+            i += 1;
+        }
+    });
+}
+
+/** 
+ * @description 创建一个包含标签和复选框的 HTML 结构
+ */
 async function createSettingsWindow() {
     // 创建设置窗口大框
-    const dialogSetting = document.createElement('div');
+    var dialogSetting = document.createElement('div');
     dialogSetting.setAttribute("data-key", "dialog-setting");
     dialogSetting.classList = "b3-dialog--open";
     document.body.appendChild(dialogSetting);
 
     // 创建一个遮罩层
-    const dialog = document.createElement('div');
+    var dialog = document.createElement('div');
     dialog.classList = "b3-dialog";
     dialog.style.zIndex = '14';
     dialogSetting.appendChild(dialog);
 
     // 可关闭遮罩层
-    const scrim = document.createElement('div');
+    var scrim = document.createElement('div');
     scrim.classList = "b3-dialog__scrim";
     scrim.onclick = () => {
         closeNotSave();
@@ -234,7 +297,7 @@ async function createSettingsWindow() {
     dialog.appendChild(scrim);
 
     // 创建窗口容器
-    const dialogContainer = document.createElement('div');
+    var dialogContainer = document.createElement('div');
     dialogContainer.classList = "b3-dialog__container";
     dialogContainer.style.width = '60vw';
     dialogContainer.style.height = '60vh';
@@ -242,14 +305,14 @@ async function createSettingsWindow() {
     dialog.appendChild(dialogContainer);
 
     // 创建设置窗口
-    const dialogBody = document.createElement('div');
+    var dialogBody = document.createElement('div');
     dialogBody.classList = 'b3-dialog__body';
     dialogBody.setAttribute("vslite", "SettingPanel");
     dialogContainer.appendChild(dialogBody);
 
 
     // 创建标题
-    const title = document.createElement('h2');
+    var title = document.createElement('h2');
     title.textContent = 'VSCode Lite Edit设置';
     title.setAttribute("data-subtype", "h2");
     // title.setAttribute("data-type", "NodeHeading");
@@ -260,14 +323,11 @@ async function createSettingsWindow() {
     async function fetchSettingsArray() {
         let re;
         await _getFile("/data/snippets/vsc_edit.config.json", async (v) => {
-            // console.log(v);
             if (v == null) {
                 v = defaultConf;
             }
-            // return v;
             re = await getSettingArrays(v);
         });
-        // console.log(re);
         return re;
 
         async function getSettingArrays(v) {
@@ -279,9 +339,9 @@ async function createSettingsWindow() {
             }
             // 引用
             if (v["theme"]["reference"] == true) {
-                settings.push({ label: '引用块样式', id: 'referenceBlock', enable: true });
+                settings.push({ label: '引用标签样式', id: 'referenceBlock', enable: true });
             } else {
-                settings.push({ label: '引用块样式', id: 'referenceBlock', enable: false });
+                settings.push({ label: '引用标签样式', id: 'referenceBlock', enable: false });
             }
             // 集市
             if (v["theme"]["bazaar"] == true) {
@@ -291,7 +351,7 @@ async function createSettingsWindow() {
             }
             // 嵌入块
             if (v["theme"]["embeddedBlock"] == true) {
-                settings.push({ label: '嵌入块样式', id: 'embeddedBlock', enable: true });
+                settings.push({ label: '嵌入样式', id: 'embeddedBlock', enable: true });
             } else {
                 settings.push({ label: '嵌入块样式', id: 'embeddedBlock', enable: false });
             }
@@ -300,6 +360,12 @@ async function createSettingsWindow() {
                 settings.push({ label: '标题块样式', id: 'titleBlock', enable: true });
             } else {
                 settings.push({ label: '标题块样式', id: 'titleBlock', enable: false });
+            }
+            // 数据库
+            if (v["theme"]["database"] == true) {
+                settings.push({ label: '数据库样式', id: 'database', enable: true });
+            } else {
+                settings.push({ label: '数据库样式', id: 'database', enable: false });
             }
             // 快捷键面板
             if (v["plugins"]["shortcutPanel"] == true) {
@@ -312,26 +378,25 @@ async function createSettingsWindow() {
     }
 
     // 创建标签和复选框
-    const settings = await fetchSettingsArray();
-    // console.log(settings);
+    var settings = await fetchSettingsArray();
 
     // 遍历数组添加选项
     settings.forEach(setting => {
-        const label = document.createElement('span');
+        var label = document.createElement('span');
         label.textContent = setting.label;
         label.htmlFor = setting.id;
         label.classList = "fn__flex-1";
 
-        const space = document.createElement('span');
+        var space = document.createElement('span');
         space.classList = 'fn__space';
 
-        const checkbox = document.createElement('input');
+        var checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.id = setting.id;
         checkbox.checked = setting.enable;
         checkbox.classList = "b3-switch fn__flex-center vslite_sets";
 
-        const div = document.createElement('label');
+        var div = document.createElement('label');
         div.classList = "fn__flex b3-label";
         div.appendChild(label);
         div.appendChild(space);
@@ -344,8 +409,8 @@ async function createSettingsWindow() {
         saveSt = defaultConf;
         ckb = document.getElementsByClassName("vslite_sets");
         Array.from(ckb).forEach(checkbox => {
-            const id = checkbox.id;
-            const ck = checkbox.checked;
+            var id = checkbox.id;
+            var ck = checkbox.checked;
             if (id == "codeBlock") {
                 saveSt["theme"]["codeBlock"] = ck;
             } else if (id == "referenceBlock") {
@@ -360,42 +425,57 @@ async function createSettingsWindow() {
                 saveSt["theme"]["title"] = ck;
             } else if (id == "scPanelStyle") {
                 saveSt["plugins"]["shortcutPanel"] = ck;
+            } else if (id == "database") {
+                saveSt["theme"]["database"] = ck;
             }
         });
         await putSettings(saveSt);
         _postMessage("ok", "配置保存成功，稍后自动刷新");
-        setTimeout(() => { window.location.reload(); }, 2000);
+        setTimeout(() => { window.location.reload(); }, 200);
         document.body.removeChild(dialogSetting);
     }
     function closeNotSave() {
-        _postMessage("error", "配置未保存");
+        _postMessage("error", "配置未保存", 3000);
         document.body.removeChild(dialogSetting);
     }
 
     // 创建关闭按钮
-    const saveButton = document.createElement('button');
-    saveButton.textContent = '保存';
+    var saveButton = document.createElement('button');
+    saveButton.textContent = '保存并刷新';
     saveButton.classList = "b3-button b3-button--outline fn__flex-center fn__size200";
     saveButton.onclick = () => {
         closeAndSave();
     };
-    const notSaveButton = document.createElement('button');
+    var notSaveButton = document.createElement('button');
     notSaveButton.textContent = '不保存';
     notSaveButton.classList = "b3-button b3-button--outline fn__flex-center fn__size200";
     notSaveButton.onclick = () => {
         closeNotSave();
     };
-    const label = document.createElement('span');
+    var refreshButton = document.createElement('button');
+    refreshButton.textContent = '刷新思源界面';
+    refreshButton.classList = "b3-button b3-button--outline fn__flex-center fn__size200";
+    refreshButton.onclick = () => {
+        window.location.reload();
+    };
+    var label = document.createElement('span');
     label.textContent = "直接关闭不保存哦，必须点击保存按钮";
     label.classList = "fn__flex-1";
-    const space = document.createElement('span');
+    var subLabel = document.createElement('div');
+    subLabel.textContent = "刷新可能无效，重启思源即可生效";
+    subLabel.classList = "b3-label__text";
+    var space = document.createElement('span');
     space.classList = 'fn__space';
-    const div = document.createElement('label');
-    div.classList = "fn__flex b3-label";
-    div.appendChild(label);
-    div.appendChild(space);
-    div.appendChild(saveButton);
-    div.appendChild(space);
-    div.appendChild(notSaveButton);
-    dialogBody.appendChild(div);
+    var div1 = document.createElement('label');
+    div1.classList = "fn__flex b3-label";
+    div1.appendChild(label);
+    label.appendChild(subLabel);
+    div1.appendChild(space.cloneNode(true));
+    div1.appendChild(saveButton);
+    div1.appendChild(space.cloneNode(true));
+    div1.appendChild(notSaveButton);
+    div1.appendChild(space.cloneNode(true));
+    div1.appendChild(refreshButton);
+    dialogBody.appendChild(div1);
+
 }
