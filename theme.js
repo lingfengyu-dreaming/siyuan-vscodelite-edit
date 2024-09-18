@@ -3,7 +3,7 @@
 (async function () {
     // 获取自己的css表
     const cssTable = document.getElementById('themeStyle');
-    console.log(cssTable);
+    // console.log(cssTable);
     if (cssTable) {
         // 读取配置文件或生成配置文件
         var labels = await getSettings();
@@ -25,7 +25,7 @@ window.destroyTheme = () => {
 /**
  * 默认配置文件
  */
-const defaultConf = {
+var defaultConf = {
     "theme": {
         "codeBlock": true,
         "reference": true,
@@ -236,37 +236,30 @@ function addImports(table, labels) {
     labels.forEach(it => {
         if (it == 'codeBlock') {
             table.insertRule('@import url(sub/block/codeBlock.css);', 6 + i);
-            console.log('代码块');
             i += 1;
         }
         if (it == 'reference') {
             table.insertRule('@import url(sub/block/reference.css);', 6 + i);
-            console.log('引用文本');
             i += 1;
         }
         if (it == 'bazaar') {
             table.insertRule('@import url(sub/app/bazaar.css);', 6 + i);
-            console.log('集市');
             i += 1;
         }
         if (it == 'embeddedBlock') {
             table.insertRule('@import url(sub/block/embeddedBlock.css);', 6 + i);
-            console.log('嵌入块');
             i += 1;
         }
         if (it == 'title') {
             table.insertRule('@import url(sub/block/title.css);', 6 + i);
-            console.log('标题');
             i += 1;
         }
         if (it == 'shortcutPanel') {
             table.insertRule('@import url(sub/plugin/keymapPlugin.css);', 6 + i);
-            console.log('快捷键面板');
             i += 1;
         }
         if (it == 'database') {
             table.insertRule('@import url(sub/block/database.css);', 6 + i);
-            console.log('数据库');
             i += 1;
         }
     });

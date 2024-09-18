@@ -29,6 +29,8 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.3.1
+  - 修复切换颜色模式需要重新加载的问题
 - V1.3.0
   - 更新加载主题的方式（可能需要多次重启或刷新）
   - 添加数据库的样式
@@ -36,9 +38,6 @@
   - 去除嵌入块的横向滚动条
 - V1.2.2
   - 完成配置面板
-- V1.2.1
-  - 为有序列表添加不同缩进层级的编号类型（#4）
-  - 为无序列表添加颜色显示
 
 # 插件适配
 

@@ -29,6 +29,8 @@ Affected by the configuration loading method, updated configurations for new ver
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.3.1
+  - Fixed an issue where switching color modes requires reloading
 - V1.3.0
   - Update how themes are loaded (may require multiple restarts or refreshments)
   - Add styles to the database

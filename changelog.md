@@ -1,4 +1,7 @@
 # ChangeLog
+- V1.3.1
+  - 修复切换颜色主题需要重新加载的问题
+  - Fixed an issue where switching color modes requires reloading
 - V1.3.0
   - 更新加载主题的方式（可能需要多次重启或刷新）
   - 添加数据库的样式
