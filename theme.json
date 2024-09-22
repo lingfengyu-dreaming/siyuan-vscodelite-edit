@@ -2,7 +2,7 @@
   "name": "siyuan-vscodelite-edit",
   "author": "Emptylight",
   "url": "https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "displayName": {
     "default": "VSCode Lite Edit"
   },
@@ -23,7 +23,7 @@
     "patreon": "",
     "github": "",
     "custom": [
-      "https://afdian.net/a/tingyuting"
+      "https://afdian.com/a/tingyuting"
     ]
   },
   "modes": [

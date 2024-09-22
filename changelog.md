@@ -1,4 +1,9 @@
 # ChangeLog
+- V1.3.2
+  - 调整列表多层级样式
+  - 修复捐赠链接
+  - Adjust list multi-level styles
+  - Fix donate link
 - V1.3.1
   - 修复切换颜色主题需要重新加载的问题
   - Fixed an issue where switching color modes requires reloading

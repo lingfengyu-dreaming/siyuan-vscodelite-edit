@@ -29,6 +29,8 @@ Affected by the configuration loading method, updated configurations for new ver
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.3.2
+  - Adjust list multi-level styles
 - V1.3.1
   - Fixed an issue where switching color modes requires reloading
 - V1.3.0
@@ -36,11 +38,6 @@ Affected by the configuration loading method, updated configurations for new ver
   - Add styles to the database
   - Modify the style of reference anchor text
   - Remove horizontal scroll bars from embedded blocks
-- V1.2.2
-  - Accomplish Configure Panel
-- V1.2.1
-  - Add numbering types with different indentation levels to ordered lists (#4)
-  - Add color display to unordered lists
 
 # Plugin fitness
 
