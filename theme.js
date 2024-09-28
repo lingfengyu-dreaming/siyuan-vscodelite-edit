@@ -3,6 +3,8 @@
 (async function () {
     // 获取自己的css表
     const cssTable = document.getElementById('themeStyle');
+    await loadGlobalVars();
+    // console.log(defLag);
     // console.log(cssTable);
     if (cssTable) {
         // 读取配置文件或生成配置文件
@@ -12,7 +14,7 @@
         // 添加主题菜单
         addThemeToolBar();
     } else {
-        _postMessage('error', '加载主题VSCode Lite Edit失败，无法获取当前样式表', 5000);
+        _postMessage('error', localMessage["localCssFail"][defLag], 5000);
     }
 })();
 
@@ -23,22 +25,121 @@ window.destroyTheme = () => {
 };
 
 /**
- * 默认配置文件
+ * 加载全局变量
  */
-var defaultConf = {
-    "theme": {
-        "codeBlock": true,
-        "reference": true,
-        "bazaar": true,
-        "embeddedBlock": true,
-        "title": true,
-        "database": true
-    },
-    "plugins": {
-        "shortcutPanel": true,
-        "mathPanel": false
+async function loadGlobalVars() {
+    /**
+     * 默认配置文件
+     */
+    globalThis.defaultConf = {
+        "version": 1,
+        "theme": {
+            "codeBlock": true,
+            "reference": true,
+            "bazaar": true,
+            "embeddedBlock": true,
+            "title": true,
+            "database": true
+        },
+        "plugins": {
+            "shortcutPanel": true,
+            "mathPanel": false
+        }
+    };
+
+    /**
+     * 默认消息本地化
+     */
+    globalThis.localMessage = {
+        "language": {
+            "zh_CN": true,
+            "en_US": true
+        },
+        "loadCssFail": {
+            "zh_CN": "加载主题VSCode Lite Edit失败，无法获取当前样式表",
+            "en_US": "Load theme VSCode Lite Edit failed, can't load current style table"
+        },
+        "confUpdate": {
+            "zh_CN": "主题配置文件需要更新，请点击<code>VC</code>按钮重新保存配置文件",
+            "en_US": "Theme conf file needs update, please click <code>VC</code> button to save the configuration file again"
+        },
+        "confNotSave": {
+            "zh_CN": "配置未保存",
+            "en_US": "Configurations not saved"
+        },
+        "confSave": {
+            "zh_CN": "配置保存成功，稍后自动刷新",
+            "en_US": "Configuration save successed, auto reload later"
+        },
+        "label-aria": {
+            "zh_CN": "VSCode Lite 主题设置",
+            "en_US": "VSCode Lite theme setting"
+        },
+        "settingPanelTitle": {
+            "zh_CN": 'VSCode Lite Edit设置',
+            "en_US": "VSCode Lite Edit Settings"
+        },
+        "saveReload": {
+            "zh_CN": '保存并刷新',
+            "en_US": 'Save and Reload'
+        },
+        "nSave": {
+            "zh_CN": '不保存',
+            "en_US": "NOT Save"
+        },
+        "oReload": {
+            "zh_CN": '刷新思源界面',
+            "en_US": 'Reload Siyuan'
+        },
+        "tip1": {
+            "zh_CN": "直接关闭不保存哦，必须点击保存按钮",
+            "en_US": "Close it directly without saving, you must click the Save button"
+        },
+        "tip2": {
+            "zh_CN": "刷新可能无效，重启思源即可生效",
+            "en_US": "Reload may useless, you can restart Siyuan to enable the changes"
+        },
+        "tip3": {
+            "zh_CN": "点击一行中任意位置",
+            "en_US": "Click anywhere in a row"
+        },
+        "cbitem": {
+            "zh_CN": '代码块样式',
+            "en_US": "code block style"
+        },
+        "refitem": {
+            "zh_CN": '引用标签样式',
+            "en_US": 'reference label style'
+        },
+        "bazitem": {
+            "zh_CN": '集市样式',
+            "en_US": "bazaar style"
+        },
+        "emitem": {
+            "zh_CN": '嵌入块样式',
+            "en_US": "embedded block style"
+        },
+        "tititem": {
+            "zh_CN": '标题块样式',
+            "en_US": "title block style"
+        },
+        "dbitem": {
+            "zh_CN": '数据库样式',
+            "en_US": 'database style'
+        },
+        "scitem": {
+            "zh_CN": '（插件）快捷键面板样式',
+            "en_US": '(plugin) Shortcut key panel style'
+        }
+    };
+
+    // 浏览器获取的默认语言
+    globalThis.defLag = document.documentElement.lang;
+    // console.log(defLag);
+    if (localMessage["language"][defLag] == undefined) {
+        globalThis.defLag = 'en_US';
     }
-};
+}
 
 /** 
  * * 定义需要用到的api
@@ -170,7 +271,7 @@ function addThemeToolBar() {
         vscToolBar = document.createElement("div");
         vscToolBar.id = "vscleToolbar";
         vscToolBar.setAttribute("class", "toolbar__item ariaLabel");
-        vscToolBar.setAttribute("aria-label", "VSClite主题设置");
+        vscToolBar.setAttribute("aria-label", localMessage["label-aria"][defLag]);
         vscToolBar.setAttribute("style", "width=23.5px;height=23.5px");
         if (toolbarVIP == null) {
             windowControls.parentElement.insertBefore(vscToolBar, windowControls);
@@ -191,8 +292,13 @@ function addThemeToolBar() {
  * @param settings
  * @return 
  */
-function showElementSettings(settings) {
+async function showElementSettings(settings) {
     var lab = [];
+    // 检测配置文件的版本
+    if (settings["version"] < defaultConf["version"] || settings["version"] == undefined) {
+        // console.log(settings["version"]);
+        await _postMessage("ok", localMessage["confUpdate"][defLag]);
+    }
     // 代码块
     if (settings["theme"]["codeBlock"] == true) {
         lab.push("codeBlock");
@@ -293,7 +399,7 @@ async function createSettingsWindow() {
     var dialogContainer = document.createElement('div');
     dialogContainer.classList = "b3-dialog__container";
     dialogContainer.style.width = '60vw';
-    dialogContainer.style.height = '60vh';
+    dialogContainer.style.height = '80vh';
     dialogContainer.style.maxWidth = '1280px';
     dialog.appendChild(dialogContainer);
 
@@ -306,7 +412,7 @@ async function createSettingsWindow() {
 
     // 创建标题
     var title = document.createElement('h2');
-    title.textContent = 'VSCode Lite Edit设置';
+    title.textContent = localMessage["settingPanelTitle"][defLag];
     title.setAttribute("data-subtype", "h2");
     // title.setAttribute("data-type", "NodeHeading");
     title.classList = "h2";
@@ -326,45 +432,45 @@ async function createSettingsWindow() {
         async function getSettingArrays(v) {
             let settings = [];
             if (v["theme"]["codeBlock"] == true) {
-                settings.push({ label: '代码块样式', id: 'codeBlock', enable: true });
+                settings.push({ label: localMessage["cbitem"][defLag], id: 'codeBlock', enable: true });
             } else {
-                settings.push({ label: '代码块样式', id: 'codeBlock', enable: false });
+                settings.push({ label: localMessage["cbitem"][defLag], id: 'codeBlock', enable: false });
             }
             // 引用
             if (v["theme"]["reference"] == true) {
-                settings.push({ label: '引用标签样式', id: 'referenceBlock', enable: true });
+                settings.push({ label: localMessage["refitem"][defLag], id: 'referenceBlock', enable: true });
             } else {
-                settings.push({ label: '引用标签样式', id: 'referenceBlock', enable: false });
+                settings.push({ label: localMessage["refitem"][defLag], id: 'referenceBlock', enable: false });
             }
             // 集市
             if (v["theme"]["bazaar"] == true) {
-                settings.push({ label: '集市样式', id: 'bazaarStyle', enable: true });
+                settings.push({ label: localMessage["bazitem"][defLag], id: 'bazaarStyle', enable: true });
             } else {
-                settings.push({ label: '集市样式', id: 'bazaarStyle', enable: false });
+                settings.push({ label: localMessage["bazitem"][defLag], id: 'bazaarStyle', enable: false });
             }
             // 嵌入块
             if (v["theme"]["embeddedBlock"] == true) {
-                settings.push({ label: '嵌入样式', id: 'embeddedBlock', enable: true });
+                settings.push({ label: localMessage["emitem"][defLag], id: 'embeddedBlock', enable: true });
             } else {
-                settings.push({ label: '嵌入块样式', id: 'embeddedBlock', enable: false });
+                settings.push({ label: localMessage["emitem"][defLag], id: 'embeddedBlock', enable: false });
             }
             // 标题
             if (v["theme"]["title"] == true) {
-                settings.push({ label: '标题块样式', id: 'titleBlock', enable: true });
+                settings.push({ label: localMessage["tititem"][defLag], id: 'titleBlock', enable: true });
             } else {
-                settings.push({ label: '标题块样式', id: 'titleBlock', enable: false });
+                settings.push({ label: localMessage["tititem"][defLag], id: 'titleBlock', enable: false });
             }
             // 数据库
             if (v["theme"]["database"] == true) {
-                settings.push({ label: '数据库样式', id: 'database', enable: true });
+                settings.push({ label: localMessage["dbitem"][defLag], id: 'database', enable: true });
             } else {
-                settings.push({ label: '数据库样式', id: 'database', enable: false });
+                settings.push({ label: localMessage["dbitem"][defLag], id: 'database', enable: false });
             }
             // 快捷键面板
             if (v["plugins"]["shortcutPanel"] == true) {
-                settings.push({ label: '（插件）快捷键面板样式', id: 'scPanelStyle', enable: true });
+                settings.push({ label: localMessage["scitem"][defLag], id: 'scPanelStyle', enable: true });
             } else {
-                settings.push({ label: '（插件）快捷键面板样式', id: 'scPanelStyle', enable: false });
+                settings.push({ label: localMessage["scitem"][defLag], id: 'scPanelStyle', enable: false });
             }
             return settings;
         }
@@ -422,53 +528,64 @@ async function createSettingsWindow() {
                 saveSt["theme"]["database"] = ck;
             }
         });
+        // 修改配置文件版本
+        saveSt["version"] = defaultConf["version"];
         await putSettings(saveSt);
-        _postMessage("ok", "配置保存成功，稍后自动刷新");
+        _postMessage("ok", localMessage["confSave"][defLag]);
         setTimeout(() => { window.location.reload(); }, 200);
         document.body.removeChild(dialogSetting);
     }
     function closeNotSave() {
-        _postMessage("error", "配置未保存", 3000);
+        _postMessage("error", localMessage["confNotSave"][defLag], 3000);
         document.body.removeChild(dialogSetting);
     }
 
     // 创建关闭按钮
     var saveButton = document.createElement('button');
-    saveButton.textContent = '保存并刷新';
+    saveButton.textContent = localMessage["saveReload"][defLag];
     saveButton.classList = "b3-button b3-button--outline fn__flex-center fn__size200";
     saveButton.onclick = () => {
         closeAndSave();
     };
     var notSaveButton = document.createElement('button');
-    notSaveButton.textContent = '不保存';
+    notSaveButton.textContent = localMessage["nSave"][defLag];
     notSaveButton.classList = "b3-button b3-button--outline fn__flex-center fn__size200";
     notSaveButton.onclick = () => {
         closeNotSave();
     };
     var refreshButton = document.createElement('button');
-    refreshButton.textContent = '刷新思源界面';
+    refreshButton.textContent = localMessage['oReload'][defLag];
     refreshButton.classList = "b3-button b3-button--outline fn__flex-center fn__size200";
     refreshButton.onclick = () => {
         window.location.reload();
     };
-    var label = document.createElement('span');
-    label.textContent = "直接关闭不保存哦，必须点击保存按钮";
-    label.classList = "fn__flex-1";
-    var subLabel = document.createElement('div');
-    subLabel.textContent = "刷新可能无效，重启思源即可生效";
-    subLabel.classList = "b3-label__text";
+    var label1 = document.createElement('span');
+    label1.textContent = localMessage["tip1"][defLag];
+    label1.classList = "fn__flex-1";
+    var label2 = document.createElement('span');
+    label2.textContent = localMessage["tip2"][defLag];
+    label2.classList = "fn__flex-1";
+    var label3 = document.createElement('span');
+    label3.textContent = localMessage["tip3"][defLag];
+    label3.classList = "fn__flex-1";
     var space = document.createElement('span');
     space.classList = 'fn__space';
     var div1 = document.createElement('label');
     div1.classList = "fn__flex b3-label";
-    div1.appendChild(label);
-    label.appendChild(subLabel);
+    div1.appendChild(label1);
     div1.appendChild(space.cloneNode(true));
     div1.appendChild(saveButton);
-    div1.appendChild(space.cloneNode(true));
-    div1.appendChild(notSaveButton);
-    div1.appendChild(space.cloneNode(true));
-    div1.appendChild(refreshButton);
     dialogBody.appendChild(div1);
-
+    var div2 = document.createElement('label');
+    div2.classList = "fn__flex b3-label";
+    div2.appendChild(label2);
+    div2.appendChild(space.cloneNode(true));
+    div2.appendChild(notSaveButton);
+    dialogBody.appendChild(div2);
+    var div3 = document.createElement('label');
+    div3.classList = "fn__flex b3-label";
+    div3.appendChild(label3);
+    div3.appendChild(space.cloneNode(true));
+    div3.appendChild(refreshButton);
+    dialogBody.appendChild(div3);
 }

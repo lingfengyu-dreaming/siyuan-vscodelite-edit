@@ -1,4 +1,7 @@
 # ChangeLog
+- V1.3.3
+  - 新增本地化适配
+  - New localized adaptation
 - V1.3.2
   - 调整列表多层级样式
   - 修复捐赠链接
