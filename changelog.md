@@ -1,4 +1,7 @@
 # ChangeLog
+- V1.3.4
+  - 新增文档树和大纲缩进（可能和插件冲突）
+  - Add document tree and outline indentation (may conflict with plugin)
 - V1.3.3
   - 新增本地化适配
   - New localized adaptation

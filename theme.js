@@ -29,17 +29,18 @@ window.destroyTheme = () => {
  */
 async function loadGlobalVars() {
     /**
-     * 默认配置文件
+     * ! 默认配置文件
      */
     globalThis.defaultConf = {
-        "version": 1,
+        "version": 2,
         "theme": {
             "codeBlock": true,
             "reference": true,
             "bazaar": true,
             "embeddedBlock": true,
             "title": true,
-            "database": true
+            "database": true,
+            "doctree": true
         },
         "plugins": {
             "shortcutPanel": true,
@@ -48,7 +49,7 @@ async function loadGlobalVars() {
     };
 
     /**
-     * 默认消息本地化
+     * ! 默认消息本地化
      */
     globalThis.localMessage = {
         "language": {
@@ -130,6 +131,10 @@ async function loadGlobalVars() {
         "scitem": {
             "zh_CN": '（插件）快捷键面板样式',
             "en_US": '(plugin) Shortcut key panel style'
+        },
+        "ftitem": {
+            "zh_CN": "文档树和大纲样式",
+            "en_US": 'Doc tree and Outline style'
         }
     };
 
@@ -299,6 +304,7 @@ async function showElementSettings(settings) {
         // console.log(settings["version"]);
         await _postMessage("ok", localMessage["confUpdate"][defLag]);
     }
+    // ! 从设置中获取启用的设置项
     // 代码块
     if (settings["theme"]["codeBlock"] == true) {
         lab.push("codeBlock");
@@ -327,6 +333,10 @@ async function showElementSettings(settings) {
     if (settings["theme"]["database"] == true) {
         lab.push("database");
     }
+    // 文档树和大纲
+    if (settings["theme"]["doctree"] == true) {
+        lab.push("doctree");
+    }
     return lab;
 }
 
@@ -339,6 +349,7 @@ async function showElementSettings(settings) {
 function addImports(table, labels) {
     table = table.sheet;
     var i = 0;
+    // ! 向css表中插入引用的语句
     labels.forEach(it => {
         if (it == 'codeBlock') {
             table.insertRule('@import url(sub/block/codeBlock.css);', 6 + i);
@@ -366,6 +377,10 @@ function addImports(table, labels) {
         }
         if (it == 'database') {
             table.insertRule('@import url(sub/block/database.css);', 6 + i);
+            i += 1;
+        }
+        if (it == 'doctree') {
+            table.insertRule('@import url(sub/app/filetree.css);', 6 + i);
             i += 1;
         }
     });
@@ -431,6 +446,20 @@ async function createSettingsWindow() {
 
         async function getSettingArrays(v) {
             let settings = [];
+            // ! 设置页添加设置选项
+            // 标题
+            if (v["theme"]["title"] == true) {
+                settings.push({ label: localMessage["tititem"][defLag], id: 'titleBlock', enable: true });
+            } else {
+                settings.push({ label: localMessage["tititem"][defLag], id: 'titleBlock', enable: false });
+            }
+            // 文档树和大纲
+            if (v["theme"]["doctree"] == true) {
+                settings.push({ label: localMessage["ftitem"][defLag], id: 'doctree', enable: true });
+            } else {
+                settings.push({ label: localMessage["ftitem"][defLag], id: 'doctree', enable: false });
+            }
+            // 代码块
             if (v["theme"]["codeBlock"] == true) {
                 settings.push({ label: localMessage["cbitem"][defLag], id: 'codeBlock', enable: true });
             } else {
@@ -453,12 +482,6 @@ async function createSettingsWindow() {
                 settings.push({ label: localMessage["emitem"][defLag], id: 'embeddedBlock', enable: true });
             } else {
                 settings.push({ label: localMessage["emitem"][defLag], id: 'embeddedBlock', enable: false });
-            }
-            // 标题
-            if (v["theme"]["title"] == true) {
-                settings.push({ label: localMessage["tititem"][defLag], id: 'titleBlock', enable: true });
-            } else {
-                settings.push({ label: localMessage["tititem"][defLag], id: 'titleBlock', enable: false });
             }
             // 数据库
             if (v["theme"]["database"] == true) {
@@ -510,6 +533,7 @@ async function createSettingsWindow() {
         Array.from(ckb).forEach(checkbox => {
             var id = checkbox.id;
             var ck = checkbox.checked;
+            // ! 保存设置到json
             if (id == "codeBlock") {
                 saveSt["theme"]["codeBlock"] = ck;
             } else if (id == "referenceBlock") {
@@ -526,6 +550,8 @@ async function createSettingsWindow() {
                 saveSt["plugins"]["shortcutPanel"] = ck;
             } else if (id == "database") {
                 saveSt["theme"]["database"] = ck;
+            } else if (id == "doctree") {
+                saveSt["theme"]["doctree"] = ck;
             }
         });
         // 修改配置文件版本

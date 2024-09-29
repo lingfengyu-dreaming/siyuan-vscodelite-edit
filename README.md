@@ -17,24 +17,26 @@ Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 - Table display style
 - Fit some plugins
 - Limit display height of embedded block(can close)
-- Configuration file
+- Multi-level serial number style
+- Configuration edit page
+- doc tree and outline indentation
 
 # Configure
 
 You can currently edit configuration files using the `VC` button on the title bar.
 
-Affected by the configuration loading method, updated configurations for new versions need to be manually enabled in the configuration panel. This way, previous configuration data will not be lost.
+Limited by the configuration loading method, updated configurations for new versions need to be manually enabled in the configuration panel. This way, previous configuration data will not be lost.
 
 # ChangeLog
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.3.4
+  - Add document tree and outline indentation (may conflict with plugin)
 - V1.3.3
   - New localized adaptation
 - V1.3.2
   - Adjust list multi-level styles
-- V1.3.1
-  - Fixed an issue where switching color modes requires reloading
 
 # Plugin fitness
 
