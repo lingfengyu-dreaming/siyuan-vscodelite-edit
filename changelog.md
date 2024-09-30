@@ -1,4 +1,7 @@
 # ChangeLog
+- V1.3.5
+  - 更新说明文档
+  - Update readme doc
 - V1.3.4
   - 新增文档树和大纲缩进（可能和插件冲突）
   - Add document tree and outline indentation (may conflict with plugin)

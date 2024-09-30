@@ -1,5 +1,9 @@
 # VSCode Lite Edit
 
+![GitHub Release Date](https://img.shields.io/github/release-date/lingfengyu-dreaming/siyuan-vscodelite-edit?display_date=published_at)
+![GitHub Release](https://img.shields.io/github/v/release/lingfengyu-dreaming/siyuan-vscodelite-edit)
+![GitHub Repo stars](https://img.shields.io/github/stars/lingfengyu-dreaming/siyuan-vscodelite-edit)
+
 A further beautification of the interface from VSCode Lite.
 
 Using dark mode for testing, expected no problems with light mode.
@@ -59,8 +63,9 @@ Follow origin repository [TinkMingKing/siyuan-themes-vscodelite](https://github.
 
 # Thanks
 
-|                                  Repository                                  |          Content           | License |
-| :--------------------------------------------------------------------------: | :------------------------: | :-----: |
-|    [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)    |           theme            | GNU3.0  |
-|          [Savor](https://github.com/royc01/notion-theme/tree/main)           | some js code,some CSS code |  None   |
-| [SiYuan api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |          API code          | AGPL3.0 |
+|                                  Repository                                  |                     Author                      |                         Content                          | License |
+| :--------------------------------------------------------------------------: | :---------------------------------------------: | :------------------------------------------------------: | :-----: |
+|    [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)    | [TinkMingKing](https://github.com/TinkMingKing) |                          theme                           | GNU3.0  |
+|          [Savor](https://github.com/royc01/notion-theme/tree/main)           |       [royc01](https://github.com/royc01)       | Connect Siyuan API code (js)<br>list-level effects (css) |  None   |
+| [SiYuan api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |                SiYuan Developers                |                         API code                         | AGPL3.0 |
+|      [doctree modify](https://github.com/zxkmm/siyuan_doctree_compress)      |        [zxkmm](https://github.com/zxkmm)        |            Document tree beautification ideas            |   MIT   |

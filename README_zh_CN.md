@@ -1,5 +1,10 @@
 # VSCode Lite Edit
 
+![GitHub Release Date](https://img.shields.io/github/release-date/lingfengyu-dreaming/siyuan-vscodelite-edit?display_date=published_at)
+![GitHub Release](https://img.shields.io/github/v/release/lingfengyu-dreaming/siyuan-vscodelite-edit)
+![GitHub Repo stars](https://img.shields.io/github/stars/lingfengyu-dreaming/siyuan-vscodelite-edit)
+
+
 从VSCode Lite脱胎而来，进一步美化界面。
 
 使用暗色模式测试，预计明亮模式没有问题。
@@ -59,8 +64,9 @@
 
 # 感谢
 
-|                                  存储库                                   |          内容           | 许可证  |
-| :-----------------------------------------------------------------------: | :---------------------: | :-----: |
-|  [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)   |          主题           | GNU3.0  |
-|         [Savor](https://github.com/royc01/notion-theme/tree/main)         | 部分js代码，部分CSS代码 |   无    |
-| [思源api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |         API代码         | AGPL3.0 |
+|                                  存储库                                   |                      作者                       |                   内容                   | 许可证  |
+| :-----------------------------------------------------------------------: | :---------------------------------------------: | :--------------------------------------: | :-----: |
+|  [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)   | [TinkMingKing](https://github.com/TinkMingKing) |                  原主题                  | GNU3.0  |
+|         [Savor](https://github.com/royc01/notion-theme/tree/main)         |       [royc01](https://github.com/royc01)       | 连接思源API代码(js)<br>列表层级效果(css) |   无    |
+| [思源api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |                   思源开发者                    |                 API代码                  | AGPL3.0 |
+|     [文档树自定义](https://github.com/zxkmm/siyuan_doctree_compress)      |        [zxkmm](https://github.com/zxkmm)        |              文档树美化思路              |   MIT   |
