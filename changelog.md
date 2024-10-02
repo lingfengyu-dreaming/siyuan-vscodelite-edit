@@ -1,7 +1,13 @@
 # ChangeLog
 - V1.3.5
   - 更新说明文档
+  - 调整文档树部分样式
+  - 尝试适配自定义背景情况（dock）
+  - 尝试禁用移动端编辑器滚动条
   - Update readme doc
+  - Adjust doc tree styles partly
+  - Try to adapt customized background(dock)
+  - Try to hide editor scroll bar on mobile app
 - V1.3.4
   - 新增文档树和大纲缩进（可能和插件冲突）
   - Add document tree and outline indentation (may conflict with plugin)

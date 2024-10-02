@@ -38,13 +38,12 @@ Limited by the configuration loading method, updated configurations for new vers
 - V1.3.5
   - Update Readme doc
   - Adjust doc tree styles partly
-  - try to adapt customized background(dock)
+  - Try to adapt customized background(dock)
+  - Try to hide editor scroll bar on mobile app
 - V1.3.4
   - Add document tree and outline indentation (may conflict with plugin)
 - V1.3.3
   - New localized adaptation
-- V1.3.2
-  - Adjust list multi-level styles
 
 # Plugin fitness
 

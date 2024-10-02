@@ -24,8 +24,8 @@
 window.destroyTheme = () => {
     // 移除主题按钮
     document.querySelector("#vscleToolbar").remove();
-    // 移除背景插件适配
-    document.getElementsByTagName("body")[0].classList.remove('bgenable');
+    // 移除body特殊适配语句
+    document.body.classList.remove('bgenable');
     // 移除计时器
     timer.forEach(e => {
         clearTimeout(e);
@@ -641,7 +641,7 @@ function addFixedAttribute() {
         var bglayer = document.getElementById("bglayer");
         if (bglayer) {
             var style = window.getComputedStyle(bglayer);
-            var body = document.getElementsByTagName('body')[0];
+            var body = document.body;
             if (style.display != 'none' && !body.classList.contains('bgenable')) {
                 body.classList.add('bgenable');
             } else if (style.display == 'none' && body.classList.contains('bgenable')) {
@@ -654,5 +654,7 @@ function addFixedAttribute() {
         }
     }
     // 运行
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
     bg(0);
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }

@@ -13,16 +13,6 @@ async function _getReadablePath(noteBook, path) {
     });
 }
 
-/**简单判断目前思源是否是pc窗口模式 */
-function isPcWindow() {
-    return document.body.classList.contains("body--window");
-}
-
-/**简单判断目前思源是否是手机模式 */
-function isPhone() {
-    return document.getElementById("editor");
-}
-
 /**
  * 向指定父级创建追加一个子元素，并可选添加ID,
  * @param {Element} fatherElement 
@@ -93,4 +83,17 @@ async function _analyseResponse(response) {
  */
 function getSiYuanToolbar() {
     return document.getElementById("toolbar");
+}
+
+/**简单判断目前思源是否是pc窗口模式 */
+function isPcWindow() {
+    var tag = document.body.classList.contains("body--window");
+    if (tag) return tag;
+    tag = document.body.classList.contains("body--win32");
+    return tag;
+}
+
+/**简单判断目前思源是否是手机模式 */
+function isPhone() {
+    return document.getElementById("editor");
 }

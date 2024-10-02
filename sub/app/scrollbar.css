@@ -37,3 +37,8 @@
 .protyle-content::-webkit-scrollbar-thumb:active {
     background: var(--mk-protyle-content-scrollbar-thumb--active);
 }
+
+/* 移除移动端编辑器滚动条 */
+#editor .protyle-content::-webkit-scrollbar {
+    display: none;
+}
