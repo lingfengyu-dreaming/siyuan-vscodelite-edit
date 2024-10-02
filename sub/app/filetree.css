@@ -41,6 +41,14 @@
     margin: unset;
 }
 
+.sy__file > .block__icons {
+    border-bottom: 1px solid var(--mk-filetree-scrollbar-thumb);
+}
+
+.sy__file > .b3-list {
+    border-top: 1px solid var(--mk-filetree-scrollbar-thumb);
+}
+
 /* 第1级缩进 */
 .sy__file ul.b3-list--background > ul > li.b3-list-item > span.b3-list-item__toggle {
     padding-left: 12px !important;

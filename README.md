@@ -35,6 +35,10 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.3.5
+  - Update Readme doc
+  - Adjust doc tree styles partly
+  - try to adapt customized background(dock)
 - V1.3.4
   - Add document tree and outline indentation (may conflict with plugin)
 - V1.3.3
@@ -44,10 +48,11 @@ Limited by the configuration loading method, updated configurations for new vers
 
 # Plugin fitness
 
-The plugins has fit now:
+Currently adapted plug-ins are::
 
 - Shortcut key panel(Category title color)
 - Custom block style(fix display problem in embedded block caused by theme)
+- Background Cover(in progress, dark mode works better)
 
 # Feedback
 

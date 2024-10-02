@@ -36,6 +36,10 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.3.5
+  - 更新说明文档
+  - 调整文档树部分样式
+  - 尝试适配自定义背景情况（dock）
 - V1.3.4
   - 新增文档树和大纲缩进（可能和插件冲突）
 - V1.3.3
@@ -49,6 +53,7 @@
 
 - 快捷键面板（分类标题颜色）
 - 自定义块样式（修复由主题造成的嵌入块中自定义块显示问题）
+- 替换背景图片（进行中，暗色效果更好）
 
 # 反馈
 

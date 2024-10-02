@@ -13,6 +13,8 @@
         addImports(cssTable, labels);
         // 添加主题菜单
         addThemeToolBar();
+        // 添加固定属性
+        addFixedAttribute();
     } else {
         _postMessage('error', localMessage["localCssFail"][defLag], 5000);
     }
@@ -22,6 +24,13 @@
 window.destroyTheme = () => {
     // 移除主题按钮
     document.querySelector("#vscleToolbar").remove();
+    // 移除背景插件适配
+    document.getElementsByTagName("body")[0].classList.remove('bgenable');
+    // 移除计时器
+    timer.forEach(e => {
+        clearTimeout(e);
+        timer.pop(e);
+    });
 };
 
 /**
@@ -144,6 +153,12 @@ async function loadGlobalVars() {
     if (localMessage["language"][defLag] == undefined) {
         globalThis.defLag = 'en_US';
     }
+
+    // 所有用到的计时器
+    globalThis.timer = [
+        // 背景插件加载后可能禁用，使用计时器定时刷新背景插件状态
+        bgTimer = null
+    ];
 }
 
 /** 
@@ -614,4 +629,30 @@ async function createSettingsWindow() {
     div3.appendChild(space.cloneNode(true));
     div3.appendChild(refreshButton);
     dialogBody.appendChild(div3);
+}
+
+/**
+ * @description 添加固定属性
+ * ! 添加固定属性
+ */
+function addFixedAttribute() {
+    function bg(times) {
+        // 背景自定义插件，部分情况下插件加载缓慢可重复检测一次
+        var bglayer = document.getElementById("bglayer");
+        if (bglayer) {
+            var style = window.getComputedStyle(bglayer);
+            var body = document.getElementsByTagName('body')[0];
+            if (style.display != 'none' && !body.classList.contains('bgenable')) {
+                body.classList.add('bgenable');
+            } else if (style.display == 'none' && body.classList.contains('bgenable')) {
+                body.classList.remove('bgenable');
+            }
+            timer.bgTimer = setTimeout(bg, 300000, times + 1);
+        } else if (times <= 0) {
+            // 5秒后重新检测一遍
+            setTimeout(bg, 5000, times + 1);
+        }
+    }
+    // 运行
+    bg(0);
 }

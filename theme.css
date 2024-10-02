@@ -7,6 +7,8 @@
 /* 插件适配，不用的就注释掉 */
 /* 快捷键面板 */
 /* @import url(sub/plugin/keymapPlugin.css); */
+/* 背景插件适配 */
+@import url(sub/plugin/backgroundPlugin.css);
 
 /* 正式内容 */
 /* 应用程序底部状态栏 */
@@ -15,6 +17,10 @@
 @import url(sub/app/toolbarHead.css);
 /* 应用程序页面标签 */
 @import url(sub/app/tabBar.css);
+/* 应用程序dock栏 */
+@import url(sub/app/dock.css);
+/* 到处的滚动条 */
+@import url(sub/app/scrollbar.css);
 /* 文档树和大纲 */
 /* @import url(sub/app/filetree.css); */
 /* 标题标签h123456 */
@@ -83,97 +89,13 @@
     display: none;
 } */
 
-/*隐藏块滚动条*/
-.protyle-scroll {
-  display: none;
-}
-
-/* 滚动条 */
-.protyle .protyle-scroll {
-  width: 10px;
-}
-
-.protyle-content:hover::-webkit-scrollbar-thumb {
-  opacity: 1;
-  background: var(--mk-protyle-content-scrollbar-thumb);
-}
-
-.protyle-content::-webkit-scrollbar {
-  width: 15px;
-}
-
-.protyle-content::-webkit-scrollbar-track {
-  border: 1px solid var(--mk-protyle-content-scrollbar-track-border);
-}
-
-.protyle-content::-webkit-scrollbar-thumb {
-  opacity: 0;
-  border-radius: 0;
-  background: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms, opacity 1s cubic-bezier(0, 0, 0.2, 1) 0ms;
-  transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0ms, opacity 1s cubic-bezier(0, 0, 0.2, 1) 0ms;
-  box-shadow: none;
-}
-
-.protyle-content::-webkit-scrollbar-thumb:hover {
-  background: var(--mk-protyle-content-scrollbar-thumb--hover);
-}
-
-.protyle-content::-webkit-scrollbar-thumb:active {
-  background: var(--mk-protyle-content-scrollbar-thumb--active);
-}
-
 .layout__resize--lr::after {
   visibility: hidden;
-}
-
-.dock#dockLeft {
-  border-right: none;
-}
-
-.dock {
-  background: var(--mk-dock-background);
-}
-
-.dock#dockRight {
-  border-left: none;
-}
-
-.dock#dockBottom {
-  border-bottom: none;
 }
 
 .b3-list--background .b3-list-item:hover:not(.b3-list-item--focus),
 .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
   background-color: var(--mk-filetree-list--hover);
-}
-
-.dock__item {
-  justify-content: center;
-  border-radius: unset;
-  margin: 5px;
-  color: var(--mk-dock-item-color);
-}
-
-.dock__item svg {
-  height: 20px;
-  width: 20px;
-}
-
-.dock__item:hover,
-.dock__item--active {
-  background-color: unset;
-}
-
-.dock__item:hover svg,
-.dock__item--active svg {
-  color: var(--mk-dock-item-svg-color--hover);
-}
-
-body.body--blur .dock__item--activefocus,
-.dock__item--activefocus {
-  color: unset !important;
-  background-color: unset !important;
 }
 
 .block__logo svg {

@@ -1,0 +1,12 @@
+body.bgenable {
+    background-color: transparent;
+}
+
+body.bgenable .dock {
+    background: var(--lite-dock-background);
+}
+
+body.bgenable .dock__item:hover svg,
+body.bgenable .dock__item--active svg {
+    color: var(--lite-dock-item-color);
+}
