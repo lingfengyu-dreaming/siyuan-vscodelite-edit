@@ -1,9 +1,11 @@
 name: 'Feature Request'
 description: '添加一个功能/Suggest an idea for this project'
-title: "[FR] 在这里描述你的功能/Describe your feature here",
+
+title: "[FR] 在这里描述你的功能/Describe your feature here"
 labels: ["enhancement"]
 assignees:
   - lingfengyu-dreaming
+  
 body:
   - type: 'checkboxes'
     id: related-problem-check
