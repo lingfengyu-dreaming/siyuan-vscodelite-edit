@@ -13,6 +13,8 @@
 
 原作者：[TinkMingKing](https://github.com/TinkMingKing)
 
+使用说明：[链滴](https://ld246.com/article/1728034766990)
+
 # 特性
 
 - 各级标题样式（进一步调整）
@@ -36,6 +38,8 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.1
+  - 调整背景透明时数据库和嵌入块的背景
 - V1.4.0
   - 适配替换背景图片插件（需要关闭插件设置中前景透明度）
 - V1.3.5
@@ -43,8 +47,6 @@
   - 调整文档树部分样式
   - 尝试适配自定义背景情况（dock）
   - 尝试禁用移动端编辑器滚动条
-- V1.3.4
-  - 新增文档树和大纲缩进（可能和插件冲突）
 
 # 插件适配
 

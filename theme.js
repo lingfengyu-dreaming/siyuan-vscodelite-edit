@@ -153,6 +153,10 @@ async function loadGlobalVars() {
             "zh_CN": '嵌入块样式',
             "en_US": "embedded block style"
         },
+        "emdesc": {
+            "zh_CN": "限制嵌入块高度",
+            "en_US": "Limit the height of embedded block"
+        },
         "tititem": {
             "zh_CN": '标题块样式',
             "en_US": "title block style"
@@ -174,8 +178,8 @@ async function loadGlobalVars() {
             "en_US": "(plugin) Background cover adaption"
         },
         "bgdesc": {
-            "zh_CN": "需要打开“替换背景图片”插件设置将“前景透明”调到0哦",
-            "en_US": "You need to open the setting of \"Background Cover\" plugin and set the \"Opacity of foreground\" to 0"
+            "zh_CN": "需要打开“替换背景图片”插件设置将“前景透明”调到0哦!建议启用插件的“背景虚化”功能!",
+            "en_US": "You need to open the setting of \"Background Cover\" plugin and set the \"Opacity of foreground\" to 0!Suggest turn on the \"Blurring\" setting of the plugin!"
         }
     };
 
@@ -538,9 +542,9 @@ async function createSettingsWindow() {
             }
             // 嵌入块
             if (v["theme"]["embeddedBlock"] == true) {
-                settings.push({ label: localMessage["emitem"][defLag], id: 'embeddedBlock', enable: true });
+                settings.push({ label: localMessage["emitem"][defLag], description: localMessage["emdesc"][defLag], id: 'embeddedBlock', enable: true });
             } else {
-                settings.push({ label: localMessage["emitem"][defLag], id: 'embeddedBlock', enable: false });
+                settings.push({ label: localMessage["emitem"][defLag], description: localMessage["emdesc"][defLag], id: 'embeddedBlock', enable: false });
             }
             // 数据库
             if (v["theme"]["database"] == true) {

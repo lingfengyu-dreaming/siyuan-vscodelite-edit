@@ -48,6 +48,17 @@ body.bgenable .dock__item--active svg {
     background-color: var(--lite-modify-surface__breadcrumb);
 }
 
+/* 数据库背景修复 */
+.av[data-av-type=table] .av__header,
+.av[data-av-type=table] .av__scroll {
+    background: var(--b3-theme-background);
+}
+
+/* 嵌入块背景调整 */
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+    background-color: var(--lite-modify-surface);
+}
+
 :root[data-theme-mode=light] body.bgenable {
     --lite-status-background: #39cebbc0;
     --lite-modify-surface: #f6f6f640;

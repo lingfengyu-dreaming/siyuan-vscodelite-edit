@@ -12,6 +12,8 @@ If display errors appear, reload SiYuan please.
 
 Origin author: [TinkMingKing](https://github.com/TinkMingKing)
 
+Instruction for use: [liandi](https://ld246.com/article/1728034766990)
+
 # Features
 
 - Style various heading levels(futher change)
@@ -35,6 +37,8 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.1
+  - Adjust the background of database and embedded blocks when the background is transparent
 - V1.4.0
   - Adapt Background Cover plugin (need to turn off foreground transparency in plugin settings)
 - V1.3.5
@@ -42,8 +46,6 @@ Limited by the configuration loading method, updated configurations for new vers
   - Adjust doc tree styles partly
   - Try to adapt customized background(dock)
   - Try to hide editor scroll bar on mobile app
-- V1.3.4
-  - Add document tree and outline indentation (may conflict with plugin)
 
 # Plugin fitness
 

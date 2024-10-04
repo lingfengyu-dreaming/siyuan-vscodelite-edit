@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.1
+  - 调整背景透明时数据库和嵌入块的背景
+  - Adjust the background of database and embedded blocks when the background is transparent
 - V1.4.0
   - 适配替换背景图片插件（需要关闭插件设置中前景透明度）
   - Adapt Background Cover plugin (need to turn off foreground transparency in plugin settings)
