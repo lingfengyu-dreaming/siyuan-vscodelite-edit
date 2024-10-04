@@ -12,9 +12,9 @@ body:
     attributes:
       label: 'Is your feature request related to a problem?/你的功能和问题相关吗?'
       options:
-        - label: Yes
+        - label: 'Yes'
           required: false
-        - label: No
+        - label: 'No'
           required: false
   - type: 'textarea'
     id: related-problem
@@ -38,9 +38,9 @@ body:
         I have describe my feature clearly.
         我已经清楚地描述了我的功能。
       options:
-        - label: Yes
+        - label: 'Yes'
           required: false
-        - label: No
+        - label: 'No'
           required: false
   - type: 'textarea'
     id: additional-infomation
