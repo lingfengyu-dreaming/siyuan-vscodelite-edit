@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.3
+  - 让不透明的块更透明一点（可能带来显示问题）
+  - Make opaque blocks more transparent (may cause display problems)
 - V1.4.2
   - readme update
 - V1.4.1

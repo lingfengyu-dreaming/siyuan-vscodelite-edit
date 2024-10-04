@@ -37,15 +37,12 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.3
+  - Make opaque blocks more transparent (may cause display problems)
 - V1.4.1
   - Adjust the background of database and embedded blocks when the background is transparent
 - V1.4.0
   - Adapt Background Cover plugin (need to turn off foreground transparency in plugin settings)
-- V1.3.5
-  - Update Readme doc
-  - Adjust doc tree styles partly
-  - Try to adapt customized background(dock)
-  - Try to hide editor scroll bar on mobile app
 
 # Plugin fitness
 
