@@ -1,5 +1,5 @@
 // 主题默认加载时进行的行为
-// js代码加载后立即执行
+// ! js代码加载后立即执行
 (async function () {
     // 获取自己的css表
     const cssTable = document.getElementById('themeStyle');
@@ -14,23 +14,42 @@
         // 添加主题菜单
         addThemeToolBar();
         // 添加固定属性
-        addFixedAttribute();
+        addFixedAttribute(labels);
     } else {
         _postMessage('error', localMessage["localCssFail"][defLag], 5000);
     }
+    console.log(localMessage["loadFinish"][defLag]);
 })();
 
-// 更换主题时移除修改内容
+// ! 更换主题时移除修改内容
 window.destroyTheme = () => {
     // 移除主题按钮
     document.querySelector("#vscleToolbar").remove();
     // 移除body特殊适配语句
     document.body.classList.remove('bgenable');
     // 移除计时器
-    timer.forEach(e => {
-        clearTimeout(e);
-        timer.pop(e);
-    });
+    for (key in globalThis.timer) {
+        if (globalThis.timer[key] != null) {
+            // console.log("remove timer");
+            clearTimeout(globalThis.timer[key]);
+            clearInterval(globalThis.timer[key]);
+            globalThis.timer[key] = null;
+        }
+    }
+    // 移除监视器
+    for (key in globalThis.observer) {
+        if (globalThis.observer[key] != null) {
+            // console.log("remove observer");
+            globalThis.observer[key].disconnect();
+            globalThis.observer[key] = null;
+        }
+    }
+    // 删除全局变量
+    delete globalThis.defaultConf;
+    delete globalThis.localMessage;
+    delete globalThis.defLag;
+    delete globalThis.timer;
+    delete globalThis.observer;
 };
 
 /**
@@ -41,7 +60,7 @@ async function loadGlobalVars() {
      * ! 默认配置文件
      */
     globalThis.defaultConf = {
-        "version": 2,
+        "version": 3,
         "theme": {
             "codeBlock": true,
             "reference": true,
@@ -53,7 +72,8 @@ async function loadGlobalVars() {
         },
         "plugins": {
             "shortcutPanel": true,
-            "mathPanel": false
+            "mathPanel": false,
+            "backgroundCover": true
         }
     };
 
@@ -68,6 +88,10 @@ async function loadGlobalVars() {
         "loadCssFail": {
             "zh_CN": "加载主题VSCode Lite Edit失败，无法获取当前样式表",
             "en_US": "Load theme VSCode Lite Edit failed, can't load current style table"
+        },
+        "loadFinish": {
+            "zh_CN": "主题VSCode Lite Edit加载完成",
+            "en_US": "Theme VSCode Lite Edit load finished"
         },
         "confUpdate": {
             "zh_CN": "主题配置文件需要更新，请点击<code>VC</code>按钮重新保存配置文件",
@@ -144,6 +168,14 @@ async function loadGlobalVars() {
         "ftitem": {
             "zh_CN": "文档树和大纲样式",
             "en_US": 'Doc tree and Outline style'
+        },
+        "bgitem": {
+            "zh_CN": "（插件）替换背景图片适配",
+            "en_US": "(plugin) Background cover adaption"
+        },
+        "bgdesc": {
+            "zh_CN": "需要打开“替换背景图片”插件设置将“前景透明”调到0哦",
+            "en_US": "You need to open the setting of \"Background Cover\" plugin and set the \"Opacity of foreground\" to 0"
         }
     };
 
@@ -154,11 +186,16 @@ async function loadGlobalVars() {
         globalThis.defLag = 'en_US';
     }
 
-    // 所有用到的计时器
-    globalThis.timer = [
+    // ! 所有用到的计时器
+    globalThis.timer = {
         // 背景插件加载后可能禁用，使用计时器定时刷新背景插件状态
-        bgTimer = null
-    ];
+        bgTimer: null
+    };
+
+    // ! 所有用到的监听器
+    globalThis.observer = {
+        bgObserver: null
+    };
 }
 
 /** 
@@ -352,6 +389,9 @@ async function showElementSettings(settings) {
     if (settings["theme"]["doctree"] == true) {
         lab.push("doctree");
     }
+    if (settings["plugins"]["backgroundCover"] == true) {
+        lab.push("backgroundCover");
+    }
     return lab;
 }
 
@@ -396,6 +436,10 @@ function addImports(table, labels) {
         }
         if (it == 'doctree') {
             table.insertRule('@import url(sub/app/filetree.css);', 6 + i);
+            i += 1;
+        }
+        if (it == 'backgroundCover') {
+            table.insertRule('@import url(sub/plugin/backgroundPlugin.css);', 6 + i);
             i += 1;
         }
     });
@@ -510,6 +554,12 @@ async function createSettingsWindow() {
             } else {
                 settings.push({ label: localMessage["scitem"][defLag], id: 'scPanelStyle', enable: false });
             }
+            // 替换背景图片插件
+            if (v["plugins"]["backgroundCover"] == true) {
+                settings.push({ label: localMessage["bgitem"][defLag], description: localMessage["bgdesc"][defLag], id: 'backgroundCover', enable: true });
+            } else {
+                settings.push({ label: localMessage["bgitem"][defLag], description: localMessage["bgdesc"][defLag], id: 'backgroundCover', enable: false });
+            }
             return settings;
         }
     }
@@ -519,10 +569,22 @@ async function createSettingsWindow() {
 
     // 遍历数组添加选项
     settings.forEach(setting => {
-        var label = document.createElement('span');
+        if (setting?.description) {
+            var label = document.createElement('div');
+        } else {
+            var label = document.createElement('span');
+        }
         label.textContent = setting.label;
         label.htmlFor = setting.id;
         label.classList = "fn__flex-1";
+
+        if (setting?.description) {
+            var description = document.createElement('div');
+            description.textContent = setting.description;
+            description.htmlFor = setting.id;
+            description.classList = "b3-label__text";
+            label.appendChild(description);
+        }
 
         var space = document.createElement('span');
         space.classList = 'fn__space';
@@ -567,6 +629,8 @@ async function createSettingsWindow() {
                 saveSt["theme"]["database"] = ck;
             } else if (id == "doctree") {
                 saveSt["theme"]["doctree"] = ck;
+            } else if (id == 'backgroundCover') {
+                saveSt["plugins"]["backgroundCover"] = ck;
             }
         });
         // 修改配置文件版本
@@ -602,13 +666,13 @@ async function createSettingsWindow() {
     };
     var label1 = document.createElement('span');
     label1.textContent = localMessage["tip1"][defLag];
-    label1.classList = "fn__flex-1";
+    label1.classList = "fn__flex-1 fn__flex-center";
     var label2 = document.createElement('span');
     label2.textContent = localMessage["tip2"][defLag];
-    label2.classList = "fn__flex-1";
+    label2.classList = "fn__flex-1 fn__flex-center";
     var label3 = document.createElement('span');
     label3.textContent = localMessage["tip3"][defLag];
-    label3.classList = "fn__flex-1";
+    label3.classList = "fn__flex-1 fn__flex-center";
     var space = document.createElement('span');
     space.classList = 'fn__space';
     var div1 = document.createElement('label');
@@ -634,27 +698,60 @@ async function createSettingsWindow() {
 /**
  * @description 添加固定属性
  * ! 添加固定属性
+ * @param {String[]} settings 
  */
-function addFixedAttribute() {
+function addFixedAttribute(settings) {
     function bg(times) {
         // 背景自定义插件，部分情况下插件加载缓慢可重复检测一次
         var bglayer = document.getElementById("bglayer");
         if (bglayer) {
             var style = window.getComputedStyle(bglayer);
             var body = document.body;
-            if (style.display != 'none' && !body.classList.contains('bgenable')) {
+            if (style.getPropertyValue("display") != 'none') {
+                // if (times < 1) {
+                //     globalThis.timer.bgTimer = setTimeout(bg, 2000, times + 1);
+                //     return;
+                // }
+                // console.log("enable background");
                 body.classList.add('bgenable');
-            } else if (style.display == 'none' && body.classList.contains('bgenable')) {
+            } else if (style.getPropertyValue("display") == 'none') {
+                // console.log("disable background");
                 body.classList.remove('bgenable');
             }
-            timer.bgTimer = setTimeout(bg, 300000, times + 1);
-        } else if (times <= 0) {
-            // 5秒后重新检测一遍
+            // 刚开始每3秒重新检测状态
+            // 后面30秒检测一次
+            if (times < 3) {
+                globalThis.timer.bgTimer = setTimeout(bg, 3000, times + 1);
+            } else if (times < 5) {
+                globalThis.timer.bgTimer = setTimeout(bg, 30000, times + 1);
+            } else {
+                globalThis.timer.bgTimer = null;
+            }
+        } else if (times == 0) {
+            // 未启用插件5秒后重新检测一遍
             setTimeout(bg, 5000, times + 1);
         }
     }
     // 运行
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    bg(0);
+    // 如果设置启用背景插件才进入判断
+    if (settings.includes("backgroundCover")) {
+        bg(0);
+        if (globalThis.observer.bgObserver == null) {
+            var bglayer = document.getElementById("bglayer");
+            globalThis.observer.bgObserver = new MutationObserver(function (mutationsList) {
+                for (var mutation of mutationsList) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+                        // 样式发生变化时执行的代码
+                        bg(0);
+                    }
+                }
+            });
+            globalThis.observer.bgObserver.observe(bglayer, {
+                attributes: true, // 监听属性变化
+                attributeFilter: ['style'] // 只监听 style 属性
+            });
+        }
+    }
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }

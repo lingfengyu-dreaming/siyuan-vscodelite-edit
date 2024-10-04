@@ -1,4 +1,8 @@
 # ChangeLog
+
+- V1.4.0
+  - 适配替换背景图片插件（需要关闭插件设置中前景透明度）
+  - Adapt Background Cover plugin (need to turn off foreground transparency in plugin settings)
 - V1.3.5
   - 更新说明文档
   - 调整文档树部分样式

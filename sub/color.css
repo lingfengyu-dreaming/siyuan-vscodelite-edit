@@ -5,9 +5,8 @@
     --lite-block-ref-color: #9e46e6;
     --lite-block-ref-background-color: #00000022;
     --lite-database-header-background: #9a9a9a80;
-    --lite-body-background: #f6f6f618;
-    --lite-dock-background: #f6f6f6;
-    --lite-dock-item-color: #66326c;
+    --lite-bg-dock-item-background: #00000022;
+    --lite-bg-dock-item-active: #3b3838;
     --mk-toolbar-background: #dddddd;
     --mk-toolbar-background--blur: #e5e5e5;
     --mk-toolbar--blur-item: #7b7b7b;
@@ -60,9 +59,8 @@
     --lite-block-ref-color: #49b0f0;
     --lite-block-ref-background-color: #ffffff22;
     --lite-database-header-background: #efefef30;
-    --lite-body-background: #1e1e1e50;
-    --lite-dock-background: #1e1e1e;
-    --lite-dock-item-color: #66326c;
+    --lite-bg-dock-item-active: #f4f4f4;
+    --lite-bg-dock-item-background: #00000022;
     --mk-toolbar-background: #3c3c3c;
     --mk-toolbar-background--blur: #323233;
     --mk-toolbar--blur-item: #8e8e8e;

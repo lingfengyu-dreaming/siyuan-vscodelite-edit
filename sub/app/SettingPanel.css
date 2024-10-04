@@ -1,3 +1,8 @@
+/* 整个设置面板 */
+div[vslite="SettingPanel"] {
+    user-select: none;
+}
+
 /* h2标签 */
 div[vslite="SettingPanel"] h2.h2 {
     color: var(--mk-block-header-h2);

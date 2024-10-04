@@ -36,6 +36,8 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.0
+  - 适配替换背景图片插件（需要关闭插件设置中前景透明度）
 - V1.3.5
   - 更新说明文档
   - 调整文档树部分样式
@@ -43,8 +45,6 @@
   - 尝试禁用移动端编辑器滚动条
 - V1.3.4
   - 新增文档树和大纲缩进（可能和插件冲突）
-- V1.3.3
-  - 新增本地化适配
 
 # 插件适配
 
@@ -52,7 +52,7 @@
 
 - 快捷键面板（分类标题颜色）
 - 自定义块样式（修复由主题造成的嵌入块中自定义块显示问题）
-- 替换背景图片（进行中，暗色效果更好）
+- 替换背景图片（通过让前景透明实现，请关闭插件设置中的前景透明度）
 
 # 反馈
 
@@ -68,9 +68,10 @@
 
 # 感谢
 
-|                                  存储库                                   |                      作者                       |                   内容                   | 许可证  |
-| :-----------------------------------------------------------------------: | :---------------------------------------------: | :--------------------------------------: | :-----: |
-|  [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)   | [TinkMingKing](https://github.com/TinkMingKing) |                  原主题                  | GNU3.0  |
-|         [Savor](https://github.com/royc01/notion-theme/tree/main)         |       [royc01](https://github.com/royc01)       | 连接思源API代码(js)<br>列表层级效果(css) |   无    |
-| [思源api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |                   思源开发者                    |                 API代码                  | AGPL3.0 |
-|     [文档树自定义](https://github.com/zxkmm/siyuan_doctree_compress)      |        [zxkmm](https://github.com/zxkmm)        |              文档树美化思路              |   MIT   |
+|                                  存储库                                   |                         作者                          |                   内容                   | 许可证  |
+| :-----------------------------------------------------------------------: | :---------------------------------------------------: | :--------------------------------------: | :-----: |
+|  [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)   |    [TinkMingKing](https://github.com/TinkMingKing)    |                  原主题                  | GNU3.0  |
+|         [Savor](https://github.com/royc01/notion-theme/tree/main)         |          [royc01](https://github.com/royc01)          | 连接思源API代码(js)<br>列表层级效果(css) |   无    |
+| [思源api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |                      思源开发者                       |                 API代码                  | AGPL3.0 |
+|     [文档树自定义](https://github.com/zxkmm/siyuan_doctree_compress)      |           [zxkmm](https://github.com/zxkmm)           |              文档树美化思路              |   MIT   |
+|          [Cliff-Dark](https://github.com/chenshinshi/Cliff-Dark)          | [Chensinshi](https://github.com/chenshinshi)&Crowds21 |               背景透明思路               |   无    |

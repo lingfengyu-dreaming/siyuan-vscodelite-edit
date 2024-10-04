@@ -1,12 +1,73 @@
 body.bgenable {
-    background-color: transparent;
+    background-color: var(--lite-modify-background);
 }
 
+/* 两边的dock栏 */
 body.bgenable .dock {
-    background: var(--lite-dock-background);
+    background: var(--lite-modify-surface__dock);
 }
 
+/* dock栏图标背景 */
+/* body.bgenable .dock__item svg {
+    background-color: var(--lite-bg-dock-item-background);
+} */
+
+/* dock栏图标激活背景 */
 body.bgenable .dock__item:hover svg,
 body.bgenable .dock__item--active svg {
-    color: var(--lite-dock-item-color);
+    color: var(--lite-bg-dock-item-active);
+    /* background-color: var(--lite-bg-dock-item-background); */
+}
+
+/* 两边的文档树、大纲位置 */
+[data-type=wnd] .layout-tab-container {
+    background-color: var(--lite-modify-surface__darker);
+}
+
+/* 顶上的标签页 */
+[data-type=wnd] .layout-tab-bar {
+    background-color: var(--lite-modify-surface__darker);
+}
+
+[data-type=wnd] .layout-tab-bar .item,
+[data-type=wnd] .layout-tab-bar .item--readonly {
+    background-color: var(--lite-tabbar-background-color-item--readonly);
+}
+
+[data-type=wnd] .layout-tab-bar .item.item--focus {
+    background-color: var(--lite-tabbar-background-color-item--focus);
+}
+
+/* 编辑器 */
+.protyle {
+    background-color: var(--lite-modify-background);
+}
+
+/* 编辑器面包屑 */
+.protyle > .protyle-breadcrumb {
+    background-color: var(--lite-modify-surface__breadcrumb);
+}
+
+:root[data-theme-mode=light] body.bgenable {
+    --lite-status-background: #39cebbc0;
+    --lite-modify-surface: #f6f6f640;
+    --lite-modify-surface__dock: #f6f6f6a0;
+    --lite-modify-surface__breadcrumb: #f6f6f620;
+    --lite-modify-surface__darker: #f6f6f6a0;
+    --lite-modify-background: #ffffff00;
+    --lite-tabbar-background-color: #f0ec7f39;
+    --lite-tabbar-background-color-item--readonly: #f3f3f350;
+    --lite-tabbar-background-color-item--focus: #ffffff80;
+}
+
+:root[data-theme-mode=dark] body.bgenable {
+    --lite-status-background: #66ccffc0;
+    --lite-modify-surface: #26262670;
+    --lite-modify-surface__dock: #262626a0;
+    --lite-modify-surface__breadcrumb: #26262620;
+    --lite-modify-surface__darker: #262626a0;
+    --lite-modify-background: #1e1e1e00;
+    --lite-tabbar-background-color: #c5c6cc39;
+    --lite-tabbar-background-color-item--readonly: #25252650;
+    --lite-tabbar-background-color-item--focus: #1e1e1e80;
 }

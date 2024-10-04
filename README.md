@@ -35,6 +35,8 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.0
+  - Adapt Background Cover plugin (need to turn off foreground transparency in plugin settings)
 - V1.3.5
   - Update Readme doc
   - Adjust doc tree styles partly
@@ -42,8 +44,6 @@ Limited by the configuration loading method, updated configurations for new vers
   - Try to hide editor scroll bar on mobile app
 - V1.3.4
   - Add document tree and outline indentation (may conflict with plugin)
-- V1.3.3
-  - New localized adaptation
 
 # Plugin fitness
 
@@ -51,7 +51,7 @@ Currently adapted plug-ins are::
 
 - Shortcut key panel(Category title color)
 - Custom block style(fix display problem in embedded block caused by theme)
-- Background Cover(in progress, dark mode works better)
+- Background Cover(By making the foreground transparent. Please turn off foreground transparency in the plugin settings)
 
 # Feedback
 
@@ -67,9 +67,10 @@ Follow origin repository [TinkMingKing/siyuan-themes-vscodelite](https://github.
 
 # Thanks
 
-|                                  Repository                                  |                     Author                      |                         Content                          | License |
-| :--------------------------------------------------------------------------: | :---------------------------------------------: | :------------------------------------------------------: | :-----: |
-|    [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)    | [TinkMingKing](https://github.com/TinkMingKing) |                          theme                           | GNU3.0  |
-|          [Savor](https://github.com/royc01/notion-theme/tree/main)           |       [royc01](https://github.com/royc01)       | Connect Siyuan API code (js)<br>list-level effects (css) |  None   |
-| [SiYuan api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |                SiYuan Developers                |                         API code                         | AGPL3.0 |
-|      [doctree modify](https://github.com/zxkmm/siyuan_doctree_compress)      |        [zxkmm](https://github.com/zxkmm)        |            Document tree beautification ideas            |   MIT   |
+|                                  Repository                                  |                        Author                         |                         Content                          | License |
+| :--------------------------------------------------------------------------: | :---------------------------------------------------: | :------------------------------------------------------: | :-----: |
+|    [vscodelite](https://github.com/TinkMingKing/siyuan-themes-vscodelite)    |    [TinkMingKing](https://github.com/TinkMingKing)    |                          theme                           | GNU3.0  |
+|          [Savor](https://github.com/royc01/notion-theme/tree/main)           |          [royc01](https://github.com/royc01)          | Connect Siyuan API code (js)<br>list-level effects (css) |  None   |
+| [SiYuan api](https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md) |                   SiYuan Developers                   |                         API code                         | AGPL3.0 |
+|      [doctree modify](https://github.com/zxkmm/siyuan_doctree_compress)      |           [zxkmm](https://github.com/zxkmm)           |            Document tree beautification ideas            |   MIT   |
+|           [Cliff-Dark](https://github.com/chenshinshi/Cliff-Dark)            | [Chensinshi](https://github.com/chenshinshi)&Crowds21 |               Transparent background ideas               |  None   |
