@@ -1,5 +1,7 @@
 # ChangeLog
 
+- V1.4.2
+  - readme update
 - V1.4.1
   - 调整背景透明时数据库和嵌入块的背景
   - Adjust the background of database and embedded blocks when the background is transparent

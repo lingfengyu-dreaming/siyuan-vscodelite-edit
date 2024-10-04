@@ -49,11 +49,11 @@ Limited by the configuration loading method, updated configurations for new vers
 
 # Plugin fitness
 
-Currently adapted plug-ins are::
+Currently adapted plugins are:
 
 - Shortcut key panel(Category title color)
 - Custom block style(fix display problem in embedded block caused by theme)
-- Background Cover(By making the foreground transparent. Please turn off foreground transparency in the plugin settings)
+- Background Cover(By making the foreground transparent. Please set "foreground transparency" to 0 in the plugin settings to disable it, and enable the Blurring in settings(set to greater than 0))
 
 # Feedback
 
