@@ -5,17 +5,17 @@ title: "[FR] 在这里描述你的功能/Describe your feature here"
 labels: ["enhancement"]
 assignees:
   - lingfengyu-dreaming
-  
+
 body:
   - type: 'checkboxes'
     id: related-problem-check
     attributes:
       label: 'Is your feature request related to a problem?/你的功能和问题相关吗?'
-    options:
-      - label: Yes
-        required: false
-      - label: No
-        required: false
+      options:
+        - label: Yes
+          required: false
+        - label: No
+          required: false
   - type: 'textarea'
     id: related-problem
     attributes:
