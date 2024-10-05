@@ -193,7 +193,9 @@ async function loadGlobalVars() {
     // ! 所有用到的计时器
     globalThis.timer = {
         // 背景插件加载后可能禁用，使用计时器定时刷新背景插件状态
-        bgTimer: null
+        bgTimer: null,
+        // 背景插件属性修改的监听器，用来监测背景状态变化
+        bgObserTimer: null
     };
 
     // ! 所有用到的监听器
@@ -274,9 +276,9 @@ async function _writeFile(path, filedata, then = null, obj = null, isDir = false
 
 /**
  * @Feature 发送消息
- * @param type 消息类型
- * @param message 消息内容
- * @param time 持续时间
+ * @param { string } type 消息类型 - "ok" or "error"
+ * @param { string } message 消息内容
+ * @param { number } time 持续时间
  */
 async function _postMessage(type, message, time = null) {
     if (type == "ok") url = "/api/notification/pushMsg";
@@ -722,12 +724,9 @@ function addFixedAttribute(settings) {
                 // console.log("disable background");
                 body.classList.remove('bgenable');
             }
-            // 刚开始每3秒重新检测状态
-            // 后面30秒检测一次
-            if (times < 3) {
-                globalThis.timer.bgTimer = setTimeout(bg, 3000, times + 1);
-            } else if (times < 5) {
-                globalThis.timer.bgTimer = setTimeout(bg, 30000, times + 1);
+            // 刚开始每2秒重新检测状态，检测10秒
+            if (times < 5) {
+                globalThis.timer.bgTimer = setTimeout(bg, 2000, times + 1);
             } else {
                 globalThis.timer.bgTimer = null;
             }
@@ -736,13 +735,10 @@ function addFixedAttribute(settings) {
             setTimeout(bg, 5000, times + 1);
         }
     }
-    // 运行
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    // 如果设置启用背景插件才进入判断
-    if (settings.includes("backgroundCover")) {
-        bg(0);
-        if (globalThis.observer.bgObserver == null) {
-            var bglayer = document.getElementById("bglayer");
+    // 监听背景自定义插件的属性修改
+    function bgobserver(times) {
+        var bglayer = document.getElementById("bglayer");
+        if (bglayer) {
             globalThis.observer.bgObserver = new MutationObserver(function (mutationsList) {
                 for (var mutation of mutationsList) {
                     if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
@@ -755,6 +751,23 @@ function addFixedAttribute(settings) {
                 attributes: true, // 监听属性变化
                 attributeFilter: ['style'] // 只监听 style 属性
             });
+            globalThis.timer.bgobserver = null;
+        } else {
+            // 运行失败等待5秒
+            globalThis.timer.bgObserTimer = setTimeout(bgobserver, 5000, 1);
+            if (times == 1) {
+                console.error("背景插件监听失败，修改插件启用状态需手动刷新");
+                globalThis.timer.bgObserTimer = null;
+            }
+        }
+    }
+    // 运行
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    // 如果设置启用背景插件才进入判断
+    if (settings.includes("backgroundCover")) {
+        bg(0);
+        if (globalThis.observer.bgObserver == null) {
+            bgobserver(0);
         }
     }
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<
