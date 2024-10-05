@@ -68,10 +68,9 @@ body:
           required: false
         - label: "It isn't a plugin feature./这不是一个插件功能。"
           required: false
-        - label: "I doesn't check all the checkboxes and therefore I just checked all of them./我没有检查所有的复选框，只是闭眼选中了所有复选框。"
+        - label: "I doesn't check all the checkboxes and therefore I just checked all of them.Please close and tag this feature request./我没有检查所有的复选框，只是闭眼选中了所有复选框。请关闭并标记这个功能请求。"
           required: false
         - label: 'No plugin do this feature./没有插件完成这个功能。'
           required: false
         - label: 'Not too hard for a theme to complete this feature./这个功能对主题来说不难实现。'
           required: false
-
