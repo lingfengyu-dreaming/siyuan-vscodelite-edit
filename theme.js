@@ -9,10 +9,10 @@
     if (cssTable) {
         // 读取配置文件或生成配置文件
         var labels = await getSettings();
-        // 向css中插入语句
-        addImports(cssTable, labels);
         // 添加主题菜单
         addThemeToolBar();
+        // 向css中插入语句
+        addImports(cssTable, labels);
         // 添加固定属性
         addFixedAttribute(labels);
     } else {
@@ -337,7 +337,11 @@ function addThemeToolBar() {
         vscToolBar.setAttribute("aria-label", localMessage["label-aria"][defLag]);
         vscToolBar.setAttribute("style", "width=23.5px;height=23.5px");
         if (toolbarVIP == null) {
-            windowControls.parentElement.insertBefore(vscToolBar, windowControls);
+            try {
+                windowControls.parentElement.insertBefore(vscToolBar, windowControls);
+            } catch (error) {
+                document.body.classList.add("vscmobile");
+            }
         } else {
             toolbarVIP.parentElement.insertBefore(vscToolBar, toolbarVIP);
         }
@@ -445,8 +449,10 @@ function addImports(table, labels) {
             i += 1;
         }
         if (it == 'backgroundCover') {
-            table.insertRule('@import url(sub/plugin/backgroundPlugin.css);', 6 + i);
-            i += 1;
+            if (!document.body.classList.contains('vscmobile')) {
+                table.insertRule('@import url(sub/plugin/backgroundPlugin.css);', 6 + i);
+                i += 1;
+            }
         }
     });
 }
@@ -753,9 +759,11 @@ function addFixedAttribute(settings) {
             });
             globalThis.timer.bgobserver = null;
         } else {
-            // 运行失败等待5秒
-            globalThis.timer.bgObserTimer = setTimeout(bgobserver, 5000, 1);
-            if (times == 1) {
+            if (times == 0 && !document.body.classList.contains('vscmobile')) {
+                // 运行失败等待5秒
+                globalThis.timer.bgObserTimer = setTimeout(bgobserver, 5000, 1);
+            }
+            else if (times == 1) {
                 console.error("背景插件监听失败，修改插件启用状态需手动刷新");
                 globalThis.timer.bgObserTimer = null;
             }

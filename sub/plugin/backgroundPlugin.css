@@ -20,65 +20,65 @@ body.bgenable .dock__item--active svg {
 }
 
 /* 两边的文档树、大纲位置 */
-[data-type=wnd] .layout-tab-container {
+body.bgenable [data-type=wnd] .layout-tab-container {
     background-color: var(--lite-modify-surface__darker);
 }
 
 /* 顶上的标签页 */
-[data-type=wnd] .layout-tab-bar {
+body.bgenable [data-type=wnd] .layout-tab-bar {
     background-color: var(--lite-modify-surface__darker);
 }
 
-[data-type=wnd] .layout-tab-bar .item,
-[data-type=wnd] .layout-tab-bar .item--readonly {
+body.bgenable [data-type=wnd] .layout-tab-bar .item,
+body.bgenable [data-type=wnd] .layout-tab-bar .item--readonly {
     background-color: var(--lite-tabbar-background-color-item--readonly);
 }
 
-[data-type=wnd] .layout-tab-bar .item.item--focus {
+body.bgenable [data-type=wnd] .layout-tab-bar .item.item--focus {
     background-color: var(--lite-tabbar-background-color-item--focus);
 }
 
 /* 编辑器 */
-.protyle {
+body.bgenable .protyle {
     background-color: var(--lite-modify-background);
 }
 
 /* 编辑器面包屑 */
-.protyle > .protyle-breadcrumb {
+body.bgenable .protyle > .protyle-breadcrumb {
     background-color: var(--lite-modify-surface__breadcrumb);
 }
 
 /* 数据库背景修复 */
-.av[data-av-type=table] .av__header,
-.av[data-av-type=table] .av__scroll {
+body.bgenable .av[data-av-type=table] .av__header,
+body.bgenable .av[data-av-type=table] .av__scroll {
     background: var(--b3-theme-background);
 }
 
 /* 嵌入块背景调整 */
-.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+body.bgenable .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
     background-color: var(--lite-modify-surface);
 }
 
 /* 设置面板类的弹出面板 */
-.b3-dialog--open .b3-dialog__container,
+body.bgenable .b3-dialog--open .b3-dialog__container,
 /* 菜单类的弹出面板 */
-.b3-menu {
+body.bgenable .b3-menu {
     background-color: var(--lite-modify-surface__menu);
 }
 
 /* 左上角菜单选项 */
-.b3-menu .b3-menu__item,
-.b3-menu .b3-menu__item .b3-menu__submenu {
+body.bgenable .b3-menu .b3-menu__item,
+body.bgenable .b3-menu .b3-menu__item .b3-menu__submenu {
     background-color: var(--lite-menu-background);
 }
 
 /* 不透明块 */
 /* 代码块 */
-[data-type=wnd] .code-block,
+body.bgenable [data-type=wnd] .code-block,
 /* 表格块 */
-[data-type=wnd] .table,
+body.bgenable [data-type=wnd] .table,
 /* 数据库块 */
-[data-type=wnd] .av[data-av-type=table] {
+body.bgenable [data-type=wnd] .av[data-av-type=table] {
     opacity: 0.7;
 }
 

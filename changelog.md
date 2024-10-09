@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.5
+  - 修复背景插件启用时意外影响移动端显示问题
+  - Fixed a problem that accidentally affected the mobile display when the background plug-in was enabled
 - V1.4.4
   - readme update
   - fix known issue
