@@ -2,7 +2,7 @@
   "name": "siyuan-vscodelite-edit",
   "author": "Emptylight",
   "url": "https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "displayName": {
     "default": "VSCode Lite Edit"
   },
@@ -29,5 +29,12 @@
   "modes": [
     "light",
     "dark"
+  ],
+  "keywords": [
+    "vscode",
+    "vscodelite",
+    "vscode lite",
+    "emptylight",
+    "lingfengyu-dreaming"
   ]
 }

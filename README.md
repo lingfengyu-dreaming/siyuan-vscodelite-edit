@@ -37,14 +37,14 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.6
+  - Limit the width of the mathematical enhancement plug-in formula preview area, adjustable
 - V1.4.5
   - Fixed a problem that accidentally affected the mobile display when the background plug-in was enabled
 - V1.4.3
   - Make opaque blocks more transparent (may cause display problems)
 - V1.4.1
   - Adjust the background of database and embedded blocks when the background is transparent
-- V1.4.0
-  - Adapt Background Cover plugin (need to turn off foreground transparency in plugin settings)
 
 # Plugin fitness
 

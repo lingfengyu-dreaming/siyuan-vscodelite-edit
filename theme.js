@@ -60,7 +60,7 @@ async function loadGlobalVars() {
      * ! 默认配置文件
      */
     globalThis.defaultConf = {
-        "version": 3,
+        "version": 4,
         "theme": {
             "codeBlock": true,
             "reference": true,
@@ -180,6 +180,14 @@ async function loadGlobalVars() {
         "bgdesc": {
             "zh_CN": "需要打开“替换背景图片”插件设置将“前景透明”调到0哦!建议启用插件的“背景虚化”功能!",
             "en_US": "You need to open the setting of \"Background Cover\" plugin and set the \"Opacity of foreground\" to 0!Suggest turn on the \"Blurring\" setting of the plugin!"
+        },
+        "mathitem": {
+            "zh_CN": "（插件）数学增强插件调整",
+            "en_US": "(plugin) math enhance plugin adjustion"
+        },
+        "mathdesc": {
+            "zh_CN": "无法显示水平滚动条",
+            "en_US": "Can't show horizon scroll bar"
         }
     };
 
@@ -402,6 +410,9 @@ async function showElementSettings(settings) {
     if (settings["plugins"]["backgroundCover"] == true) {
         lab.push("backgroundCover");
     }
+    if (settings["plugins"]["mathPanel"] == true) {
+        lab.push("mathPanel");
+    }
     return lab;
 }
 
@@ -451,6 +462,12 @@ function addImports(table, labels) {
         if (it == 'backgroundCover') {
             if (!document.body.classList.contains('vscmobile')) {
                 table.insertRule('@import url(sub/plugin/backgroundPlugin.css);', 6 + i);
+                i += 1;
+            }
+        }
+        if (it == 'mathPanel') {
+            if (!document.body.classList.contains('vscmobile')) {
+                table.insertRule('@import url(sub/plugin/mathEnhance.css);', 6 + i);
                 i += 1;
             }
         }
@@ -572,6 +589,12 @@ async function createSettingsWindow() {
             } else {
                 settings.push({ label: localMessage["bgitem"][defLag], description: localMessage["bgdesc"][defLag], id: 'backgroundCover', enable: false });
             }
+            // 数学公式增强插件
+            if (v["plugins"]["mathPanel"] == true) {
+                settings.push({ label: localMessage["mathitem"][defLag], description: localMessage["mathdesc"][defLag], id: 'mathPanel', enable: true });
+            } else {
+                settings.push({ label: localMessage["mathitem"][defLag], description: localMessage["mathdesc"][defLag], id: 'mathPanel', enable: false });
+            }
             return settings;
         }
     }
@@ -643,6 +666,8 @@ async function createSettingsWindow() {
                 saveSt["theme"]["doctree"] = ck;
             } else if (id == 'backgroundCover') {
                 saveSt["plugins"]["backgroundCover"] = ck;
+            } else if (id == 'mathPanel') {
+                saveSt["plugins"]["mathPanel"] = ck;
             }
         });
         // 修改配置文件版本

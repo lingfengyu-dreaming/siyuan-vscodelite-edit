@@ -1,0 +1,7 @@
+/* 底部的数学公式窗口 */
+#mathEnhanceDyBlock {
+    resize: horizontal;
+    overflow-x: auto;
+    width: 647.5px;
+    min-width: 268px;
+}

@@ -38,12 +38,12 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.6
+  - 限制数学增强插件公式预览区域的宽度，可调整
 - V1.4.5
   - 修复背景插件启用时意外影响移动端显示问题
 - V1.4.3
   - 让不透明的块更透明一点（可能带来显示问题）
-- V1.4.1
-  - 调整背景透明时数据库和嵌入块的背景
 
 # 插件适配
 
