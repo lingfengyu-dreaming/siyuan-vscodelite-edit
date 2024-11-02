@@ -1,5 +1,12 @@
 # ChangeLog
 
+- V1.4.7
+  - 尝试修复导出预览效果
+  - 尝试修复设置界面右侧设置选项显示效果
+  - 尝试修复导出PDF预览面板右侧意外滚动条
+  - Try to fix the export preview style
+  - Try to repair the display style of setting options on the right side of the settings panel
+  - Try to fix the unexcepted scrollbar on the right side of export PDF preview panel
 - V1.4.6
   - 限制数学增强插件公式预览区域的宽度，可调整
   - Limit the width of the mathematical enhancement plug-in formula preview area, adjustable

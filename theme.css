@@ -21,6 +21,8 @@
 @import url(sub/app/tabBar.css);
 /* 应用程序dock栏 */
 @import url(sub/app/dock.css);
+/* 导出预览面板 */
+@import url(sub/app/export.css);
 /* 到处的滚动条 */
 @import url(sub/app/scrollbar.css);
 /* 文档树和大纲 */
