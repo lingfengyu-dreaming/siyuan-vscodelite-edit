@@ -1,5 +1,10 @@
 # ChangeLog
 
+- V1.4.8
+  - 标题添加阴影
+  - 标题符号转为svg并添加颜色
+  - Header add shadow
+  - Header icon convert to svg and add color
 - V1.4.7
   - 尝试修复导出预览效果
   - 尝试修复设置界面右侧设置选项显示效果

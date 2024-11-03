@@ -37,14 +37,15 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.8
+  - Header add shadow
+  - Header icon convert to svg and add color
 - V1.4.7
   - Try to fix the export preview style
   - Try to repair the display style of setting options on the right side of the settings panel
   - Try to fix the unexcepted scrollbar on the right side of export PDF preview panel
 - V1.4.6
   - Limit the width of the mathematical enhancement plug-in formula preview area, adjustable
-- V1.4.5
-  - Fixed a problem that accidentally affected the mobile display when the background plug-in was enabled
 
 # Plugin fitness
 

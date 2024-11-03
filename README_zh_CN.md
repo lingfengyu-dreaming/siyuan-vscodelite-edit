@@ -38,14 +38,15 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.8
+  - 标题添加阴影
+  - 标题符号转为svg并添加颜色
 - V1.4.7
   - 尝试修复导出预览效果
   - 尝试修复设置界面右侧设置选项显示效果
   - 尝试修复导出PDF预览面板右侧意外滚动条
 - V1.4.6
   - 限制数学增强插件公式预览区域的宽度，可调整
-- V1.4.5
-  - 修复背景插件启用时意外影响移动端显示问题
 
 # 插件适配
 

@@ -3,6 +3,7 @@
 .protyle-preview h1 {
     color: var(--mk-block-header-h1);
     display: flex;
+    text-shadow: 2px 2px 4px var(--lite-header-shadow);
 }
 
 /* h1标签 */
@@ -12,9 +13,10 @@
     display: inline-block;
     width: 1.75rem;
     height: 1.75rem;
-    background: url(../../resources/h1.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h1.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h1);
+    /* filter: invert(40%); */
     padding-top: 8.4px;
     margin-right: 0.2em;
 }
@@ -26,9 +28,10 @@
     display: inline-block;
     width: 1.75rem;
     height: 1.75rem !important;
-    background: url(../../resources/h1.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h1.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h1);
+    /* filter: invert(40%); */
     position: static;
     border-radius: unset;
     margin-top: unset;
@@ -46,6 +49,7 @@ ul.b3-list.b3-list--background [data-subtype=h1] .b3-list-item__text {
 .protyle-preview h2 {
     color: var(--mk-block-header-h2);
     display: flex;
+    text-shadow: 2px 2px 4px var(--lite-header-shadow);
 }
 
 /* h2标签 */
@@ -55,9 +59,10 @@ ul.b3-list.b3-list--background [data-subtype=h1] .b3-list-item__text {
     display: inline-block;
     width: 1.55rem;
     height: 1.55rem;
-    background: url(../../resources/h2.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h2.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h2);
+    /* filter: invert(40%); */
     padding-top: 7.44px;
     margin-right: 0.2em;
 }
@@ -69,9 +74,10 @@ ul.b3-list.b3-list--background [data-subtype=h1] .b3-list-item__text {
     display: inline-block;
     width: 1.55rem;
     height: 1.55rem !important;
-    background: url(../../resources/h2.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h2.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h2);
+    /* filter: invert(40%); */
     position: static;
     border-radius: unset;
     margin-top: unset;
@@ -89,6 +95,7 @@ ul.b3-list.b3-list--background [data-subtype=h2] .b3-list-item__text {
 .protyle-preview h3 {
     color: var(--mk-block-header-h3);
     display: flex;
+    text-shadow: 2px 2px 4px var(--lite-header-shadow);
 }
 
 /* h3标签 */
@@ -98,9 +105,10 @@ ul.b3-list.b3-list--background [data-subtype=h2] .b3-list-item__text {
     display: inline-block;
     width: 1.38rem;
     height: 1.38rem;
-    background: url(../../resources/h3.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h3.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h3);
+    /* filter: invert(40%); */
     padding-top: 4px;
     margin-right: 0.2em;
 }
@@ -112,9 +120,10 @@ ul.b3-list.b3-list--background [data-subtype=h2] .b3-list-item__text {
     display: inline-block;
     width: 1.38rem;
     height: 1.38rem !important;
-    background: url(../../resources/h3.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h3.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h3);
+    /* filter: invert(40%); */
     position: static;
     border-radius: unset;
     margin-top: unset;
@@ -132,6 +141,7 @@ ul.b3-list.b3-list--background [data-subtype=h3] .b3-list-item__text {
 .protyle-preview h4 {
     color: var(--mk-block-header-h4);
     display: flex;
+    text-shadow: 2px 2px 4px var(--lite-header-shadow);
 }
 
 /* h4标签 */
@@ -141,9 +151,10 @@ ul.b3-list.b3-list--background [data-subtype=h3] .b3-list-item__text {
     display: inline-block;
     width: 1.25rem;
     height: 1.25rem;
-    background: url(../../resources/h4.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h4.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h4);
+    /* filter: invert(40%); */
     padding-top: 4px;
     margin-right: 0.2em;
 }
@@ -155,9 +166,10 @@ ul.b3-list.b3-list--background [data-subtype=h3] .b3-list-item__text {
     display: inline-block;
     width: 1.25rem;
     height: 1.25rem !important;
-    background: url(../../resources/h4.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h4.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h4);
+    /* filter: invert(40%); */
     position: static;
     border-radius: unset;
     margin-top: unset;
@@ -175,6 +187,7 @@ ul.b3-list.b3-list--background [data-subtype=h4] .b3-list-item__text {
 .protyle-preview h5 {
     color: var(--mk-block-header-h5);
     display: flex;
+    text-shadow: 2px 2px 4px var(--lite-header-shadow);
 }
 
 /* h5标签 */
@@ -184,9 +197,10 @@ ul.b3-list.b3-list--background [data-subtype=h4] .b3-list-item__text {
     display: inline-block;
     width: 1.13rem;
     height: 1.13rem;
-    background: url(../../resources/h5.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h5.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h5);
+    /* filter: invert(40%); */
     padding-top: 4px;
     margin-right: 0.2em;
 }
@@ -198,9 +212,10 @@ ul.b3-list.b3-list--background [data-subtype=h4] .b3-list-item__text {
     display: inline-block;
     width: 1.13rem;
     height: 1.13rem !important;
-    background: url(../../resources/h5.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h5.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h5);
+    /* filter: invert(40%); */
     position: static;
     border-radius: unset;
     margin-top: unset;
@@ -218,6 +233,7 @@ ul.b3-list.b3-list--background [data-subtype=h5] .b3-list-item__text {
 .protyle-preview h6 {
     color: var(--mk-block-header-h6);
     display: flex;
+    text-shadow: 2px 2px 4px var(--lite-header-shadow);
 }
 
 /* h6标签 */
@@ -227,9 +243,10 @@ ul.b3-list.b3-list--background [data-subtype=h5] .b3-list-item__text {
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    background: url(../../resources/h6.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h6.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h6);
+    /* filter: invert(40%); */
     padding-top: 4px;
     margin-right: 0.2em;
 }
@@ -241,9 +258,10 @@ ul.b3-list.b3-list--background [data-subtype=h5] .b3-list-item__text {
     display: inline-block;
     width: 1rem;
     height: 1rem !important;
-    background: url(../../resources/h6.bmp) no-repeat center center;
-    background-size: contain;
-    filter: invert(75%);
+    mask: url(../../resources/h6.svg) no-repeat center center;
+    mask-size: contain;
+    background-color: var(--mk-block-header-h6);
+    /* filter: invert(40%); */
     position: static;
     border-radius: unset;
     margin-top: unset;
