@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.9
+  - 修复标题无法居中问题
+  - Fixed the problem that the title could not be centered
 - V1.4.8
   - 标题添加阴影
   - 标题符号转为svg并添加颜色
