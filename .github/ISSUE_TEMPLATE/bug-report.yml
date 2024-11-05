@@ -83,7 +83,7 @@ body:
           required: false
         - label: 'I have complete OS Version./我已经填写了操作系统版本。'
           required: false
-        - label: "I doesn't check all the checkboxes and therefore I just checked all of them.Please close and tag this bug report./我没有检查所有的复选框，只是闭眼选中了所有复选框。请关闭并标记这个问题反馈。"
+        - label: "I didn't check all the checkboxes and therefore I just checked all of them.Please close and tag this bug report./我没有检查所有的复选框，只是闭眼选中了所有复选框。请关闭并标记这个问题反馈。"
           required: false
         - label: 'I have complete SiYuan Version./我已经填写了思源版本。'
           required: false
