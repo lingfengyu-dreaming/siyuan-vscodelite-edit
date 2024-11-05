@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.10
+  - 修复大纲中标题失去颜色问题
+  - Fixed the issue where the title in the outline lost color
 - V1.4.9
   - 修复标题无法居中问题
   - Fixed the problem that the title could not be centered
