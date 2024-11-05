@@ -7,17 +7,6 @@ assignees:
   - lingfengyu-dreaming
 
 body:
-  - type: "checkboxes"
-    id: describe-bug-check
-    attributes:
-      label: "I have describe the bug clearly./我已经清楚地描述了问题。"
-      options:
-        - label: "Yes"
-          required: false
-        - label: "No"
-          required: false
-        - label: "I confirmed this problem is related to theme./我确信这个问题和主题有关。"
-          required: false
   - type: 'textarea'
     id: bug-drscribe
     attributes:
@@ -30,15 +19,6 @@ body:
         我的问题是...
     validations:
       required: true
-  - type: 'checkboxes'
-    id: excepted-behavior-check
-    attributes:
-      label: 'I know how it should behavior./我知道它应该是怎样的。'
-      options:
-        - label: 'Yes'
-          required: false
-        - label: 'No'
-          required: false
   - type: 'textarea'
     id: excepted-behavior
     attributes:
