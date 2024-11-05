@@ -24,7 +24,7 @@ jobs:
           echo "Checkbox is checked"
           echo "checkbox_checked=true" >> $GITHUB_ENV
           echo "available=true" >> $GITHUB_ENV
-        elif [[ "$ISSUE_BODY" == *"- [X] I didn't check all the checkboxes"* ]]; then
+        elif [[ "$ISSUE_BODY" == *"- [ ] I didn't check all the checkboxes"* ]]; then
           echo "Checkbox is not checked"
           echo "checkbox_checked=false" >> $GITHUB_ENV
           echo "available=true" >> $GITHUB_ENV
