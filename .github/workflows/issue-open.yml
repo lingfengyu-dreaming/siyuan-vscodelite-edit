@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions: 
       issues: write
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
@@ -18,7 +20,7 @@ jobs:
       run: |
         ISSUE_BODY="${{ github.event.issue.body }}"
         # echo "$ISSUE_BODY"
-        if [[ "$ISSUE_BODY" == *"- [x] I doesn't check all the checkboxes"* ]]; then
+        if [[ "$ISSUE_BODY" == *"- [X] I doesn't check all the checkboxes"* ]]; then
           echo "Checkbox is checked"
           echo "checkbox_checked=true" >> $GITHUB_ENV
           echo "available=true" >> $GITHUB_ENV
