@@ -37,13 +37,13 @@ jobs:
     - name: Close issue on check
       if: env.checkbox_checked == 'true'
       run: |
-        gh issue close ${{ github.event.issue.number }} --comment $"The issue is closed because it should be. If you want to re-open it, please edit and check your issue then re-open it.\n这个议题因为应被关闭而被关闭了。如果你想要重新打开它，请编辑并检查你的议题再重新打开它。"
+        gh issue close ${{ github.event.issue.number }} --comment $'The issue is closed because it should be. If you want to re-open it, please edit and check your issue then re-open it.\n这个议题因为应被关闭而被关闭了。如果你想要重新打开它，请编辑并检查你的议题再重新打开它。'
         gh issue edit ${{ github.event.issue.number }} --add-label "invalid"
 
     - name: Comment issue on not check
       if: env.checkbox_checked == 'false' && env.available == 'true'
       run: |
-        gh issue comment ${{ github.event.issue.number }} --body $"Thank you for confirming the issue.\n感谢提交议题。"
+        gh issue comment ${{ github.event.issue.number }} --body $'Thank you for confirming the issue.\n感谢提交议题。'
         if gh issue view ${{ github.event.issue.number }} --json labels --jq '.labels | map(.name) | contains(["'"invalid"'"])'; then
           gh issue edit ${{ github.event.issue.number }} --remove-label "invalid"
         fi
@@ -51,5 +51,5 @@ jobs:
     - name: Comment issue on no checkbox
       if: env.checkbox_checked == 'false' && env.available == 'false'
       run: |
-        gh issue comment ${{ github.event.issue.number }} --body $"Your issue is not generated from template. Please make sure your issue includes all the necessary infomation. If you submitted this issue from template, please ignore this message, there may be some problems.\n你的议题不是从模板生成的。请确保你的议题包含所有必须的信息。如果你从模板新建了这个议题，请忽略这条消息，可能出现了一些问题。"
+        gh issue comment ${{ github.event.issue.number }} --body $'Your issue is not generated from template. Please make sure your issue includes all the necessary infomation. If you submitted this issue from template, please ignore this message, there may be some problems.\n你的议题不是从模板生成的。请确保你的议题包含所有必须的信息。如果你从模板新建了这个议题，请忽略这条消息，可能出现了一些问题。'
         gh issue edit ${{ github.event.issue.number }} --add-label "not template"
