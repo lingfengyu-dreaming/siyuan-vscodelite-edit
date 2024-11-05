@@ -42,5 +42,5 @@ jobs:
         actions: 'create-comment,add-labels'
         labels: 'not template'
         body: |
-          Your issue is not generated from template. Please make sure your issue includes all the necessary infomation. If you submitted this issue from template, please ignore this message, there may be some problems.
-          你的议题不是从模板生成的。请确保你的议题包含所有必须的信息。如果你从模板新建了这个议题，请忽略这条消息，可能出现了一些问题。
+          Your issue is not generated from template. Please make sure your issue includes all the necessary infomation. If not, your issue may be close immediately. If you submitted this issue from template, please ignore this message, there may be some problems.
+          你的议题不是从模板生成的。请确保你的议题包含所有必须的信息。如果没有，你的议题可能会立刻被关闭。如果你从模板新建了这个议题，请忽略这条消息，可能出现了一些问题。
