@@ -19,7 +19,7 @@ jobs:
       if: contains(github.event.issue.body, '- [X] I didn''t check all the checkboxes')
       uses: actions-cool/issues-helper@v3
       with:
-        actions: 'create-comment,add-labels'
+        actions: 'create-comment,add-labels,close-issue'
         labels: 'invalid'
         body: |
           The issue is closed because it should be. If you want to re-open it, please edit and check your issue then re-open it.
