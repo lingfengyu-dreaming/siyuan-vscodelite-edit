@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.11
+  - 可以禁用标题阴影
+  - Can disable heading block shadow
 - V1.4.10
   - 修复大纲中标题失去颜色问题
   - Fixed the issue where the title in the outline lost color

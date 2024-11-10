@@ -38,13 +38,12 @@
 
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.11
+  - 可以禁用标题阴影
 - V1.4.10
   - 修复大纲中标题失去颜色问题
 - V1.4.9
   - 修复标题无法居中问题
-- V1.4.8
-  - 标题添加阴影
-  - 标题符号转为svg并添加颜色
 
 # 插件适配
 

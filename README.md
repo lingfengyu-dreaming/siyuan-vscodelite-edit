@@ -37,13 +37,12 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.11
+  - Can disable heading block shadow
 - V1.4.10
   - Fixed the issue where the title in the outline lost color
 - V1.4.9
   - Fixed the problem that the title could not be centered
-- V1.4.8
-  - Header add shadow
-  - Header icon convert to svg and add color
 
 # Plugin fitness
 
