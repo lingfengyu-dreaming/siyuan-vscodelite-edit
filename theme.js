@@ -60,13 +60,14 @@ async function loadGlobalVars() {
      * ! 默认配置文件
      */
     globalThis.defaultConf = {
-        "version": 4,
+        "version": 5,
         "theme": {
             "codeBlock": true,
             "reference": true,
             "bazaar": true,
             "embeddedBlock": true,
             "title": true,
+            "titleShadow": true,
             "database": true,
             "doctree": true
         },
@@ -159,7 +160,15 @@ async function loadGlobalVars() {
         },
         "tititem": {
             "zh_CN": '标题块样式',
-            "en_US": "title block style"
+            "en_US": "Heading block style"
+        },
+        "titleShadow": {
+            "zh_CN": "标题添加阴影",
+            "en_US": "Heading add shadow"
+        },
+        "titleShadowDesc": {
+            "zh_CN": "仅启用标题样式有效",
+            "en_US": "Only effective when enable heading style"
         },
         "dbitem": {
             "zh_CN": '数据库样式',
@@ -393,7 +402,12 @@ async function showElementSettings(settings) {
     }
     // 标题
     if (settings["theme"]["title"] == true) {
-        lab.push("title");
+        // 标题阴影
+        if (settings["theme"]['titleShadow'] == true) {
+            lab.push("titleShadow");
+        } else {
+            lab.push("titleNoShadow");
+        }
     }
     // 快捷键面板
     if (settings["plugins"]["shortcutPanel"] == true) {
@@ -443,8 +457,12 @@ function addImports(table, labels) {
             table.insertRule('@import url(sub/block/embeddedBlock.css);', 6 + i);
             i += 1;
         }
-        if (it == 'title') {
-            table.insertRule('@import url(sub/block/title.css);', 6 + i);
+        if (it == 'titleShadow') {
+            table.insertRule('@import url(sub/block/title-shadow.css);', 6 + i);
+            i += 1;
+        }
+        if (it == 'titleNoShadow') {
+            table.insertRule('@import url(sub/block/title-no-shadow.css);', 6 + i);
             i += 1;
         }
         if (it == 'shortcutPanel') {
@@ -540,6 +558,12 @@ async function createSettingsWindow() {
                 settings.push({ label: localMessage["tititem"][defLag], id: 'titleBlock', enable: true });
             } else {
                 settings.push({ label: localMessage["tititem"][defLag], id: 'titleBlock', enable: false });
+            }
+            // 标题
+            if (v["theme"]["titleShadow"] == true) {
+                settings.push({ label: localMessage["titleShadow"][defLag], description: localMessage["titleShadowDesc"][defLag], id: 'titleShadow', enable: true });
+            } else {
+                settings.push({ label: localMessage["titleShadow"][defLag], description: localMessage["titleShadowDesc"][defLag], id: 'titleShadow', enable: false });
             }
             // 文档树和大纲
             if (v["theme"]["doctree"] == true) {
@@ -658,6 +682,8 @@ async function createSettingsWindow() {
                 saveSt["theme"]["embeddedBlock"] = ck;
             } else if (id == "titleBlock") {
                 saveSt["theme"]["title"] = ck;
+            } else if (id == "titleShadow") {
+                saveSt["theme"]["titleShadow"] = ck;
             } else if (id == "scPanelStyle") {
                 saveSt["plugins"]["shortcutPanel"] = ck;
             } else if (id == "database") {
