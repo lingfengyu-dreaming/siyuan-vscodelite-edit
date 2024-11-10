@@ -3,8 +3,6 @@ description: "反馈一个问题/Report a BUG"
 
 title: "[BUG] Summary your bug here/在这里概括你的问题"
 labels: ["bug"]
-assignees:
-  - lingfengyu-dreaming
 
 body:
   - type: 'textarea'
