@@ -33,8 +33,8 @@ jobs:
         labels: 'invalid'
         assignees: 'lingfengyu-dreaming'
         body: |
-          Thank you for confirming the issue.
-          感谢提交议题。
+          Thank you for confirming the issue. Your issue will be reviewed in several days.
+          感谢提交议题。你的议题会在几天内检查。
 
     - name: Comment issue on no checkbox
       if: contains(github.event.issue.body, '- [ ] I didn''t check all the checkboxes') == false && contains(github.event.issue.body, '- [X] I didn''t check all the checkboxes') == false
