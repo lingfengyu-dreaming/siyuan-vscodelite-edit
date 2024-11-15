@@ -37,12 +37,12 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.12
+  - Remove transparency from tables to alleviate the problem of losing background in tables
 - V1.4.11
   - Can disable heading block shadow
 - V1.4.10
   - Fixed the issue where the title in the outline lost color
-- V1.4.9
-  - Fixed the problem that the title could not be centered
 
 # Plugin fitness
 

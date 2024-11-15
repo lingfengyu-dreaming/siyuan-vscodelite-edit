@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.12
+  - 去除表格透明以缓解表格失去背景问题
+  - Remove transparency from tables to alleviate the problem of losing background in tables
 - V1.4.11
   - 可以禁用标题阴影
   - Can disable heading block shadow
