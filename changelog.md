@@ -4,14 +4,14 @@
   - 去除表格透明以缓解表格失去背景问题（仅透明背景）
   - Remove transparency from tables to alleviate the problem of losing background in tables(only transparent background)
 - V1.4.11
-  - 可以禁用标题阴影
-  - Can disable heading block shadow
+  - 可以禁用标题阴影(#13)
+  - Can disable heading block shadow(#13)
 - V1.4.10
   - 修复大纲中标题失去颜色问题
   - Fixed the issue where the title in the outline lost color
 - V1.4.9
-  - 修复标题无法居中问题
-  - Fixed the problem that the title could not be centered
+  - 修复标题无法居中问题(#9)
+  - Fixed the problem that the title could not be centered(#9)
 - V1.4.8
   - 标题添加阴影
   - 标题符号转为svg并添加颜色
@@ -34,16 +34,16 @@
   - readme update
   - fix known issue
 - V1.4.3
-  - 让不透明的块更透明一点（可能带来显示问题）
-  - Make opaque blocks more transparent (may cause display problems)
+  - 让不透明的块更透明一点（可能带来显示问题）(#5)
+  - Make opaque blocks more transparent (may cause display problems)(#5)
 - V1.4.2
   - readme update
 - V1.4.1
-  - 调整背景透明时数据库和嵌入块的背景
-  - Adjust the background of database and embedded blocks when the background is transparent
+  - 调整背景透明时数据库和嵌入块的背景(#5)
+  - Adjust the background of database and embedded blocks when the background is transparent(#5)
 - V1.4.0
-  - 适配替换背景图片插件（需要关闭插件设置中前景透明度）
-  - Adapt Background Cover plugin (need to turn off foreground transparency in plugin settings)
+  - 适配替换背景图片插件（需要关闭插件设置中前景透明度）(#5)
+  - Adapt Background Cover plugin (need to turn off foreground transparency in plugin settings)(#5)
 - V1.3.5
   - 更新说明文档
   - 调整文档树部分样式
@@ -83,7 +83,7 @@
   - 完成配置面板
   - Accomplish Configure Panel
 - V1.2.1
-  - 为有序列表添加不同缩进层级的编号类型（#4）
+  - 为有序列表添加不同缩进层级的编号类型(#4)
   - 为无序列表添加颜色显示
   - Add numbering types with different indentation levels to ordered lists (#4)
   - Add color display to unordered lists
