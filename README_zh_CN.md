@@ -39,7 +39,7 @@
 > 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
 
 - V1.4.12
-  - 去除表格透明以缓解表格失去背景问题
+  - 去除表格透明以缓解表格失去背景问题（仅透明背景）
 - V1.4.11
   - 可以禁用标题阴影
 - V1.4.10
