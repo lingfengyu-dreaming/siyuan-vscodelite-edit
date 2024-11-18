@@ -1,8 +1,8 @@
 # VSCode Lite Edit
 
-![GitHub Release Date](https://img.shields.io/github/release-date/lingfengyu-dreaming/siyuan-vscodelite-edit?display_date=published_at)
-![GitHub Release](https://img.shields.io/github/v/release/lingfengyu-dreaming/siyuan-vscodelite-edit)
-![GitHub Repo stars](https://img.shields.io/github/stars/lingfengyu-dreaming/siyuan-vscodelite-edit)
+![GitHub Release Date](https://img.shields.io/github/release-date/emptylight370/siyuan-vscodelite-edit?display_date=published_at)
+![GitHub Release](https://img.shields.io/github/v/release/emptylight370/siyuan-vscodelite-edit)
+![GitHub Repo stars](https://img.shields.io/github/stars/emptylight370/siyuan-vscodelite-edit)
 
 A further beautification of the interface from VSCode Lite.
 
@@ -35,7 +35,7 @@ Limited by the configuration loading method, updated configurations for new vers
 
 # ChangeLog
 
-> Full changelog view [ChangeLog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
+> Full changelog view [ChangeLog](https://github.com/emptylight370/siyuan-vscodelite-edit/blob/main/changelog.md)
 
 - V1.4.12
   - Remove transparency from tables to alleviate the problem of losing background in tables(only transparent background)
@@ -55,7 +55,7 @@ Currently adapted plugins are:
 
 # Feedback
 
-Bug report & Known issue: [Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)
+Bug report & Known issue: [Issue](https://github.com/emptylight370/siyuan-vscodelite-edit/issues)
 
 Don't use GitHub & Can't visit Github?  
 Please [email to me](mailto:1378990254@qq.com)(1378990254@qq.com).  

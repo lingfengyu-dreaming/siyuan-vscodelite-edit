@@ -1,8 +1,8 @@
 # VSCode Lite Edit
 
-![GitHub Release Date](https://img.shields.io/github/release-date/lingfengyu-dreaming/siyuan-vscodelite-edit?display_date=published_at)
-![GitHub Release](https://img.shields.io/github/v/release/lingfengyu-dreaming/siyuan-vscodelite-edit)
-![GitHub Repo stars](https://img.shields.io/github/stars/lingfengyu-dreaming/siyuan-vscodelite-edit)
+![GitHub Release Date](https://img.shields.io/github/release-date/emptylight370/siyuan-vscodelite-edit?display_date=published_at)
+![GitHub Release](https://img.shields.io/github/v/release/emptylight370/siyuan-vscodelite-edit)
+![GitHub Repo stars](https://img.shields.io/github/stars/emptylight370/siyuan-vscodelite-edit)
 
 
 从VSCode Lite脱胎而来，进一步美化界面。
@@ -36,7 +36,7 @@
 
 # 更新日志
 
-> 完整更新日志查看[changelog](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/blob/main/changelog.md)
+> 完整更新日志查看[changelog](https://github.com/emptylight370/siyuan-vscodelite-edit/blob/main/changelog.md)
 
 - V1.4.12
   - 去除表格透明以缓解表格失去背景问题（仅透明背景）
@@ -56,7 +56,7 @@
 
 # 反馈
 
-反馈问题和已知问题：[Issue](https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit/issues)。
+反馈问题和已知问题：[Issue](https://github.com/emptylight370/siyuan-vscodelite-edit/issues)。
 
 不使用GitHub或无法访问？  
 [发邮件](mailto:1378990254@qq.com)（1378990254@qq.com）。  

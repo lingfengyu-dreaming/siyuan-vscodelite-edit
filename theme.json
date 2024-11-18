@@ -1,7 +1,7 @@
 {
   "name": "siyuan-vscodelite-edit",
   "author": "Emptylight",
-  "url": "https://github.com/lingfengyu-dreaming/siyuan-vscodelite-edit",
+  "url": "https://github.com/emptylight370/siyuan-vscodelite-edit",
   "version": "1.4.12",
   "displayName": {
     "default": "VSCode Lite Edit"
@@ -37,6 +37,6 @@
     "light",
     "dark",
     "emptylight",
-    "lingfengyu-dreaming"
+    "emptylight370"
   ]
 }
