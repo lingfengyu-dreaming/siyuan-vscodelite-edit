@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.13
+  - 修改仓库链接，可能需要重新安装
+  - Edit repo link, maybe you should reinstall
 - V1.4.12
   - 去除表格透明以缓解表格失去背景问题（仅透明背景）
   - Remove transparency from tables to alleviate the problem of losing background in tables(only transparent background)
