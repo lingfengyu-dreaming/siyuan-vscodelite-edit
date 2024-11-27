@@ -1,5 +1,7 @@
 # ChangeLog
-
+- V1.4.14
+  - 调整背景插件适配下全屏显示效果
+  - Adjust fullscreen display style under background image plugin adaption
 - V1.4.13
   - 修改仓库链接，可能需要重新安装
   - Edit repo link, maybe you should reinstall

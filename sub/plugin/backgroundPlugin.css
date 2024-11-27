@@ -39,12 +39,16 @@ body.bgenable [data-type=wnd] .layout-tab-bar .item.item--focus {
 }
 
 /* 编辑器 */
-body.bgenable .protyle {
+body.bgenable .protyle:not(.fullscreen) {
     background-color: var(--lite-modify-background);
 }
 
+body.bgenable .protyle.fullscreen {
+    opacity: 0.75;
+}
+
 /* 编辑器面包屑 */
-body.bgenable .protyle > .protyle-breadcrumb {
+body.bgenable .protyle:not(.fullscreen) > .protyle-breadcrumb {
     background-color: var(--lite-modify-surface__breadcrumb);
 }
 

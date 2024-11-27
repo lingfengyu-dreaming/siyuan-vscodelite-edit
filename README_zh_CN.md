@@ -38,14 +38,12 @@
 
 > 完整更新日志查看[changelog](https://github.com/emptylight370/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.14
+  - 调整背景插件适配下全屏显示效果
 - V1.4.13
   - 修改仓库链接，可能需要重新安装
 - V1.4.12
   - 去除表格透明以缓解表格失去背景问题（仅透明背景）
-- V1.4.11
-  - 可以禁用标题阴影
-- V1.4.10
-  - 修复大纲中标题失去颜色问题
 
 # 插件适配
 
