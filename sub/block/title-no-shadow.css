@@ -5,8 +5,8 @@
 }
 
 /* h1标签 */
-[data-node-id].h1 [contenteditable="true"],
-.protyle-preview h1 [contenteditable="true"] {
+[data-node-id].h1 div:nth-child(1),
+.protyle-preview h1 div:nth-child(1) {
     display: inline-block;
 }
 
@@ -56,8 +56,8 @@ ul.b3-list.b3-list--background [data-subtype=h1] .b3-list-item__text {
 }
 
 /* h2标签 */
-[data-node-id].h2 [contenteditable="true"],
-.protyle-preview h2 [contenteditable="true"] {
+[data-node-id].h2 div:nth-child(1),
+.protyle-preview h2 div:nth-child(1) {
     display: inline-block;
 }
 
@@ -107,8 +107,8 @@ ul.b3-list.b3-list--background [data-subtype=h2] .b3-list-item__text {
 }
 
 /* h3标签 */
-[data-node-id].h3 [contenteditable="true"],
-.protyle-preview h3 [contenteditable="true"] {
+[data-node-id].h3 div:nth-child(1),
+.protyle-preview h3 div:nth-child(1) {
     display: inline-block;
 }
 
@@ -158,8 +158,8 @@ ul.b3-list.b3-list--background [data-subtype=h3] .b3-list-item__text {
 }
 
 /* h4标签 */
-[data-node-id].h4 [contenteditable="true"],
-.protyle-preview h4 [contenteditable="true"] {
+[data-node-id].h4 div:nth-child(1),
+.protyle-preview h4 div:nth-child(1) {
     display: inline-block;
 }
 
@@ -209,8 +209,8 @@ ul.b3-list.b3-list--background [data-subtype=h4] .b3-list-item__text {
 }
 
 /* h5标签 */
-[data-node-id].h5 [contenteditable="true"],
-.protyle-preview h5 [contenteditable="true"] {
+[data-node-id].h5 div:nth-child(1),
+.protyle-preview h5 div:nth-child(1) {
     display: inline-block;
 }
 
@@ -260,8 +260,8 @@ ul.b3-list.b3-list--background [data-subtype=h5] .b3-list-item__text {
 }
 
 /* h6标签 */
-[data-node-id].h6 [contenteditable="true"],
-.protyle-preview h6 [contenteditable="true"] {
+[data-node-id].h6 div:nth-child(1),
+.protyle-preview h6 div:nth-child(1) {
     display: inline-block;
 }
 

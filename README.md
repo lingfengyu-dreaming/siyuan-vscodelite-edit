@@ -38,12 +38,13 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/emptylight370/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.15
+  - Redraw heading icon
+  - Fix heading display style
 - V1.4.14
   - Adjust fullscreen display style under background image plugin adaption
 - V1.4.13
   - Edit repo link, maybe you should reinstall
-- V1.4.12
-  - Remove transparency from tables to alleviate the problem of losing background in tables(only transparent background)
 
 # Plugin fitness
 
