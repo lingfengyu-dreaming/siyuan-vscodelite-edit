@@ -38,6 +38,8 @@
 
 > 完整更新日志查看[changelog](https://github.com/emptylight370/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.16
+  - 标签关闭按钮添加悬停背景
 - V1.4.15
   - 重绘标题图标
   - 修复标题显示效果

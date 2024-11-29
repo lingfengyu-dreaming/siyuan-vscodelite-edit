@@ -1,5 +1,8 @@
 # ChangeLog
 
+- V1.4.16
+  - 标签关闭按钮添加悬停背景
+  - tab close button add hover background
 - V1.4.15
   - 重绘标题图标
   - 修复标题显示效果(#14)
