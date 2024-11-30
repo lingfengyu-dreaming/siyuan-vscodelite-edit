@@ -12,7 +12,8 @@
 /* 集市中选中的标签栏 */
 .config__tab-container.config__tab-container--top .layout-tab-bar .item.item--focus {
     color: white;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 16px;
     background-color: rgb(72, 72, 72);
+    padding-top: 1px;
 }

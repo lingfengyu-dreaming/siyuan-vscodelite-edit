@@ -2,7 +2,11 @@
 
 - V1.4.16
   - 标签关闭按钮添加悬停背景
+  - 为钉住的标签添加显示效果
+  - 微调集市标签字体样式，可能需要搭配字体插件才能看出区别
   - tab close button add hover background
+  - Add special style for pinned tab
+  - Fine-tune the font style for market tabs; the differences might be more noticeable with a font plugin installed
 - V1.4.15
   - 重绘标题图标
   - 修复标题显示效果(#14)

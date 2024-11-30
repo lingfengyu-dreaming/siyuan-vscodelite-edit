@@ -39,14 +39,14 @@ Limited by the configuration loading method, updated configurations for new vers
 > Full changelog view [ChangeLog](https://github.com/emptylight370/siyuan-vscodelite-edit/blob/main/changelog.md)
 
 - V1.4.16
-  - tab close button add hover background
+  - Add hover background for tab close button
+  - Add special style for pinned tab
+  - Fine-tune the font style for market tabs
 - V1.4.15
   - Redraw heading icon
   - Fix heading display style
 - V1.4.14
   - Adjust fullscreen display style under background image plugin adaption
-- V1.4.13
-  - Edit repo link, maybe you should reinstall
 
 # Plugin fitness
 
