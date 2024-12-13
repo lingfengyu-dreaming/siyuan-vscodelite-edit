@@ -27,6 +27,8 @@
 @import url(sub/app/scrollbar.css);
 /* 文档树和大纲 */
 /* @import url(sub/app/filetree.css); */
+/* 文档面包屑 */
+@import url(sub/app/breadcrumb.css);
 /* 标题标签h123456 */
 /* @import url(sub/block/title.css); */
 /* 列表样式 */
