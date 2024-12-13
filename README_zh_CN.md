@@ -38,6 +38,9 @@
 
 > 完整更新日志查看[changelog](https://github.com/emptylight370/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.17
+  - 高亮退出聚焦按钮
+  - 修复块引加粗外观
 - V1.4.16
   - 标签关闭按钮添加悬停背景
   - 为钉住的标签添加显示效果
@@ -45,8 +48,6 @@
 - V1.4.15
   - 重绘标题图标
   - 修复标题显示效果
-- V1.4.14
-  - 调整背景插件适配下全屏显示效果
 
 # 插件适配
 

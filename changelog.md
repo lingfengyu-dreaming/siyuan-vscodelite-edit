@@ -1,5 +1,10 @@
 # ChangeLog
 
+- V1.4.17
+  - 高亮退出聚焦按钮
+  - 修复块引加粗外观
+  - Highlight the exit focus button
+  - Repair reference text with bold appearance
 - V1.4.16
   - 标签关闭按钮添加悬停背景
   - 为钉住的标签添加显示效果

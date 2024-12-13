@@ -333,18 +333,10 @@ async function putSettings(settings) {
 }
 
 /**
- * @description 得到vscode-lite-edit-Toolbar
- * @returns HTMLElement
- */
-function getvscleToolbar() {
-    return document.getElementById("vscleToolbar");
-}
-
-/**
  * @description 创建工具栏的按钮
  */
 function addThemeToolBar() {
-    var vscToolBar = getvscleToolbar();
+    var vscToolBar = document.getElementById("vscleToolbar");
     if (vscToolBar == null) {
         var toolbarVIP = document.getElementById("toolbarVIP");
         var windowControls = document.getElementById("windowControls");

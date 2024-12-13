@@ -38,6 +38,9 @@ Limited by the configuration loading method, updated configurations for new vers
 
 > Full changelog view [ChangeLog](https://github.com/emptylight370/siyuan-vscodelite-edit/blob/main/changelog.md)
 
+- V1.4.17
+  - Highlight the exit focus button
+  - Repair reference text with bold appearance
 - V1.4.16
   - Add hover background for tab close button
   - Add special style for pinned tab
@@ -45,8 +48,6 @@ Limited by the configuration loading method, updated configurations for new vers
 - V1.4.15
   - Redraw heading icon
   - Fix heading display style
-- V1.4.14
-  - Adjust fullscreen display style under background image plugin adaption
 
 # Plugin fitness
 
